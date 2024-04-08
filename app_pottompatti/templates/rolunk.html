@@ -1,0 +1,76 @@
+{% extends 'main.html'%}
+{% load static %}       
+{% block content %}
+
+<div class="carousel slide" data-bs-ride="carousel" id="carouselExampleIndicators" data-bs-pause="false">
+		<!-- <div class="carousel-indicators">
+			<button aria-label="Slide 1" class="active" data-bs-slide-to="0" data-bs-target="#carouselExampleIndicators" type="button"></button> <button aria-label="Slide 2" data-bs-slide-to="1" data-bs-target="#carouselExampleIndicators" type="button"></button> <button aria-label="Slide 3" data-bs-slide-to="2" data-bs-target="#carouselExampleIndicators" type="button"></button>
+		</div> -->
+		<div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row g-0">
+            <div class="col-4 carousel-picture">
+              <img alt="torta kozeli kep" class="d-block w-100" src={% static 'app_pottompatti/img/torta-carousel.jpeg' %}>
+            </div>
+            <div class="col-8 main-text">
+                <div class="vertical-center">
+                  <p class="animated bounceInLeft d-none d-md-block" style="animation-delay: 2s">{{ bemutatkozas.content.html|safe }}</p>
+                </div>
+              </div>
+          </div>
+      </div>
+      <div class="carousel-item">
+        <div class="row g-0">
+          <div class="col-8 main-text">
+              <div class="vertical-center">
+                <p class="animated bounceInLeft d-none d-md-block" style="animation-delay: 2s">{{ bemutatkozas.content.html|safe  }}</p>
+              </div>
+          </div>
+          <div class="col-4 carousel-picture">
+            <img alt="torta kozeli kep" class="d-block w-100" src={% static 'app_pottompatti/img/torta-carousel-2.jpg' %}>
+          </div>
+        </div>
+    </div>
+		</div>
+
+</div>
+
+<section class="section-activities">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <h1>CUKISÁGOK</h1><br><br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xl-4">
+          <img src={% static 'app_pottompatti/img/halloween-cake.jpg' %} /><br><br>
+      </div>
+      <div class="col-xl-4">
+          <img src={% static 'app_pottompatti/img/halloween-cake.jpg' %} /><br><br>
+      </div>
+      <div class="col-xl-4">
+          <img src={% static 'app_pottompatti/img/halloween-cake.jpg' %} /><br><br>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="parallax">
+  <h1>Jártál már nálunk?</h1>
+</div>
+
+<section class="main-bg-color jartalnalunk">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xl-6 jartalnalunk-text">
+        <p class="animated bounceInLeft d-none d-md-block" style="animation-delay: 2s">{{ terjbe.content.html|safe  }}</p>
+      </div>
+      <div class="col-xl-6 img-container">
+        <img alt="torta kozeli kep" src={% static 'app_pottompatti/img/tea-room.jpg' %}>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock content %}
