@@ -10,7 +10,6 @@ from django.conf import settings
 # class AllatAdmin(admin.ModelAdmin):
 #     inlines = [MainPictureInline]
     
-admin.site.register(ProductMainCategory)
 admin.site.register(ProductCategory)
 admin.site.register(Product)
 admin.site.register(Bemutatkozas)

@@ -11,9 +11,14 @@ def rolunk(request):
 def uzletunk(request):
     return render(request, 'uzletunk.html')
 
-def kinalat(request):
-    productmaincategories = ProductMainCategory.objects.all()
-    return render(request, 'kinalat.html', {'productmaincategories': productmaincategories})
+def torta(request):
+    tortacategories = ProductCategory.objects.filter(product_main_category="Torták")
+    tortak = Product.objects.filter(product_category__product_main_category="Torták")
+    return render(request, 'torta.html', {'tortacategories': tortacategories, 'tortak': tortak})
+
+def sutemeny(request):
+    sutemenycategories = ProductCategory.objects.filter(product_main_category="Sütemények")
+    return render(request, 'sutemeny.html', {'sutemenycategories': sutemenycategories})
 
 def eskuvo(request):
     return render(request, 'eskuvo.html')

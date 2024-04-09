@@ -8,7 +8,6 @@ from django.core.exceptions import ValidationError
 
 # Create your models here.
 
-
 class ImageHandlerMixin():
     def save(self, *args, **kwargs):
         if not self.photo.closed:
@@ -48,7 +47,9 @@ class ImageHandlerMixin():
         temp_thumb.close()
 
         return True   
-    
+
+
+
 class Bemutatkozas(models.Model):
     content=QuillField(verbose_name = "Bemutatkozó szöveg")
 
@@ -83,36 +84,27 @@ class TerjBeHozzank(models.Model):
     def __str__(self):
         return "Térj Be Hozzánk Szöveg"
     
-class ProductMainCategory(models.Model):
-    name = models.CharField(max_length=200, verbose_name="termék fő kategória")
-    priority = models.IntegerField(default=10, verbose_name="sorrend", validators=[MaxValueValidator(10), MinValueValidator(1)])
-    category_cover = models.ImageField(default = 'app_pottompatti/img/', upload_to='app_pottompatti/img/thumbs')
-
-
-    class Meta:
-        verbose_name = 'termék főkategória'
-        verbose_name_plural = 'termék főkategóriák'
-
-    def __str__(self):
-        return self.name
+class CategoryChoices(models.TextChoices):
+    tortak = "Torták"
+    sutemenyek = "Sütemények"
     
 class ProductCategory(models.Model):
-    product_main_category = models.ForeignKey(ProductMainCategory, on_delete=models.CASCADE)
+    product_main_category = models.CharField(max_length=10, choices=CategoryChoices.choices, default='tortak', verbose_name = 'főkategória')
     name = models.CharField(max_length=200, verbose_name="termék kategória")
     priority = models.IntegerField(default=10, verbose_name="sorrend", validators=[MaxValueValidator(10), MinValueValidator(1)])
-    category_cover = models.ImageField(default = 'app_pottompatti/img/', upload_to='app_pottompatti/img/thumbs')
 
     class Meta:
-        verbose_name = 'termék alkategória'
-        verbose_name_plural = 'termék alkategóriák'
+        verbose_name = 'kategória'
+        verbose_name_plural = 'kategóriák'
 
     def __str__(self):
         return self.name
 
 class Product(models.Model):
     product_category = models.ForeignKey(ProductCategory, on_delete=models.CASCADE)
+    name = models.CharField(max_length=200, verbose_name="név", default="termek")
     description = models.TextField(max_length=300, verbose_name="termék leírás", default="leírás később érkezik")
-    photo = models.ImageField(upload_to='app_pottompatti/img/photos/', verbose_name = "kép")
+    # photo = models.ImageField(upload_to='app_pottompatti/img/photos/', verbose_name = "kép")
     photo_tumb = models.ImageField(upload_to='app_pottompatti/img/thumbs/', editable=False) 
     
     class Meta:
@@ -120,7 +112,7 @@ class Product(models.Model):
         verbose_name_plural = 'termékek'
 
     def __str__(self):
-        return "termék"
+        return self.name
     
 class AllasLehetoseg(models.Model):
     content=QuillField(verbose_name = "Álláslehetőség")
