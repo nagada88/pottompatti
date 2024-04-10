@@ -2,32 +2,7 @@
 {% load static %}       
 {% block content %}
 
-
 <section>
-  <div class="container-fluid">
-    <div class="row mt-5 mb-5 g-0">  
-      <div class="col-lg-4">
-        {% for torta_category in tortacategories %}
-        <p><a href="">{{ torta_category.name }}</a></p>
-        {% endfor %}
-      </div>
-      <div class="col-lg-8">
-        {% for torta_category in tortacategories %}
-        <h2>{{ torta_category.name }}</h2>
-          {% for torta in tortak %}
-            {{ torta.product_category }}<br>
-            {{ torta_category.name }}
-            {% if "torta.product_category" == "torta_category.name" %}
-              <p><a href="">{{ torta.name }}</a></p>
-            {% endif %}
-          {% endfor %}
-        {% endfor %}
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- <section>
   <div class="container maincategories">
     {% for maincat in productmaincategories %}
     <div class="row mt-5 mb-5 g-0">  
@@ -56,5 +31,5 @@
     </div>
     {% endfor %}
   </div>
-</section> -->
+</section>
 {% endblock content %}

@@ -104,7 +104,7 @@ class Product(models.Model):
     product_category = models.ForeignKey(ProductCategory, on_delete=models.CASCADE)
     name = models.CharField(max_length=200, verbose_name="név", default="termek")
     description = models.TextField(max_length=300, verbose_name="termék leírás", default="leírás később érkezik")
-    # photo = models.ImageField(upload_to='app_pottompatti/img/photos/', verbose_name = "kép")
+    photo = models.ImageField(upload_to='app_pottompatti/img/photos/', verbose_name = "kép", default="/app_pottompatti/img/bakery.jpg")
     photo_tumb = models.ImageField(upload_to='app_pottompatti/img/thumbs/', editable=False) 
     
     class Meta:
