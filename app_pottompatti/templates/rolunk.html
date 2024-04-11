@@ -2,17 +2,17 @@
 {% load static %}       
 {% block content %}
 
-<div class="carousel slide" data-bs-ride="carousel" id="carouselExampleIndicators" data-bs-pause="false">
-		<!-- <div class="carousel-indicators">
+<div class="carousel main-text slide" data-bs-ride="carousel" id="carouselExampleIndicators" data-bs-pause="false">
+		<div class="carousel-indicators">
 			<button aria-label="Slide 1" class="active" data-bs-slide-to="0" data-bs-target="#carouselExampleIndicators" type="button"></button> <button aria-label="Slide 2" data-bs-slide-to="1" data-bs-target="#carouselExampleIndicators" type="button"></button> <button aria-label="Slide 3" data-bs-slide-to="2" data-bs-target="#carouselExampleIndicators" type="button"></button>
-		</div> -->
+		</div>
 		<div class="carousel-inner">
         <div class="carousel-item active">
           <div class="row g-0">
             <div class="col-4 carousel-picture">
-              <img alt="torta kozeli kep" class="d-block w-100" src={% static 'app_pottompatti/img/torta-carousel.jpeg' %}>
+              <img alt="torta kozeli kep" class="d-block w-100" src={% static 'app_pottompatti/img/carousel1.png' %}>
             </div>
-            <div class="col-8 main-text">
+            <div class="col-8">
                 <div class="vertical-center">
                   <p class="animated bounceInLeft d-none d-md-block" style="animation-delay: 2s">{{ bemutatkozas.content.html|safe }}</p>
                 </div>
@@ -21,7 +21,7 @@
       </div>
       <div class="carousel-item">
         <div class="row g-0">
-          <div class="col-8 main-text">
+          <div class="col-8">
               <div class="vertical-center">
                 <p class="animated bounceInLeft d-none d-md-block" style="animation-delay: 2s">{{ bemutatkozas.content.html|safe  }}</p>
               </div>
@@ -39,18 +39,29 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col">
-        <h1>CUKISÁGOK</h1><br><br>
+        <h1>PATTI TÖRTÉNETE</h1><hr><br><br><br><br>
       </div>
     </div>
     <div class="row">
-      <div class="col-xl-4">
-          <img src={% static 'app_pottompatti/img/halloween-cake.jpg' %} /><br><br>
+      <div class="col-xl-3 card-1">
+        <div class="activity-card">
+          Az ELSŐ tortám
+        </div>
       </div>
-      <div class="col-xl-4">
-          <img src={% static 'app_pottompatti/img/halloween-cake.jpg' %} /><br><br>
+      <div class="col-xl-3 card-2">
+        <div class="activity-card">
+          
+        </div>
       </div>
-      <div class="col-xl-4">
-          <img src={% static 'app_pottompatti/img/halloween-cake.jpg' %} /><br><br>
+      <div class="col-xl-3 card-3">
+        <div class="activity-card">
+          
+        </div>
+      </div>
+      <div class="col-xl-3 card-4">
+        <div class="activity-card">
+          
+        </div>
       </div>
     </div>
   </div>

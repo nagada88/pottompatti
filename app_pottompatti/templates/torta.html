@@ -15,9 +15,7 @@
         {% for torta_category in tortacategories %}
         <h2>{{ torta_category.name }}</h2>
           {% for torta in tortak %}
-            {{ torta.product_category }}<br>
-            {{ torta_category.name }}
-            {% if "torta.product_category" == "torta_category.name" %}
+            {% if torta.product_category.name == torta_category.name %}
               <p><a href="">{{ torta.name }}</a></p>
             {% endif %}
           {% endfor %}
