@@ -6,17 +6,29 @@
 <section>
   <div class="container-fluid">
     <div class="row mt-5 mb-5 g-0">  
-      <div class="col-lg-4">
+      <div class="col-lg-4 torta-sidebar">
         {% for torta_category in tortacategories %}
         <p><a href="">{{ torta_category.name }}</a></p>
         {% endfor %}
       </div>
-      <div class="col-lg-8">
+      <div class="col-lg-8 tortalista">
         {% for torta_category in tortacategories %}
         <h2>{{ torta_category.name }}</h2>
           {% for torta in tortak %}
-            {% if torta.product_category.name == torta_category.name %}
-              <p><a href="">{{ torta.name }}</a></p>
+          {% if torta.product_category.name == torta_category.name %}
+          <div class="torta-card">
+            <div class="wrapper-img">
+                <a href="#">
+                    <div class="tortapic">
+                      <!-- {{ torta.photo_tumb.url }} -->
+                        <!-- <img src="{{ torta.photo_tumb.url }}" class="cover"> -->
+                    </div>
+                </a>
+            </div>
+            <div class="news">
+                <p><h2><center><strong>{{ torta.name }}</strong></center></h2></p>
+                <p class="hirtartalom">{{ torta.leiras }}</p>
+            </div>
             {% endif %}
           {% endfor %}
         {% endfor %}
