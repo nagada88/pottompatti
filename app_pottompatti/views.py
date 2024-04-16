@@ -3,18 +3,18 @@ from .models import *
 
 # Create your views here.
 def rolunk(request):
-    rolunk = Bemutatkozas.objects.get(id=1)
+    hirek = Hirek.objects.filter().order_by('-id')[:3]
     terjbe = TerjBeHozzank.objects.get(id=1)
 
-    return render(request, 'rolunk.html', {'rolunk': rolunk, 'bemutatkozas': rolunk, 'terjbe': terjbe})
+    return render(request, 'rolunk.html', {'hirek': hirek, 'terjbe': terjbe})
 
 def uzletunk(request):
     return render(request, 'uzletunk.html')
 
-def torta(request):
+def tortak(request):
     tortacategories = ProductCategory.objects.filter(product_main_category="Torták")
     tortak = Product.objects.filter(product_category__product_main_category="Torták")
-    return render(request, 'torta.html', {'tortacategories': tortacategories, 'tortak': tortak})
+    return render(request, 'tortak.html', {'tortacategories': tortacategories, 'tortak': tortak})
 
 def sutemeny(request):
     sutemenycategories = ProductCategory.objects.filter(product_main_category="Sütemények")

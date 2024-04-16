@@ -12,5 +12,5 @@ from django.conf import settings
     
 admin.site.register(ProductCategory)
 admin.site.register(Product)
-admin.site.register(Bemutatkozas)
+admin.site.register(Hirek)
 admin.site.register(TerjBeHozzank)

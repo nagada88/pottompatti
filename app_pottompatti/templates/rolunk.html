@@ -6,31 +6,50 @@
 		<div class="carousel-indicators">
 			<button aria-label="Slide 1" class="active" data-bs-slide-to="0" data-bs-target="#carouselExampleIndicators" type="button"></button> <button aria-label="Slide 2" data-bs-slide-to="1" data-bs-target="#carouselExampleIndicators" type="button"></button> <button aria-label="Slide 3" data-bs-slide-to="2" data-bs-target="#carouselExampleIndicators" type="button"></button>
 		</div>
+
 		<div class="carousel-inner">
         <div class="carousel-item active">
           <div class="row g-0">
-            <div class="col-4 carousel-picture">
-              <img alt="torta kozeli kep" class="d-block w-100" src={% static 'app_pottompatti/img/carousel1.png' %}>
+            <div class="col-6 col-xs-12 carousel-picture">
+              <img alt="torta kozeli kep" class="d-block w-100" src="{{ hirek.0.photo_tumb.url }}">
             </div>
-            <div class="col-8">
+            <div class="col-6 col-xs-12 ">
                 <div class="vertical-center">
-                  <p class="animated bounceInLeft d-none d-md-block" style="animation-delay: 2s">{{ bemutatkozas.content.html|safe }}</p>
+                  <h2>{{ hirek.0.title }}</h2>
+                  <p class="animated bounceInLeft d-none d-md-block" style="animation-delay: 2s">{{ hirek.0.content.html|safe }}</p>
                 </div>
               </div>
           </div>
       </div>
+
       <div class="carousel-item">
         <div class="row g-0">
-          <div class="col-8">
+          <div class="col-6 col-xs-12 ">
               <div class="vertical-center">
-                <p class="animated bounceInLeft d-none d-md-block" style="animation-delay: 2s">{{ bemutatkozas.content.html|safe  }}</p>
+                <h2>{{ hirek.1.title }}</h2>
+                <p class="animated bounceInLeft d-none d-md-block" style="animation-delay: 2s">{{ hirek.1.content.html|safe }}</p>
               </div>
           </div>
-          <div class="col-4 carousel-picture">
-            <img alt="torta kozeli kep" class="d-block w-100" src={% static 'app_pottompatti/img/torta-carousel-2.jpg' %}>
+          <div class="col-6 col-xs-12">
+            <img alt="torta kozeli kep" class="d-block w-100" src={{ hirek.1.photo_tumb.url }}>
           </div>
         </div>
-    </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="row g-0">
+          <div class="col-6 col-xs-12 ">
+            <img alt="torta kozeli kep" class="d-block w-100" src={{ hirek.2.photo_tumb.url }}>
+          </div>
+          <div class="col-6 col-xs-12 ">
+            <div class="vertical-center">
+                <h2>{{ hirek.2.title }}</h2>
+                <p class="animated bounceInLeft d-none d-md-block" style="animation-delay: 2s">{{ hirek.2.content.html|safe }}</p>
+              </div>
+            </div>
+        </div>
+
+      </div>
 		</div>
 
 </div>

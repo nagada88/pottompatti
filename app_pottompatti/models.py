@@ -5,6 +5,7 @@ from django.core.files.base import ContentFile
 from django_quill.fields import QuillField
 from django.core.validators import MaxValueValidator, MinValueValidator
 from django.core.exceptions import ValidationError
+import os
 
 # Create your models here.
 
@@ -50,22 +51,25 @@ class ImageHandlerMixin():
 
 
 
-class Bemutatkozas(models.Model):
-    content=QuillField(verbose_name = "Bemutatkozó szöveg")
+class Hirek(ImageHandlerMixin, models.Model):
+    title=models.CharField(max_length=200, verbose_name="Hír cím")
+    content=QuillField(verbose_name = "Hír szövege")
+    photo = models.ImageField(upload_to='app_pottompatti/img/photos/', verbose_name = "kép", default="/app_pottompatti/img/bakery.jpg")
+    photo_tumb = models.ImageField(upload_to='app_pottompatti/img/thumbs/', editable=False) 
 
-    def save(self, *args, **kwargs):
-        if not self.pk and Bemutatkozas.objects.exists():
-        # if you'll not check for self.pk 
-        # then error will also be raised in the update of exists model
-            raise ValidationError('Csak egy bemutatkozas bejegyzes lehet')
-        return super(Bemutatkozas, self).save(*args, **kwargs)
+    # def save(self, *args, **kwargs):
+    #     if not self.pk and Bemutatkozas.objects.exists():
+    #     # if you'll not check for self.pk 
+    #     # then error will also be raised in the update of exists model
+    #         raise ValidationError('Csak egy bemutatkozas bejegyzes lehet')
+    #     return super(Hirek, self).save(*args, **kwargs)
 
     class Meta:
-        verbose_name = 'Bemutatkozás'
-        verbose_name_plural = 'Bemutatkozás'
+        verbose_name = 'Hír'
+        verbose_name_plural = 'Hírek'
 
     def __str__(self):
-        return "Bemutatkozás"
+        return "Hírek"
 
 class TerjBeHozzank(models.Model):
     content=QuillField(verbose_name = "Bemutatkozó szöveg")
@@ -100,7 +104,7 @@ class ProductCategory(models.Model):
     def __str__(self):
         return self.name
 
-class Product(models.Model):
+class Product(ImageHandlerMixin, models.Model):
     product_category = models.ForeignKey(ProductCategory, on_delete=models.CASCADE)
     name = models.CharField(max_length=200, verbose_name="név", default="termek")
     description = models.TextField(max_length=300, verbose_name="termék leírás", default="leírás később érkezik")
