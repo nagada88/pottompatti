@@ -1,0 +1,58 @@
+{% extends 'main.html'%}
+{% load static %}       
+{% block content %}
+
+
+<section>
+  <div class="container-fluid">
+    <div class="row mt-5 mb-5 g-0">  
+      <div class="col-lg-4">
+        {% for torta_category in tortacategories %}
+        <p><a href="">{{ torta_category.name }}</a></p>
+        {% endfor %}
+      </div>
+      <div class="col-lg-8">
+        {% for torta_category in tortacategories %}
+        <h2>{{ torta_category.name }}</h2>
+          {% for torta in tortak %}
+            {% if torta.product_category.name == torta_category.name %}
+              <p><a href="">{{ torta.name }}</a></p>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section>
+  <div class="container maincategories">
+    {% for maincat in productmaincategories %}
+    <div class="row mt-5 mb-5 g-0">  
+
+      {% if forloop.counter|divisibleby:2 %}
+        <div class="col-xl-7 maincategory">
+          <h1>{{ maincat.name }}</h1>
+          <a href=""><button class="btn1">LÁSSAM</button></a>
+        </div>
+        {% else %}
+        <div class="col-xl-5 maincatimgcontainer">
+          <img src="{{ maincat.category_cover.url }}">
+        </div>
+        {% endif %}
+        
+        {% if forloop.counter|divisibleby:2 %}
+        <div class="col-xl-5 maincatimgcontainer">
+          <img src="{{ maincat.category_cover.url }}">
+        </div>
+        {% else %}
+        <div class="col-xl-7 maincategory">
+          <h1>{{ maincat.name }}</h1>
+          <a href=""><button class="btn1">LÁSSAM</button></a>
+        </div>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</section> -->
+{% endblock content %}

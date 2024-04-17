@@ -10,10 +10,10 @@
 		<div class="carousel-inner">
         <div class="carousel-item active">
           <div class="row g-0">
-            <div class="col-6 col-xs-12 carousel-picture">
+            <div class="col-xl-6 d-none d-xl-block">
               <img alt="torta kozeli kep" class="d-block w-100" src="{{ hirek.0.photo_tumb.url }}">
             </div>
-            <div class="col-6 col-xs-12 ">
+            <div class="col-xl-6 col-xs-12 col-sm-12">
                 <div class="vertical-center">
                   <h2>{{ hirek.0.title }}</h2>
                   <p class="animated bounceInLeft d-none d-md-block" style="animation-delay: 2s">{{ hirek.0.content.html|safe }}</p>
@@ -24,13 +24,13 @@
 
       <div class="carousel-item">
         <div class="row g-0">
-          <div class="col-6 col-xs-12 ">
+          <div class="col-xl-6 col-xs-12 col-sm-12">
               <div class="vertical-center">
                 <h2>{{ hirek.1.title }}</h2>
                 <p class="animated bounceInLeft d-none d-md-block" style="animation-delay: 2s">{{ hirek.1.content.html|safe }}</p>
               </div>
           </div>
-          <div class="col-6 col-xs-12">
+          <div class="col-xl-6  d-none d-xl-block">
             <img alt="torta kozeli kep" class="d-block w-100" src={{ hirek.1.photo_tumb.url }}>
           </div>
         </div>
@@ -38,10 +38,10 @@
 
       <div class="carousel-item">
         <div class="row g-0">
-          <div class="col-6 col-xs-12 ">
+          <div class="col-xl-6 d-none d-xl-block">
             <img alt="torta kozeli kep" class="d-block w-100" src={{ hirek.2.photo_tumb.url }}>
           </div>
-          <div class="col-6 col-xs-12 ">
+          <div class="col-xl-6 col-xs-12 col-sm-12">
             <div class="vertical-center">
                 <h2>{{ hirek.2.title }}</h2>
                 <p class="animated bounceInLeft d-none d-md-block" style="animation-delay: 2s">{{ hirek.2.content.html|safe }}</p>

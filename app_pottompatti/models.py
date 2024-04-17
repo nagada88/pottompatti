@@ -53,7 +53,7 @@ class ImageHandlerMixin():
 
 class Hirek(ImageHandlerMixin, models.Model):
     title=models.CharField(max_length=200, verbose_name="Hír cím")
-    content=QuillField(verbose_name = "Hír szövege")
+    content=QuillField(max_length=1000, verbose_name = "Hír szövege")
     photo = models.ImageField(upload_to='app_pottompatti/img/photos/', verbose_name = "kép", default="/app_pottompatti/img/bakery.jpg")
     photo_tumb = models.ImageField(upload_to='app_pottompatti/img/thumbs/', editable=False) 
 
@@ -69,7 +69,7 @@ class Hirek(ImageHandlerMixin, models.Model):
         verbose_name_plural = 'Hírek'
 
     def __str__(self):
-        return "Hírek"
+        return self.title
 
 class TerjBeHozzank(models.Model):
     content=QuillField(verbose_name = "Bemutatkozó szöveg")
