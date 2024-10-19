@@ -128,6 +128,63 @@ class AllasLehetoseg(models.Model):
     def __str__(self):
         return "álláslehetőség"
     
+
+class Eskuvo(models.Model):
+    eskuvo_szoveg=QuillField(verbose_name = "Esküvő szöveg")
+
+    def save(self, *args, **kwargs):
+        if not self.pk and Eskuvo.objects.exists():
+        # if you'll not check for self.pk 
+        # then error will also be raised in the update of exists model
+            raise ValidationError('Csak egy esküvői bemutatkozó szöveg lehet bejegyzes lehet')
+        return super(Eskuvo, self).save(*args, **kwargs)
+    
+    class Meta:
+        verbose_name = 'Esküvő szöveg'
+        verbose_name_plural = 'Esküvő szöveg'
+
+    def __str__(self):
+        return "esküvő szöveg"
+    
+class EskuvoKerdezzFelelek(models.Model):
+    eskuvo_kerdes=models.TextField(max_length=300, verbose_name="kérdés", default="")
+    eskuvo_valasz=models.TextField(max_length=300, verbose_name="válasz", default="")
+    
+    class Meta:
+        verbose_name = 'Esküvő kérdezz felelek'
+        verbose_name_plural = 'Esküvő kérdezz felelek objektumok'
+
+    def __str__(self):
+        return self.eskuvo_kerdes
+    
+class Rendezveny(models.Model):
+    rendezveny_szoveg=QuillField(verbose_name = "Rendezvény szöveg")
+
+    def save(self, *args, **kwargs):
+        if not self.pk and Rendezveny.objects.exists():
+        # if you'll not check for self.pk 
+        # then error will also be raised in the update of exists model
+            raise ValidationError('Csak egy rendezvény bemutatkozó szöveg lehet bejegyzes lehet')
+        return super(Rendezveny, self).save(*args, **kwargs)
+    
+    class Meta:
+        verbose_name = 'Rendezvény szöveg'
+        verbose_name_plural = 'Rendezvény szöveg'
+
+    def __str__(self):
+        return "rendezvény szöveg"
+    
+class RendezvenyKerdezzFelelek(models.Model):
+    rendezveny_kerdes=models.TextField(max_length=300, verbose_name="kérdés", default="")
+    rendezveny_valasz=models.TextField(max_length=300, verbose_name="válasz", default="")
+    
+    class Meta:
+        verbose_name = 'Rendezvény kérdezz felelek'
+        verbose_name_plural = 'Rendezvény kérdezz felelek objektumok'
+
+    def __str__(self):
+        return self.rendezveny_kerdes
+    
 class Kapcsolat(models.Model):
     nyitvatartas=models.CharField(max_length=50, verbose_name="nyitvatartás")
     emailcim=models.CharField(max_length=50, default="", verbose_name="email cím")
@@ -143,6 +200,22 @@ class Kapcsolat(models.Model):
     def __str__(self):
         return "Kapcsolat"
     
+class Karrier(models.Model):
+    karrier=QuillField(verbose_name = "Karrier szöveg")
+
+    def save(self, *args, **kwargs):
+        if not self.pk and Karrier.objects.exists():
+        # if you'll not check for self.pk 
+        # then error will also be raised in the update of exists model
+            raise ValidationError('Csak egy karrier szöveg lehet bejegyzes lehet')
+        return super(Karrier, self).save(*args, **kwargs)
+    
+    class Meta:
+        verbose_name = 'Karrier szöveg'
+        verbose_name_plural = 'Karrier szöveg'
+
+    def __str__(self):
+        return "karrier szöveg"
     
 # class ProductMainImg(ImageHandlerMixin, models.Model):
 #     product = models.ForeignKey(Product, on_delete=models.CASCADE)

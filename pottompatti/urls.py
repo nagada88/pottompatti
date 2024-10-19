@@ -30,6 +30,6 @@ urlpatterns = [
 #     )] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
 
 
-admin.site.site_header = "Vackoló Admin"
-admin.site.site_title  = "Vackoló Admin Portál"
-admin.site.index_title = "Üdvözöllek a Vackoló Admin Portál felületén"
+admin.site.site_header = "Pöttöm Patti Admin"
+admin.site.site_title  = "Pöttöm Patti Portál"
+admin.site.index_title = "Üdvözöllek a Pöttöm Patti Portál felületén"

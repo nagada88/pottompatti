@@ -28,6 +28,7 @@
 <script src={% static 'app_pottompatti/js/lightbox-plus-jquery.min.js' %}></script>
 <script src={% static 'app_pottompatti/js/jquery.min.js' %}></script>
 <script src={% static 'app_pottompatti/js/owl.carousel.min.js' %}></script>
+<script type="text/javascript" src={% static 'app_pottompatti/js/htmx.min.js' %} defer></script>
 
 <!-- own css -->
 <link rel="stylesheet" href={% static 'app_pottompatti/bootstrap-5.0.2-dist/css/bootstrap.css' %}>
@@ -50,7 +51,6 @@
 </head>
 
 <body>
-
 <nav id="mynav" class="navbar navbar-expand-xl navbar-light sticky-top navbar-custom">
   <div class="container-fluid">
     <a class="navbar-brand d-md-none" href="#">
@@ -65,20 +65,17 @@
           <a class="nav-link" href="tortak">torták</a>
         </li>
         <li class="nav-item menupoint">
-          <a class="nav-link" href="sutemeny">sütemények</a>
+          <a class="nav-link" href="sutemenyek">sütemények</a>
         </li>
-        <li class="nav-item menupoint">
-          <a class="nav-link" href="eskuvo">esküvő</a>
-        </li>            
         <li class="nav-item menupoint">
           <a class="nav-link" href="rendezvenyek">rendezvények</a>
-        </li>
+        </li>  
         <a class="navbar-brand d-none d-md-block" href="rolunk">
           <img src={% static 'app_pottompatti/img/logo.jpg' %}  alt="">
         </a>
         <li class="nav-item menupoint">
-          <a class="nav-link" href="esemenyek">események</a>
-        </li>
+          <a class="nav-link" href="eskuvo">esküvő</a>
+        </li>          
         <li class="nav-item menupoint">
           <a class="nav-link" href="karrier">karrier</a>
         </li>
@@ -99,39 +96,38 @@
 
 {% endblock content %}
 
-<section>
-  <div class ="container-fluid footer">
-    <div class="row pt-5 pb-2">
-        <div class="col-lg-3 pb-5">
-          <h2>CÍMÜNK</h2>
-          <p>1234 Város<br>
-           14</p>
-        </div>
-        <div class="col-lg-3 pb-xs-5">
-          <h2>NYITVATARTÁS</h2>
-          <p>1234 Város<br>
-          Utca 14</p>
-        </div>
-        <div class="col-lg-3 pt-xs-5">
-          <h2>KONTAKT</h2>
-          <p>email<br>
-          Utca 14</p>
-        </div>        
-        <div class="col-lg-3 pt-xs-5">
-          <h2>SOCIAL</h2>
-          <p>email<br>
-           14</p>
-        </div>
-    </div>
+<div style="flex-grow:1"></div>
+
+<div class ="container-fluid footer">
+  <div class="row pt-5 pb-2">
+      <div class="col-lg-3 pb-5">
+        <h2>CÍMÜNK</h2>
+        <p>1234 Város<br>
+          14</p>
+      </div>
+      <div class="col-lg-3 pb-xs-5">
+        <h2>NYITVATARTÁS</h2>
+        <p>1234 Város<br>
+        Utca 14</p>
+      </div>
+      <div class="col-lg-3 pt-xs-5">
+        <h2>KONTAKT</h2>
+        <p>email<br>
+        Utca 14</p>
+      </div>        
+      <div class="col-lg-3 pt-xs-5">
+        <h2>SOCIAL</h2>
+        <p>email<br>
+          14</p>
+      </div>
   </div>
-</section>
+</div>
 
 <!-- <div class="cookies-eu-banner hidden">
   Az oldal viselkedésalapú cookie-kat használhat. Amennyiben elfogadod, kattints az elfogadom gombra.<a href="{% static 'app_pottompatti/cookie/sutik.pdf' %}" download="cookies">adatvédelmi irányelvek</a> 
   <button>ELFOGADOM</button>
 </div> -->
-
 </body>
 
-<script src={% static 'app_pottompatti/app_pottompatti.js' %}></script>
+<script src={% static 'app_pottompatti/js/app_pottompatti.js' %}></script>
 </html>

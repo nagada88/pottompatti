@@ -1,48 +1,5 @@
-{% extends 'main.html'%}
-{% load static %}       
-{% block content %}
 
-<div class="container eskuvo-szoveg">
-  <div class="row">
-    <div class="col-lg-1"></div>
-    <div class="col-lg-10">
-      <div class="eskuvo-img">
-        <img src={% static 'app_pottompatti/img/torta-carousel-2.jpg' %}> 
-      </div>
-      <h1>{{ eskuvoszoveg.eskuvo_szoveg.html|safe }}</h1>
-    </div>
-    <div class="col-lg-1"></div>
-  </div>
-</div>
-<div class="container">
-    <div class="row accordition-wedding ac-wedd-bg">
-      <div class="col-xl-3"></div>
-      <div class="col-xl-6">
-          <center><h3>Gyakori kérdések</h3></center><br>
-              <div class="accordion accordion-flush" id="accordionExample">
-                {% for kerdesvalasz in kerdezzfelelek %}
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingOne">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{kerdesvalasz.id}}" aria-expanded="true" aria-controls="collapse{{kerdesvalasz.id}}">
-                        {{ kerdesvalasz.eskuvo_kerdes }}
-                      </button>
-                    </h2>
-                    <div id="collapse{{kerdesvalasz.id}}" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                      <div class="accordion-body">
-                        {{ kerdesvalasz.eskuvo_valasz }}<br><br>
-                      </div>
-                    </div>
-                  </div>
-                {% endfor %}
-              </div>
-          </ul></p>
-      </div>
-    </div>
-</div>
-
-<div class="container eskuvo-torta-lista">
-  <center><h1>Elérhető esküvői tortáink</h1>  </center>
-  <div class="row">
+<div class="row">
     {% for torta in tortak %}
         <div class="col-md-6">
             <div class="product-card">
@@ -84,6 +41,3 @@
 
     {% endfor %}
 </div>
-</div>
-
-{% endblock content %}

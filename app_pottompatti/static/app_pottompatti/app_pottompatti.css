@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lekton:ital,wght@0,400;0,700;1,400&family=Oleo+Script+Swash+Caps:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 
 /* ---------------------------------------- */
 /* COL-XS */
@@ -277,7 +278,6 @@ hr.half-width{
     text-transform: uppercase;
     font-weight: 700;
     padding-bottom: 30px;
-    padding-tp
 }
 
 .carousel-item h2:after{
@@ -537,6 +537,8 @@ hr.half-width{
   background-color: #A2B49C;
   text-align: center;
   color: white;
+  position: sticky;
+  top: 100%;
 }
 
 .footer h2{
@@ -678,17 +680,19 @@ hr.half-width{
 
 .wrapper-img{
   overflow:hidden;
-  height: 250px;
+  height: 11rem;
+  width: 11rem;
   margin-top: 3px;
-  border-radius: 20px;
+  border-radius: 5px;
 }
 
 .tortapic{
-  height: 300px;
-  display: flex;
+  height:100%;
+  width:100%;
   overflow: hidden;
-  border-radius: 20px;
+  border-radius: 5px;
   transition: transform 1s ease;
+  object-fit: cover;
 }
 
 .cover{
@@ -702,7 +706,210 @@ hr.half-width{
   transform: rotate(2deg) scale(1.1);
 }
 
-  /* div { outline: 1px dashed blue } span { outline: 1px dashed green }
+.product-card{
+  border-bottom: 1px solid rgb(224, 224, 224);
+  overflow: hidden; /* add this to contain floated children */
+  margin: 20px;
+  padding: 20px;
+  display:flex;
+  transition: box-shadow 0.3s ease-in-out;
+  font-family: "Karla", sans-serif;
+}
+
+.product-card:hover{
+  box-shadow: 10px 10px 5px rgba(233, 233, 233, 0.699);
+}
+
+.product-card-body{
+  padding-left: 2rem;
+  margin-top: 0.5rem;
+  position: relative;
+}
+
+.categories{
+  font-family: "Karla", sans-serif;
+  padding-left: 3rem;
+  padding-top: 40px;
+}
+
+.category-tag{
+  color: rgb(136, 114, 114);
+}
+
+body{
+  min-height: 100vh;
+}
+
+.btn-outline-dark{
+  position: absolute;
+  bottom: 0px;
+  /* right: -10px; */
+}
+
+.modal-dialog{
+  font-family: "Karla", sans-serif;
+}
+
+.modal-footer{
+  border-top: none;
+}
+
+.modal-header{
+  border-bottom: none;
+  padding-bottom: 0.2rem;
+}
+
+.accordition-wedding{
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  font-family: "Karla", sans-serif;
+  min-height: 500px;
+}
+
+.ac-wedd-bg{
+  background-image: url("/static/app_pottompatti/img/wedding-pattern.jpg"); /* Kép megadása */
+  background-repeat: repeat; /* Ez az alapértelmezett, de biztosan megadhatod */
+}
+
+.accordition-wedding h3{
+  font-size: 36px;
+  font-family: "Lekton", sans-serif;  
+}
+
+/* Az accordion header háttérszínének eltávolítása */
+.accordion-button, .accordion, .accordion-item{
+  background-color: transparent !important; /* Átlátszóvá teszi a hátteret */
+  border: none; /* Ha a szegélyt is el akarod tüntetni */
+}
+
+.accordion-button{
+  font-size: 24px;
+}
+
+.accordion-header{
+  font-family: "Lekton", sans-serif;
+}
+
+.accordion-button:not(.collapsed){
+  color: #000000;
+}
+
+/* Az accordion body háttérszínének eltávolítása */
+.accordion-body {
+  background-color: transparent !important; /* Átlátszóvá teszi a test hátterét */
+}
+
+.accordion-button:focus{
+  border: none;
+  box-shadow: none;
+}
+
+.eskuvo-szoveg{
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  font-family: "Karla", sans-serif;  
+}
+
+.eskuvo-szoveg h3, h4, h1{
+  font-family: "Lekton", sans-serif;
+}
+
+.eskuvo-img img{
+  width: 100%;
+  height: 100%;
+  padding-bottom: 3rem;
+}
+
+.eskuvo-torta-lista{
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.eskuvo-torta-lista h1{
+  padding-top:10px;
+  padding-bottom:10px;
+  font-family: "Lekton", sans-serif;  
+}
+
+/* ********************************************** */
+/* KAPCSOLAT */
+/* ********************************************** */
+.form-group{
+  font-size: 19px;
+  padding-top: 3rem;
+  text-align: center;
+}
+
+.form-group a img{
+  height: 40px;
+  transition: 0.1s linear;
+}
+
+.form-group a img:hover{
+  transform: scale(1.1);
+}
+
+.form-field{
+  text-align:left;
+}
+
+.kapcsolat-paw{
+  height: 100px !important;
+}
+
+.form-control{
+  border-radius: 355px 45px 225px 75px/15px 225px 15px 255px;
+}
+
+.contact-button {
+    color: white;
+    font-size: 14px;
+    display: block;
+    border-radius: 30px;
+    background-color: #A2B49C;
+    padding: 6px;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.3s linear;
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 4px 0 6px 0px rgba(0, 0, 0, 0.15);
+    width: 70%;
+}
+
+.contact-button:hover {
+    background-color: gray;
+    color: white;
+}
+
+.btn:hover{
+    color: #fff;
+    background: #A2B49C;
+}
+
+.btn::after:hover{
+    filter:alpha(opacity=70) !important;
+}
+
+.btn {
+  border-radius: 12px;
+  -webkit-box-shadow: 0 0 16px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.07);
+  background: #fff;
+  padding: 17px;
+  font-weight: 500;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  transition-property: all;
+  -webkit-transition-property: background, color;
+  transition-property: background, color;
+  display: inline-block;
+  font-size: 20px;
+  color: #000;
+  letter-spacing: 0.0001vw;
+  font-family: "Lekton", sans-serif;
+}
+
+/* div { outline: 1px dashed blue } span { outline: 1px dashed green }
 
   div { 
       border: 1px solid rgb(0, 0, 0);

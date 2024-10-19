@@ -8,9 +8,10 @@ urlpatterns = [
     re_path(r'kapcsolat', views.kapcsolat, name='kapcsolat'),
     re_path(r'uzletunk', views.sikeresmail, name='uzletunk'),
     re_path(r'tortak', views.tortak, name='tortak'),
-    re_path(r'sutemeny', views.sutemeny, name='sutemeny'),
+    path('sutemenyek', views.sutemenyek, name='sutemenyek'),
     re_path(r'eskuvo', views.eskuvo, name='eskuvo'),
     re_path(r'rendezvenyek', views.rendezvenyek, name='rendezvenyek'),
-    re_path(r'esemenyek', views.esemenyek, name='esemenyek'),
     re_path(r'karrier', views.karrier, name='karrier'),
+    path('filter-cakes/', views.filter_cakes, name='filter_cakes'),
+    path('filter-sutemenyek/', views.filter_sutemenyek, name='filter_sutemenyek'),
     ]
