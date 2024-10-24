@@ -105,7 +105,7 @@ class ProductCategory(models.Model):
         return self.name
 
 class Product(ImageHandlerMixin, models.Model):
-    product_category = models.ForeignKey(ProductCategory, on_delete=models.CASCADE)
+    product_category = models.ForeignKey(ProductCategory, on_delete=models.CASCADE, verbose_name="kategória")
     name = models.CharField(max_length=200, verbose_name="név", default="termek")
     description = models.TextField(max_length=300, verbose_name="termék leírás", default="leírás később érkezik")
     photo = models.ImageField(upload_to='app_pottompatti/img/photos/', verbose_name = "kép", default="/app_pottompatti/img/bakery.jpg")

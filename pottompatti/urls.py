@@ -32,4 +32,4 @@ urlpatterns = [
 
 admin.site.site_header = "Pöttöm Patti Admin"
 admin.site.site_title  = "Pöttöm Patti Portál"
-admin.site.index_title = "Üdvözöllek a Pöttöm Patti Portál felületén"
+admin.site.index_title = "Üdvözöllek a Pöttöm Patti Portál admin felületén"

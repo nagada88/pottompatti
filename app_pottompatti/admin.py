@@ -33,8 +33,18 @@ class EskuvoAdmin(InstanceCounterMixin1, admin.ModelAdmin):
 class TerjBeHozzankAdmin(InstanceCounterMixin1, admin.ModelAdmin):
     model = TerjBeHozzank
 
+class ProductAdmin(admin.ModelAdmin):
+    list_filter = ['product_category']
+    list_display = ['name', 'product_category']
+
+    class Media:
+        css = {
+            'all': ('app_pottompatti/fancy.css',)
+        }
+
+
 admin.site.register(ProductCategory)
-admin.site.register(Product)
+admin.site.register(Product, ProductAdmin)
 admin.site.register(Hirek)
 admin.site.register(TerjBeHozzank, TerjBeHozzankAdmin)
 admin.site.register(Kapcsolat, KapcsolatAdmin)

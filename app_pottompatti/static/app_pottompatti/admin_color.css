@@ -2,7 +2,13 @@
     color: #A2B49C;
 }
 
+#nav-sidebar .current-app .section:link{
+    color: #000000;
+}
 
+#nav-sidebar .current-app .section:visited{
+    color: #000000;
+}
 
 a.section:link, a.section:visited {
   color: black;
@@ -10,7 +16,7 @@ a.section:link, a.section:visited {
 }
 
 #header {
-    background: #A2B49C;
+    background: #ffffff;
     color: black;
 }
 #header a:link, #header a:visited {
@@ -21,10 +27,18 @@ a.section:link, a.section:visited {
     color: black;
 }
 
-div.breadcrumbs {
-    background: #39743a;
-    color: #A2B49C;
+.navbar-brand img {
+    height: 50px;  /* A logó magassága */
+    width: 50px;
+    margin-right: 10px;  /* Térköz a logó és a szöveg között */
+    border-radius: 50%;
 }
+
+div.breadcrumbs, div.breadcrumbs a {
+    background: #ffffff; 
+    color: #000000;
+}
+
 div.breadcrumbs a.active {
     color: #000000;
 !important;
@@ -45,7 +59,8 @@ div.breadcrumbs a:focus, div.breadcrumbs a:hover {
 }
 
 .button, input[type=submit], input[type=button], .submit-row input, a.button {
-    background: #39743a;
+    background: #FFE1E1;
+    color: #000;
 }
 .button:hover, input[type=submit]:hover, input[type=button]:hover {
     background: #878787;
@@ -53,10 +68,12 @@ div.breadcrumbs a:focus, div.breadcrumbs a:hover {
 
 .module h2, .module caption, .inline-group h2 {
     background: #FFE1E1;
+    color:  #000000;
 }
+
 #user-tools a:focus, #user-tools a:hover {
     border: 0;
-    color:  #000000;;
+    color:  #000000;
 }
 
 .selector-chosen h2 {
@@ -135,7 +152,7 @@ a.active.selector-chooseall:hover, a.active.selector-clearall:hover {
 }
 
 .button.default:hover, input[type=submit].default:hover {
-    background: #191D22;
+    background: #878787;
 }
 
 .select2-container--admin-autocomplete .select2-results__option--highlighted[aria-selected] {

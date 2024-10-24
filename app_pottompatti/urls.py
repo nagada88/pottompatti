@@ -14,4 +14,5 @@ urlpatterns = [
     re_path(r'karrier', views.karrier, name='karrier'),
     path('filter-cakes/', views.filter_cakes, name='filter_cakes'),
     path('filter-sutemenyek/', views.filter_sutemenyek, name='filter_sutemenyek'),
+    path("cookies/", include("cookie_consent.urls")),
     ]
