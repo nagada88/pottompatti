@@ -30,7 +30,6 @@ DEBUG = True
 ALLOWED_HOSTS = ['*']
 
 # Application definition
-APPEND_SLASH = False
 
 INSTALLED_APPS = [
     'app_pottompatti',
