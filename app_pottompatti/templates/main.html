@@ -76,26 +76,21 @@
         <li class="nav-item menupoint">
           <a class="nav-link" href="sutemenyek">sütemények</a>
         </li>
-        <li class="nav-item menupoint">
-          <a class="nav-link" href="rendezvenyek">rendezvények</a>
-        </li>  
+
         <a class="navbar-brand d-none d-md-block" href="rolunk">
           <img src={% static 'app_pottompatti/img/logo.jpg' %}  alt="">
         </a>
         <li class="nav-item menupoint">
-          <a class="nav-link" href="eskuvo">esküvő</a>
+          <a class="nav-link" href="eskuvo">eseményekre</a>
         </li>          
-        <li class="nav-item menupoint">
-          <a class="nav-link" href="karrier">karrier</a>
-        </li>
         <li class="nav-item menupoint">
           <a class="nav-link" href="kapcsolat">kapcsolat</a>
         </li>
-        <li class="social">
+        <!-- <li class="social">
           <a href="https://www.instagram.com/pottompatti/" target="blank"><i class="fa-brands fa-instagram socicon"></i></a>
           <a href="https://www.facebook.com/pottompatti" target="blank"><i class="fa-brands fa-facebook-f socicon"></i></a>
           <a href="https://www.tiktok.com/@pottompatti" target="blank"><i class="fa-brands fa-tiktok socicon"></i></a>
-        </li>
+        </li> -->
       </ul>
     </div>
   </div>
@@ -115,66 +110,18 @@
   </div>
 </template>
 
-<!-- <div style="flex-grow:1"></div>
-
-<div class ="container-fluid footer">
-  <div class="row pt-5 pb-2">
-      <div class="col-lg-3 pb-5">
-        <h2>CÍMÜNK</h2>
-        <p>{{ kapcsolat.adress }}<br>
-      </div>
-      <div class="col-lg-3 pb-xs-5">
-        <h2>NYITVATARTÁS</h2>
-        <p>{{ kapcsolat.nyitvatartas }}</p><br>
-
-      </div>
-      <div class="col-lg-3 pt-xs-5">
-        <h2>KONTAKT</h2>
-        <p>{{ kapcsolat.emailcim }}</p><br>
-
-      </div>        
-      <div class="col-lg-3 pt-xs-5">
-        <h2>SOCIAL</h2>
-        <p>{{ kapcsolat.facebook }}</p><br>
-
-      </div>
-  </div>
-</div> -->
-
-<!-- <div class="cookies-eu-banner hidden">
-  Az oldal viselkedésalapú cookie-kat használhat. Amennyiben elfogadod, kattints az elfogadom gombra.<a href="{% static 'app_pottompatti/cookie/sutik.pdf' %}" download="cookies">adatvédelmi irányelvek</a> 
-  <button>ELFOGADOM</button>
-</div> -->
-
 </body>
 
-
-{% all_cookie_groups 'cookie-consent__cookie-groups' %}
-
-{% static "cookie_consent/cookiebar.module.js" as cookiebar_src %}
-{% url 'cookie_consent_status' as status_url %}
-
-<script type="module">
-
-import {showCookieBar} from '{{ cookiebar_src }}';
-function onAccept(event, cookieGroups) {
-    const analyticsEnabled = cookieGroups.find(group => group.varname === 'google') != undefined;
-    if (analyticsEnabled) {
-        const template = document.getElementById('google').content;
-        const analyticsScripts = templateNode.content.cloneNode(true);
-        document.body.appendChild(analyticsScripts);
-    }
-}
-
-showCookieBar({
-  statusUrl: '{{ status_url|escapejs }}',
-  templateSelector: '#cookie-consent__cookie-bar',
-  cookieGroupsSelector: '#cookie-consent__cookie-groups',
-  onShow: () => document.querySelector('body').classList.add('with-cookie-bar'),
-  onAccept: () => document.querySelector('body').classList.remove('with-cookie-bar'),
-  onDecline: () => document.querySelector('body').classList.remove('with-cookie-bar'),
-});
-</script>
-
 <script src={% static 'app_pottompatti/js/app_pottompatti.js' %}></script>
+<script>
+  document.addEventListener("scroll", function(){
+      const navbar = document.getElementById("mynav");
+      if(window.scrollY > 50){
+          navbar.classList.add("scrolled");
+      } else {
+          navbar.classList.remove("scrolled");
+      }
+  });
+  </script>
+  
 </html>

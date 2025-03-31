@@ -2,133 +2,157 @@
 {% load static %}       
 {% block content %}
 
-<div class="carousel main-text slide" data-bs-ride="carousel" id="carouselExampleIndicators" data-bs-pause="false">
-		<div class="carousel-indicators">
-			<button aria-label="Slide 1" class="active" data-bs-slide-to="0" data-bs-target="#carouselExampleIndicators" type="button"></button> <button aria-label="Slide 2" data-bs-slide-to="1" data-bs-target="#carouselExampleIndicators" type="button"></button> <button aria-label="Slide 3" data-bs-slide-to="2" data-bs-target="#carouselExampleIndicators" type="button"></button>
-		</div>
+<div class="hero-image">
+  <p class="cseppnyi">Egy cseppnyi <i>boldogság</i></p>
+  <img src={% static 'app_pottompatti/img/background_cake.png' %} class="logo" alt="Logo">
+  <button class="btn btn-order">Rendelek!</button>
+  <p class="minden-falat"> <i>minden</i> falatban</p>
+</div>
 
-		<div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="row g-0">
-            <div class="col-xl-6 d-none d-xl-block">
-              <img alt="torta kozeli kep" class="d-block w-100" src="{{ hirek.0.photo_tumb.url }}">
-            </div>
-            <div class="col-xl-6 col-xs-12 col-sm-12">
-                <div class="vertical-center">
-                  <h2>{{ hirek.0.title }}</h2>
-                  <p class="animated bounceInLeft d-none d-md-block" style="animation-delay: 2s">{{ hirek.0.content.html|safe }}</p>
+<div class="container-fluid filler">
+  <center><img src="{% static 'app_pottompatti/img/filler.png' %}"></img></center>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <h1><i>Nézd meg, hol születnek a város legédesebb pillanatai!</i></h1>
+      <p class="bordered">
+        Lépj be hozzánk, ahol a friss alapanyagok, a gondos kezek és a kreativitás találkoznak, hogy életre keltsék a legfinomabb süteményeket és tortákat. 
+        Itt minden falatban benne van a szenvedélyünk és a minőség, amitől a hétköznapok is ünneppé válnak. Gyere, és tapasztald meg személyesen az ízek varázsát!
+      </p>
+    </div>
+  </div>
+</div>
+
+ <div class="container-fluid gallery-custom">
+  <div class="row g-0">
+
+      <!-- Col 1 -->
+      <div class="col-12 col-xl-4">
+          <div class="gallery-item" style="height:900px;">
+              <img src="{% static 'app_pottompatti/img/patti_shake.jpg' %}" alt="Patti shake-el a kezében">
+          </div>
+      </div>
+
+<!-- Második oszlop -->
+<div class="col-12 col-xl-4">
+  <div class="row g-0">
+
+      <!-- első sor -->
+      <div class="col-12 gallery-item" style="height:300px;">
+          <img src="{% static 'app_pottompatti/img/sutik.jpg' %}" alt="Szép sütemények">
+      </div>
+
+      <!-- második + harmadik sor -->
+      <div class="col-12">
+          <div class="row g-0" style="height:600px;">
+
+              <!-- bal oldal -->
+              <div class="col-6 d-flex flex-column">
+
+                  <div class="gallery-item offset-top" style="height:300px;">
+                      <img src="{% static 'app_pottompatti/img/limonadek.jpg' %}" alt="Limonadék">
+                  </div>
+
+                  <div class="gallery-item" style="height:300px;">
+                      <img src="{% static 'app_pottompatti/img/kremes_suti_kek_tanyeron.jpg' %}" alt="Krémes süti kék tányéron">
+                  </div>
+
+              </div>
+
+              <!-- jobb oldal -->
+              <div class="col-6 gallery-item" style="height:600px;">
+                  <img src="{% static 'app_pottompatti/img/poharkrem_kinalat.jpg' %}" alt="Pohárkrém kínálat">
+              </div>
+
                 </div>
-              </div>
-          </div>
-      </div>
-
-      <div class="carousel-item">
-        <div class="row g-0">
-          <div class="col-xl-6 col-xs-12 col-sm-12">
-              <div class="vertical-center">
-                <h2>{{ hirek.1.title }}</h2>
-                <p class="animated bounceInLeft d-none d-md-block" style="animation-delay: 2s">{{ hirek.1.content.html|safe }}</p>
-              </div>
-          </div>
-          <div class="col-xl-6  d-none d-xl-block">
-            <img alt="torta kozeli kep" class="d-block w-100" src={{ hirek.1.photo_tumb.url }}>
-          </div>
-        </div>
-      </div>
-
-      <div class="carousel-item">
-        <div class="row g-0">
-          <div class="col-xl-6 d-none d-xl-block">
-            <img alt="torta kozeli kep" class="d-block w-100" src={{ hirek.2.photo_tumb.url }}>
-          </div>
-          <div class="col-xl-6 col-xs-12 col-sm-12">
-            <div class="vertical-center">
-                <h2>{{ hirek.2.title }}</h2>
-                <p class="animated bounceInLeft d-none d-md-block" style="animation-delay: 2s">{{ hirek.2.content.html|safe }}</p>
-              </div>
             </div>
+
         </div>
-
       </div>
-		</div>
 
+
+      <!-- Col 3 -->
+      <div class="col-12 col-xl-4">
+          <div class="row g-0">
+
+              <div class="col-6 gallery-item" style="height:300px;">
+                  <img src="{% static 'app_pottompatti/img/poharkrem_es_shake.jpg' %}" alt="Pohárkrém és shake">
+              </div>
+
+              <div class="col-6 gallery-item" style="height:300px;">
+                  <img src="{% static 'app_pottompatti/img/karamellas_shake.jpg' %}" alt="Karamellás shake">
+              </div>
+
+              <div class="col-12 gallery-item offset-top" style="height:600px;">
+                  <img src="{% static 'app_pottompatti/img/vendeg_sutit_eszi.jpg' %}" alt="Vendég sütit eszik">
+              </div>
+
+          </div>
+      </div>
+
+  </div>
 </div>
 
-<section class="section-activities">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col">
-        <h1>PATTI TÖRTÉNETE</h1><hr class="half-width"><br><br>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xl-3 card-1">
-        <div class="flip-card activity-card">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <h2>Az ELSŐ tortám</h2>
-            </div>
-            <div class="flip-card-back">
-              <img src={% static 'app_pottompatti/img/torta-carousel-2.jpg' %}>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-xl-3 card-2">
-        <div class="flip-card activity-card">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <h2>2019</h2>
-            </div>
-            <div class="flip-card-back">
-              <p>Megnyílt Pöttöm Patti üzlete Kazincbarcikán</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-xl-3 card-3">
-        <div class="flip-card activity-card">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <h2>2021</h2>
-            </div>
-            <div class="flip-card-back">
-              <p>Kávézási lehetőség és sós süteméyek is várják</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-xl-3 card-4">
-        <div class="flip-card activity-card">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <h2>2024</h2>
-            </div>
-            <div class="flip-card-back">
-              <p>Három közösségi média platform után már honlapon válogathatsz</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="parallax">
-  <h1>Jártál már nálunk?</h1>
+<div class="container-fluid filler">
+  <center><img src="{% static 'app_pottompatti/img/filler.png' %}"></img></center>
 </div>
 
-<section class="jartalnalunk">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-xl-6 jartalnalunk-text">
-        <p class="animated bounceInLeft d-none d-md-block" style="animation-delay: 2s">{{ terjbe.content.html|safe  }}</p>
-      </div>
-      <div class="col-xl-6 img-container">
-        <img alt="torta kozeli kep" src={% static 'app_pottompatti/img/tea-room.jpg' %}>
-      </div>
+<h1><i>Édes újdonságok minden évszakban!</i></h1>
+<div class="container-fluid pt-5">
+  <div class="row">
+    <div class="col-lg-6 col-12">
+      <img src="{% static 'app_pottompatti/img/ajanlatok_image_hatterrel.png' %}" style="max-width: 80%; padding-left: 100px;"/>
+    </div>
+    <div class="col-lg-6 col-12">
+      <p class="bordered1">
+          Nálunk mindig édes meglepetések várnak! 🍰🎉  <br><br>
+
+          Cukrászdánkban <b>aktuális újdonságok és szezonális finomságok</b> folyamatosan gondoskodnak róla, hogy minden látogatás különleges legyen. <br><br>
+
+          Ne felejtsd el követni Facebook-oldalunkat, ahol elsőként értesülhetsz legfrissebb kínálatunkról és ínycsiklandó akcióinkról! 🍩✨ <br><br>
+      </p>
+      <button class="btn btn-discover">Fedezd fel!</button>
     </div>
   </div>
-</section>
+</div>
 
+<div class="container-fluid filler">
+  <center><img src="{% static 'app_pottompatti/img/filler.png' %}"></img></center>
+</div>
+
+<div class="container-fluid rolam pb-5">
+  <div class="row pt-5 pb-5"><h1><i>Rólam</i></h1></div>
+  <div class="row">
+    <div class="col-xl-6 col-12">
+      <img src="{% static 'app_pottompatti/img/Patti.jpg' %}" style="max-width: 100%; margin-left: -100px;"/ alt="Patrícia, tulajdonos">
+    </div>
+    <div class="col-xl-6 col-12 pt-5">
+      <h2><i>Szia, Patrícia vagyok</i></h2>
+      <p>
+        a Pöttöm Patti cukrászda tulajdonosa, üzemeltetője, 
+        főcukrásza, felszolgálója, takarítója, egyszóval a lelke!<br><br>
+        
+        Sokan kérdezitek, hogy miért épp Kazincbarcikán nyitottam 
+        meg ezt a kis ékszerdobozt?
+        Úgy gondolom, hogy valami jót és jól csinálni nemcsak a 
+        nagyvárosokban lehet, a vidéki életnek is szüksége van olyan 
+        gyöngyszemekre, ahol valódi minőséget adunk az 
+        embereknek! <br><br>
+        
+        Miért utaznál kilométereket egy finom desszertért, ha itthon is 
+        kaphatsz?
+        Engem ez motivál és ezért készítek nektek minden nap 
+        szívből jövő receptúrákat!<br><br>
+        
+        Ha még nem kóstoltad a sütijeimet, akkor ma gyere el 
+        hozzánk és kérj a desszert mellé egy melengető teát, vagy 
+        kávét is!<br><br>
+        
+        Én itt leszek!
+      </p>
+    </div>
+  </div>
+</div>
 {% endblock content %}

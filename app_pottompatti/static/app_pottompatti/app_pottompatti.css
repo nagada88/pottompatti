@@ -1,11 +1,25 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
-@import url('https://fonts.googleapis.com/css?family='Roboto', sans-serif');
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lekton:ital,wght@0,400;0,700;1,400&family=Oleo+Script+Swash+Caps:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
 
+
+h1 {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 50px;
+  color: #4E6661;
+}
+
+h2 {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 35px;
+  color: #4E6661;
+}
 /* ---------------------------------------- */
 /* COL-XS */
 /* ---------------------------------------- */
@@ -31,6 +45,24 @@
   .activity-card{
     height: 350px;
     width: 350px;
+  }
+
+  .hero-image{
+    margin-top: auto; /* akkora legyen, amilyen magas a navbar */
+  }
+
+  .logo{
+    width: 150px;
+  }
+
+  .cseppnyi{
+    top: 20.4%;
+    font-size: 1rem;
+  }
+  
+  .minden-falat{
+    top: 100.4%;
+    font-size: 1rem;
   }
 }
 
@@ -64,6 +96,25 @@
     height: 350px;
     width: 350px;
   }
+
+  .hero-image{
+    margin-top: auto; /* akkora legyen, amilyen magas a navbar */
+  }
+  .navbar-brand img {
+    width: 80px;
+  }
+
+  .cseppnyi{
+    top: 35.4%;
+    font-size: 50px;
+    margin-left: -30px;
+  }
+  
+  .minden-falat{
+    top: 90.4%;
+    font-size: 50px;
+    margin-left: -30px;
+  }
 }
 
 
@@ -75,6 +126,10 @@
 
   .social{
     min-width: 200px;
+  }
+
+  .navbar-brand img {
+    width: 80px;
   }
 
   .vertical-center{
@@ -109,25 +164,17 @@
     padding-right: 120px;
   }
 
-  .card-1{
-
-  }
-  
-  .card-2{
-    padding-top: 100px;
-  }
-  
-  .card-3{
-    padding-top: 200px;
-  }
-  
-  .card-4{
-    padding-top: 300px;
-  }
-
   .activity-card{
     height: 300px;
     width: 300px;
+  }
+
+  .hero-image{
+    margin-top: -140px; /* akkora legyen, amilyen magas a navbar */
+  }
+
+  .logo{
+    width: 400px;
   }
 }
 
@@ -174,9 +221,9 @@ hr.half-width{
 /* ********************************************** */
 
 .navbar-brand img {
-  width: 80px;
   border-radius: 50%;
   transition: 0.2s linear;
+  height: 80px;
 }
 
 .navbar-brand img:hover {
@@ -184,11 +231,11 @@ hr.half-width{
 }
 
 .navbar-light{
-  background: #fff;
-  font-family: "Kumbh Sans", sans-serif;
+  background: transparent !important;
+  font-family: "Mulish", sans-serif;
+  font-weight: 200;
   text-transform: uppercase;
-  font-weight: bold;
-  font-size: 14px;
+  font-size: 22px;
   color: #000000 !important;
   -webkit-box-shadow: 0 8px 6px -6px #999;
   -moz-box-shadow: 0 8px 6px -6px #999;
@@ -199,6 +246,7 @@ hr.half-width{
   align-items: center;
   flex: 1;
   margin: auto !important;
+  max-width: 80%;
 }
 
 .navbar-nav a{
@@ -213,7 +261,7 @@ hr.half-width{
 
 @media screen and (min-width: 1200px) {
   .navbar-brand img {
-    width: 100px;
+    width: 80px;
   }
   .navbar-brand {
     margin-right: 0;
@@ -253,6 +301,34 @@ hr.half-width{
     color: #000000 !important;
     display: inline-block;
 } */
+
+
+/* Alapállapot */
+.navbar-light {
+  background: transparent !important;
+  transition: all 0.3s ease;
+}
+
+/* Görgetéskor */
+.navbar-light.scrolled {
+  background: white !important;
+  box-shadow: 0 4px 6px -4px #999;
+  height: 80px;
+}
+
+/* Magasság animáció */
+#navbarNav,
+.navbar-nav {
+  transition: all 0.3s ease;
+}
+
+/* Eredeti magasság */
+@media (min-width: 1200px) {
+  .navbar-light {
+      height: 120px;
+  }
+}
+
 
 /* ********************************************** */
 /* CAROUSEL */
@@ -342,10 +418,7 @@ hr.half-width{
     padding: 3vw 5VW;
     padding-bottom: 5vw;
     text-align: center;
-}
-
-.section-activities h1{
-
+    margin-top: 100vh; /* Eltolja az első tartalmi blokkot a hero image alá */
 }
 
 .activity-card{
@@ -475,18 +548,6 @@ hr.half-width{
   background-color: rgba(255,255,255,0.7);
   background-blend-mode: lighten;
   background-image: url("/static/app_pottompatti/img/bakery.jpeg");
-}
-
-.parallax h1{
-  color: #000000;
-  font-size: 4rem;
-  text-align: center;
-  padding-top: 150px;
-  opacity: 100% !important;
-  font-family: "Oleo Script Swash Caps", system-ui;
-  font-weight: 700;
-  font-style: normal;
-  letter-spacing: 1rem;
 }
 
 /* ********************************************** */
@@ -810,7 +871,7 @@ body{
   font-family: "Karla", sans-serif;  
 }
 
-.eskuvo-szoveg h3, h4, h1{
+.eskuvo-szoveg h3, h4{
   font-family: "Lekton", sans-serif;
 }
 
@@ -909,6 +970,129 @@ body{
   font-family: "Lekton", sans-serif;
 }
 
+
+.hero-image {
+  position: relative; 
+  background-image: url("/static/app_pottompatti/img/background_base.png");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  padding-top: 56.25%; /* = 4500 / 8000 arány */
+}
+
+
+.hero-image p{
+  position: absolute;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;   
+  width: 100%;
+  color: #4E6661;
+}
+
+.logo {
+  position: absolute;   /* a szülőhöz fog igazodni */
+  top: 69.2%;
+  left: 52.5%;
+  transform: translate(-68.4%, -52%); /* vagy inkább responsive: max-width: 20vw */
+  height: auto;
+}
+
+.btn-order {
+  position: absolute;
+  top: 58%;
+  left: 34.5%;
+  background: white;
+  color: #4E6661;
+  border: 2px solid #4E6661;
+  border-radius: 30px; /* szép lekerekítés */
+  padding: 10px 25px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  margin-left: 200px;
+}
+
+.btn-order:hover {
+  background: #4E6661;
+  color: white;
+  border-color: #4E6661;
+}
+
+.filler{
+  padding: 10vw 0;
+}
+
+p.bordered {
+  border-left: 2px solid #4E6661;
+  border-right: 2px solid #4E6661;
+  padding: 0.5rem 1rem;
+  max-width: 800px;
+  margin: 2rem auto;
+  text-align: center;
+  font-family: "Mulish", sans-serif;
+}
+
+.gallery-custom{
+  overflow: hidden;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-item img.offset-top {
+  object-position: center -100px; /* felfelé tolja a képet */
+}
+
+
+p.bordered1 {
+  border-left: 2px solid #92beb5;
+  padding: 0.5rem 1rem;
+  max-width: 600px;
+  margin-top: 200px;
+  text-align: left;
+  font-family: "Mulish", sans-serif;
+}
+
+.btn-discover {
+  background: white;
+  color: #EBAEB4;
+  border: 2px solid #EBAEB4;
+  border-radius: 30px; /* szép lekerekítés */
+  padding: 10px 25px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  margin-left: 200px;
+}
+
+.btn-discover:hover {
+  background: #EBAEB4;
+  color: white;
+  border-color: #EBAEB4;
+}
+
+.rolam{
+  background-color: #FFF4F9;
+}
+
+.rolam p{
+  max-width: 600px;
+  margin-top: 20px;
+  text-align: left;
+  font-family: "Mulish", sans-serif; 
+}
 /* div { outline: 1px dashed blue } span { outline: 1px dashed green }
 
   div { 
