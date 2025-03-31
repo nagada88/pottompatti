@@ -404,7 +404,7 @@ hr.half-width{
   border-bottom: 10px solid transparent;
   opacity: .5;
   transition: opacity .6s ease;
-  border-radius: 100%; // /* add border-radius */
+  border-radius: 100%; 
 }
 
 .carousel-indicators  [data-bs-target].active{
@@ -689,7 +689,6 @@ hr.half-width{
 .socicon{
   transition: 0.1s linear;
   transform:scale(1.2);
-  -webkit-backface-visibility: hidden;
   color: #969595;
 }
 

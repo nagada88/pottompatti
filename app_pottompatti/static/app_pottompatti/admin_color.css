@@ -102,7 +102,6 @@ div.breadcrumbs, div.breadcrumbs a {
 
 div.breadcrumbs a.active {
     color: #000000;
-!important;
     font-weight: 300;
 }
 
