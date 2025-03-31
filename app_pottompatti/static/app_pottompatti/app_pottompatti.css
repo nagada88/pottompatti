@@ -8,7 +8,7 @@ h1 {
   font-optical-sizing: auto;
   font-weight: 200;
   font-style: normal;
-  font-size: 50px;
+  font-size: clamp(1.5rem, 3vw, 5rem);
   color: #4E6661;
 }
 
@@ -56,13 +56,24 @@ h2 {
   }
 
   .cseppnyi{
-    top: 20.4%;
-    font-size: 1rem;
+    top: 15.4%;
   }
   
   .minden-falat{
     top: 100.4%;
-    font-size: 1rem;
+  }
+  
+  .btn-order{
+  top: 48%;
+  left: 38.5%;
+  border-radius: 30px; /* szép lekerekítés */
+  padding: 5px 10px;
+  font-weight: 500;
+  }
+
+  .logo{
+    top: 69.2%;
+    left: 56.5%;
   }
 }
 
@@ -75,6 +86,14 @@ h2 {
     padding-top: 5px;
     padding-bottom: 5px;
   }
+  
+  .btn-order{
+    top: 58%;
+    left: 44.9%;
+    border-radius: 30px; /* szép lekerekítés */
+    padding: 15px 35px;
+    font-weight: 500;
+    }
 
   .carousel{
     margin: 10px 20px;
@@ -114,6 +133,10 @@ h2 {
     top: 90.4%;
     font-size: 50px;
     margin-left: -30px;
+  }
+  .logo{
+    top: 69.2%;
+    left: 52.5%;
   }
 }
 
@@ -595,9 +618,8 @@ hr.half-width{
 /* FOOTER */
 /* ********************************************** */
 .footer{
-  background-color: #A2B49C;
   text-align: center;
-  color: white;
+  color: #4E6661;
   position: sticky;
   top: 100%;
 }
@@ -993,24 +1015,16 @@ body{
 
 .logo {
   position: absolute;   /* a szülőhöz fog igazodni */
-  top: 69.2%;
-  left: 52.5%;
   transform: translate(-68.4%, -52%); /* vagy inkább responsive: max-width: 20vw */
   height: auto;
 }
 
 .btn-order {
   position: absolute;
-  top: 58%;
-  left: 34.5%;
   background: white;
   color: #4E6661;
   border: 2px solid #4E6661;
-  border-radius: 30px; /* szép lekerekítés */
-  padding: 10px 25px;
-  font-weight: 500;
   transition: all 0.3s ease;
-  margin-left: 200px;
 }
 
 .btn-order:hover {
@@ -1091,6 +1105,10 @@ p.bordered1 {
   margin-top: 20px;
   text-align: left;
   font-family: "Mulish", sans-serif; 
+}
+
+.cseppnyi, .minden-falat{
+  font-size: clamp(1.5rem, 2vw, 5rem);
 }
 /* div { outline: 1px dashed blue } span { outline: 1px dashed green }
 
