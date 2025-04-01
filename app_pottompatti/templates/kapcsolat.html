@@ -2,60 +2,60 @@
 {% load static %}
 {% block content %}
 
-<div class="container eskuvo-szoveg">
+<div class="container-fluid py-5 kapcsolat">
+  <div class="row divider">
+
+  </div>
   <div class="row">
-    <div class="col-lg-1"></div>
-    <div class="col-lg-10">
-      <center><h1>KAPCSOLAT</h1></center><br>
-      <div class="eskuvo-img">
-        <img src={% static 'app_pottompatti/img/contact.jpg' %}> 
-      </div>
-      <h1>{{ eskuvoszoveg.eskuvo_szoveg.html|safe }}</h1>
+    <!-- Info Box -->
+    <div class="info-box mx-auto mb-5 p-4 col-lg-6 kapcsolat-leiras">
+        <p class="mb-3">
+            Ha már van konkrét elképzelésed, vagy tanácsra van szükséged a tökéletes süti kiválasztásához, írj nekünk bátran az online felületünkön! Örömmel segítünk, hogy pontosan azt kapd, amit megálmodtál. 🍪😊
+        </p>
+        <p>
+            Amint megkaptuk az általad leírtakat, igyekszünk minél hamarabb visszajelezni neked e-mailben vagy telefonon, hogy a lehető leghamarabb a kezedhez kapd a kedvenc finomságaid.
+        </p>
     </div>
-    <div class="col-lg-1"></div>
+
+    <div class="col-lg-6">
+      <!-- Rendelés form -->
+      <h2 class="mb-4 text-center"><i>Add le rendelésed online</i></h2>
+      <div class="form-container">
+        <form method="post" action="">
+            {% csrf_token %}
+            <div class="row g-3">
+
+                <div class="col-12">
+                    <label for="nev" class="form-label">Név*</label>
+                    <input type="text" class="form-control" id="nev" name="nev" required>
+                </div>
+
+                <div class="col-12">
+                    <label for="telefon" class="form-label">Telefonszám*</label>
+                    <input type="tel" class="form-control" id="telefon" name="telefon" required>
+                </div>
+
+                <div class="col-12">
+                    <label for="email" class="form-label">E-mail cím*</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+
+                <div class="col-12">
+                    <label for="rendeles" class="form-label">Rendelés leírása</label>
+                    <textarea class="form-control" id="rendeles" name="rendeles" rows="4" required></textarea>
+                </div>
+
+                <div class="col-12 text-center">
+                    <button type="submit" class="btn btn-discover mt-3">Rendelés elküldése</button>
+                </div>
+
+            </div>
+        </form>
+      </div>
+    </div>
   </div>
 </div>
 
-<div class="container">
-    <div class="row form-group">
-          <div class="col-md-1 col-sm-0"></div>
-          <div class="col-md-5 col-sm-12"><br><br>			
-            <p>
-              Amennyiben bármilyen kérdésed van töltsd ki az űrlapot vagy keress az alábbi elérhetőségeken minket:<br><br>
-            </p>
-            <p>
-            <center>
-      <a href={{ kapcsolat.facebook }} target="_blank" class="contact-button"><img src={% static 'app_pottompatti/img/facebook-white.png' %} alt="facebook ikon"> &nbsp facebook </a>
-      </center>
-            </p>
-            <p>
-            <center>
-      <a href="mailto:{{ kapcsolat.emailcim }}" target="_blank" class="contact-button"><img src={% static 'app_pottompatti/img/envelope-white.png' %} alt="levél ikon">&nbsp {{ kapcsolat.emailcim }}</a>
-      </center>
-            </p>
-            <p>
-            <center>
-      <a href="tel:{{ kapcsolat.telefonszam }}" target="_blank" class="contact-button"><img src={% static 'app_pottompatti/img/phone-white.png' %} alt="telefon ikon">&nbsp {{ kapcsolat.telefonszam }} </a>
-      </center>
-            </p>
-            <p>
-            <center>
-      <a href="{{ kapcsolat.telephelyterkeplink}}" target="_blank" class="contact-button"><img src={% static 'app_pottompatti/img/location-white.png' %} alt="location ikon"> {{ kapcsolat.telephely }}</a>
-      </center>
-            </p>   			  
-            <br><br>
-          </div>
-          <div class="col-md-5 col-sm-12 form-field"><br><br>
-                          <form method="post">
-                          {% csrf_token %}
-                              {{form.as_p}}
-
-                              <br><div class="formbutton text-center"><button type="submit" class="btn btn-light btn-rounded" style="text-align: center; margin: 0 auto;">elküldöm</button></div>
-                          </form><br><br><br><br><br><br><br><br>
-          </div>
-          <div class="col-md-1 col-sm-0 form-group"></div>
-    </div>
-</div>
 
 
 

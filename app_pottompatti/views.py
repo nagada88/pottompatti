@@ -46,44 +46,10 @@ def filter_sutemenyek(request):
 
     return render(request, 'partial_templates/sutemeny_list.html', {'sutemenyek': sutemenyek})
 
-def eskuvo(request):
-    kapcsolat = Kapcsolat.objects.get(id=1)
-    eskuvoszoveg = Eskuvo.objects.get(id=1)
-    kerdezzfelelek = EskuvoKerdezzFelelek.objects.all()
-    tortak = Product.objects.filter(product_category__name="Esküvői torta")
-    return render(request, 'eskuvo.html', {'eskuvoszoveg': eskuvoszoveg, 'kerdezzfelelek': kerdezzfelelek, 'tortak': tortak, 'kapcsolat': kapcsolat})
 
-def rendezvenyek(request):
-    kapcsolat = Kapcsolat.objects.get(id=1)
-    rendezvenyszoveg = Rendezveny.objects.get(id=1)
-    kerdezzfelelek = RendezvenyKerdezzFelelek.objects.all()
-    return render(request, 'rendezvenyek.html', {'rendezvenyszoveg': rendezvenyszoveg, 'kerdezzfelelek': kerdezzfelelek, 'kapcsolat': kapcsolat})
+def esemeny(request):
+    return render(request, 'esemenyek.html', {})
 
-def karrier(request):
-    kapcsolat = Kapcsolat.objects.get(id=1)
-    karrier = Karrier.objects.get(id=1)
-    if request.method == 'POST':
-        form = ContactForm(request.POST)
-        if form.is_valid():
-            subject = "pottompatti.hu - érdeklődés"
-            body = {
-                'név': 'Feladó: ' + form.cleaned_data['name'],
-                'email cím': form.cleaned_data['email_address'],
-                'üzenet': form.cleaned_data['message'],
-            }
-            message = "Üzenet érkezett a Pöttöm Patti honlapról: \n\n" + "\n".join(body.values())
-
-            try:
-                send_mail(subject, message,  body['email cím'], [kapcsolat.emailcim])
-            except BadHeaderError:
-                return HttpResponse('Invalid header found.')
-            return redirect("rolunk.html")
-        else:
-            messages.error(request, form.errors)
-    else:
-        form = ContactForm()
-
-    return render(request, "karrier.html", {'form': form, 'title': 'Pöttöm Patti kapcsolatfelvétel', 'kapcsolat': kapcsolat, 'karrier': karrier })
 
 def kapcsolat(request):
     kapcsolat = Kapcsolat.objects.get(id=1)
