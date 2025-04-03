@@ -1,56 +1,34 @@
 from django.contrib import admin
 from .models import *
 from django.conf import settings
+from solo.admin import SingletonModelAdmin
+from django.utils.html import format_html
 
-# Register your models here.
-# class MainPictureInline(admin.StackedInline):
-#     model = AllatMainImage
-#     extra = 0
-
-# class AllatAdmin(admin.ModelAdmin):
-#     inlines = [MainPictureInline]
-
-class InstanceCounterMixin1():
-    def has_add_permission(self, request):
-        num_objects = self.model.objects.count()
-        if num_objects >= 1:
-            return False
-        else:
-            return True
-        
-class RendezvenyAdmin(InstanceCounterMixin1, admin.ModelAdmin):
-    model = Rendezveny
-
-class KarrierAdmin(InstanceCounterMixin1, admin.ModelAdmin):
-    model = Karrier
-
-class KapcsolatAdmin(InstanceCounterMixin1, admin.ModelAdmin):
-    model = Kapcsolat
-
-class EskuvoAdmin(InstanceCounterMixin1, admin.ModelAdmin):
-    model = Eskuvo
-
-class TerjBeHozzankAdmin(InstanceCounterMixin1, admin.ModelAdmin):
-    model = TerjBeHozzank
 
 class ProductAdmin(admin.ModelAdmin):
     list_filter = ['product_category']
     list_display = ['name', 'product_category']
 
-    class Media:
-        css = {
-            'all': ('app_pottompatti/fancy.css',)
-        }
 
+class ProductCategoryAdmin(admin.ModelAdmin):
+    list_filter = ['product_main_category']
+    list_display = ['name', 'colored_category']
 
-admin.site.register(ProductCategory)
+    def colored_category(self, obj):
+        color = {
+            'tortak': 'red',
+            'sutemenyek': 'green',
+        }.get(obj.product_main_category, 'gray')
+
+        return format_html(
+            '<span style="color: white; background-color: {}; padding: 2px 6px; border-radius: 5px;">{}</span>',
+            color,
+            obj.get_product_main_category_display()
+        )
+
+    colored_category.short_description = 'Főkategória'
+
+admin.site.register(ProductCategory, ProductCategoryAdmin)
 admin.site.register(Product, ProductAdmin)
-admin.site.register(Hirek)
-admin.site.register(TerjBeHozzank, TerjBeHozzankAdmin)
-admin.site.register(Kapcsolat, KapcsolatAdmin)
-admin.site.register(EskuvoKerdezzFelelek)
-admin.site.register(Eskuvo, EskuvoAdmin)
-admin.site.register(Rendezveny, RendezvenyAdmin)
-admin.site.register(RendezvenyKerdezzFelelek)
-admin.site.register(Karrier, KarrierAdmin)
+admin.site.register(Kapcsolat, SingletonModelAdmin)
 

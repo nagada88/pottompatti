@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django_quill',
     'django_htmx',
     'cookie_consent',
+    'solo.apps.SoloAppConfig',
 ]
 
 MIDDLEWARE = [
@@ -68,6 +69,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'app_pottompatti.views.contact_context',
             ],
         },
     },

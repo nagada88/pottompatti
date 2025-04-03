@@ -2,7 +2,7 @@
 {% load static %}       
 {% block content %}
 
-<div class="hero-image">
+<div class="hero-image fade-in-on-load">
   <p class="cseppnyi">Egy cseppnyi <i>boldogság</i></p>
   <img src={% static 'app_pottompatti/img/background_cake.png' %} class="logo" alt="Logo">
   <button class="btn-order">Rendelek!</button>
@@ -15,7 +15,7 @@
   </div>
 </div>
 
-<div class="container-fluid">
+<div class="container-fluid fade-in">
   <div class="row">
     <div class="col">
       <h1><i>Nézd meg, hol születnek a város legédesebb pillanatai!</i></h1>
@@ -27,7 +27,7 @@
   </div>
 </div>
 
- <div class="container-fluid gallery-custom">
+ <div class="container-fluid gallery-custom fade-in">
   <div class="row g-0">
 
       <!-- Col 1 -->
@@ -97,14 +97,14 @@
   </div>
 </div>
 
-<div class="container-fluid filler">
+<div class="container-fluid filler fade-in">
   <div class="row separator">
     <center>~ & ~</center>
   </div>
 </div>
 
-<h1><i>Édes újdonságok minden évszakban!</i></h1>
-<div class="container-fluid pt-5">
+<h1 class="fade-in"><i>Édes újdonságok minden évszakban!</i></h1>
+<div class="container-fluid pt-5 fade-in">
   <div class="row">
     <div class="col-lg-6 col-12">
       <img src="{% static 'app_pottompatti/img/ajanlatok_image_hatterrel.png' %}" class="ajanlatok" />
@@ -122,13 +122,13 @@
   </div>
 </div>
 
-<div class="container-fluid filler">
+<div class="container-fluid filler fade-in">
   <div class="row separator">
     <center>~ & ~</center>
   </div>
 </div>
 
-<div class="container-fluid rolam pb-5">
+<div class="container-fluid rolam pb-5 fade-in">
   <div class="row pt-5 pb-5"><h1><i>Rólam</i></h1></div>
   <div class="row">
     <div class="col-xl-6 col-12">

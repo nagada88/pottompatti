@@ -2,47 +2,55 @@ from django.shortcuts import render
 from .models import *
 from app_pottompatti.forms import ContactForm
 
+
+def contact_context(request):
+    """
+    Globális context processor, amely a kapcsolati adatokat elküldi az összes view-ba.
+    """
+    return { 'kapcsolat': Kapcsolat.get_solo()}
+
+
 # Create your views here.
 def rolunk(request):
-    hirek = Hirek.objects.filter().order_by('-id')[:3]
-    terjbe = TerjBeHozzank.objects.get(id=1)
-    kapcsolat = Kapcsolat.objects.get(id=1)
-
-    return render(request, 'rolunk.html', {'hirek': hirek, 'terjbe': terjbe, 'kapcsolat': kapcsolat})
-
-def uzletunk(request):
-    return render(request, 'uzletunk.html')
+    return render(request, 'rolunk.html')
 
 def tortak(request):
-    tortacategories = ProductCategory.objects.filter(product_main_category="Torták")
-    tortak = Product.objects.filter(product_category__product_main_category="Torták")
-    kapcsolat = Kapcsolat.objects.get(id=1)
-    return render(request, 'tortak.html', {'tortacategories': tortacategories, 'tortak': tortak, 'kapcsolat': kapcsolat})
+    tortacategories = ProductCategory.objects.filter(product_main_category="tortak")
+    tortak = Product.objects.filter(product_category__product_main_category="tortak")
+
+    return render(request, 'tortak.html', {'tortacategories': tortacategories, 'tortak': tortak})
 
 def filter_cakes(request):
-    category_ids = request.GET.getlist('torta_category') 
-    Cake = Product.objects.filter(product_category__product_main_category="Torták")
+    category_ids = request.GET.getlist('torta_category')
+    permanent_checked = request.GET.get('permanent')
+
+    tortak = Product.objects.filter(product_category__product_main_category="tortak")
+
     if category_ids:
-        tortak = Cake.filter(product_category__in=category_ids)  # Csak a kiválasztott kategória tortái
-    else:
-        tortak = Cake  # Ha nincs kiválasztott kategória, minden tortát visszaadunk
+        tortak = tortak.filter(product_category__in=category_ids)
+
+    if permanent_checked:
+        tortak = tortak.filter(permanent=True)
 
     return render(request, 'partial_templates/cake_list.html', {'tortak': tortak})
 
 def sutemenyek(request):
-    kapcsolat = Kapcsolat.objects.get(id=1)
-    sutemenycategories = ProductCategory.objects.filter(product_main_category="Sütemények")
-    sutemenyek = Product.objects.filter(product_category__product_main_category="Sütemények")
-    kapcsolat = Kapcsolat.objects.get(id=1)
-    return render(request, 'sutemenyek.html', {'sutemenycategories': sutemenycategories, 'sutemenyek': sutemenyek, 'kapcsolat': kapcsolat})
+    sutemenycategories = ProductCategory.objects.filter(product_main_category="sutemenyek")
+    sutemenyek = Product.objects.filter(product_category__product_main_category="sutemenyek")
+
+    return render(request, 'sutemenyek.html', {'sutemenycategories': sutemenycategories, 'sutemenyek': sutemenyek})
 
 def filter_sutemenyek(request):
     category_ids = request.GET.getlist('sutemeny_category') 
-    Suti = Product.objects.filter(product_category__product_main_category="Sütemények")
+    permanent_checked = request.GET.get('permanent')
+    
+    sutemenyek = Product.objects.filter(product_category__product_main_category="sutemenyek")
+
     if category_ids:
-        sutemenyek = Suti.filter(product_category__in=category_ids)  # Csak a kiválasztott kategória tortái
-    else:
-        sutemenyek = Suti  # Ha nincs kiválasztott kategória, minden tortát visszaadunk
+        sutemenyek = sutemenyek.filter(product_category__in=category_ids)  # Csak a kiválasztott kategória tortái
+    if permanent_checked:
+        sutemenyek = sutemenyek.filter(permanent=True)
+
 
     return render(request, 'partial_templates/sutemeny_list.html', {'sutemenyek': sutemenyek})
 
@@ -52,7 +60,6 @@ def esemeny(request):
 
 
 def kapcsolat(request):
-    kapcsolat = Kapcsolat.objects.get(id=1)
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
@@ -74,7 +81,7 @@ def kapcsolat(request):
     else:
         form = ContactForm()
 
-    return render(request, "kapcsolat.html", {'form': form, 'title': 'Pöttöm Patti kapcsolatfelvétel', 'kapcsolat': kapcsolat })
+    return render(request, "kapcsolat.html", {'form': form, 'title': 'Pöttöm Patti kapcsolatfelvétel'})
 
 def sikeresmail(request):
     return render(request, 'sikeresmail.html')

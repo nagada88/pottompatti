@@ -1,39 +1,38 @@
 
-<div class="row">
+<div class="row g-3">
     {% for torta in tortak %}
-        <div class="col-md-6">
-            <div class="product-card">
+        <div class="col-xl-4 col-sm-12 col-md-6 pb-3">
+            <div class="product-card fade-in-htmx">
                 <div class="wrapper-img">
                     <a href="#tortaModal{{ forloop.counter }}" data-bs-toggle="modal" data-bs-target="#tortaModal{{ forloop.counter }}">
                         <img src="{{ torta.photo_tumb.url }}" class="tortapic">
                     </a>
-                    </div>
-                    <div class="product-card-body">
-                        <h5 class="card-title">{{ torta.name }}</h5>
-                        <!-- <p class="card-text">{{ torta.description }}</p> -->
-                        <p class="category-tag">#{{ torta.product_category }}</p>
-                        <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#tortaModal{{ forloop.counter }}">
-                            Részletek
-                        </button>
-                    </div>
                 </div>
+                <div class="product-card-body">
+                        <h5 class="card-title">{{ torta.name }}</h5>
+                        <p class="category-tag">#{{ torta.product_category }}</p>
 
+                </div>
+            </div>
         </div>
 
-        <div class="modal fade" id="tortaModal{{ forloop.counter }}" tabindex="-1" aria-labelledby="tortaModalLabel{{ forloop.counter }}" aria-hidden="true">
-            <div class="modal-dialog">
+        <div class="modal fade" id="tortaModal{{ forloop.counter }}" tabindex="-1" aria-labelledby="tortaModalLabel{{ forloop.counter }}" aria-hidden="true" data-bs-keyboard="true">
+            <div class="modal-dialog modal-dialog-centered"> <!-- nagyobb modal -->
                 <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="tortaModalLabel{{ forloop.counter }}">{{ torta.name }}</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
                     <div class="modal-body">
-                        <img src="{{ torta.photo_tumb.url }}" class="img-fluid mb-3" alt="{{ torta.name }}">
-                        <br>
-                        <p>{{ torta.description }}</p> <!-- Hosszú leírás -->
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Bezárás</button>
+                        <div class="row">
+                            <div class="col-md-6 text-center">
+                                <img src="{{ torta.photo_tumb.url }}" class="img-fluid mb-3" alt="{{ torta.name }}">
+                            </div>
+                            <div class="col-md-6">
+                                <h5>{{ torta.name }}</h5>
+                                <div class="row separator-modal">
+                                    <center>~ & ~</center>
+                                  </div>
+                                <h4>Leírás</h4>
+                                <p>{{ torta.description }}</p> <!-- hosszú leírás -->
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -41,3 +40,19 @@
 
     {% endfor %}
 </div>
+<!-- 
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        document.querySelectorAll('.tortapic').forEach(function(img) {
+            if (img.naturalHeight > img.naturalWidth) {
+                // portrait
+                img.style.width = '100%';
+                img.style.height = 'auto';
+            } else {
+                // landscape
+                img.style.height = '100%';
+                img.style.width = 'auto';
+            }
+        });
+    });
+</script> -->

@@ -60,6 +60,21 @@
 {% endif %}
 
 <body>
+
+
+<!-- TOPBAR -->
+<div id="topbar" class="topbar">
+  <div class="container d-flex justify-content-between align-items-center h-100">
+      <div>
+          <small>📍 {{ kapcsolat.address }} | ☎ {{ kapcsolat.telefonszam }} | ✉ {{ kapcsolat.emailcim }}</small>
+      </div>
+      <div>
+          <small>⏰ Nyitvatartás: {{ kapcsolat.nyitvatartas }}</small>
+      </div>
+  </div>
+</div>
+
+
 <nav id="mynav" class="navbar navbar-expand-xl navbar-light sticky-top navbar-custom">
   <div class="container-fluid">
     <a class="navbar-brand d-md-none" href="#">
@@ -106,28 +121,23 @@
     <div class="col-lg-4">
       <p style="  margin: 2rem auto;">
       <img src="{% static 'app_pottompatti/img/patti_logo.png' %}" style="height: 100px;" /><br>
-      3700 Kazincbarcika <br>
-      Egressy Béni út 18.<br>
-      (70) 200 8779
+      {{ kapcsolat.address }} <br>
+      {{ kapcsolat.telefonszam }}
     </div>
     <div class="col-lg-4">
       <p class="bordered">
         Nyitvatartási idő<br><br>
-        H 9-17 <br>
-        K 9-17 <br>
-        Sz 9-17 <br>
-        Cs 9-17 <br>
-        P 9-17 <br>
-        Sz 9-17 <br>
-        V 9-16
+        {{ kapcsolat.nyitvatartas }}
       </p>
     </div>
     <div class="col-lg-4">
-      <p style="  margin: 2rem auto;">
-      Információk<br><br>
-      GYIK <br>
-      Rendelés Menete <br>
-      Rendezvények <br>
+      <p><br><br>
+        <ul class="list-unstyled">
+          <li><a href="{% url 'tortak' %}">Torták</a></li>
+          <li><a href="{% url 'sutemenyek' %}">Sütemények</a></li>
+          <li><a href="{% url 'esemenyek' %}">Események</a></li>
+          <li><a href="{% url 'kapcsolat' %}">Kapcsolat</a></li>
+        </ul>
       </p>
     </div>
   </div>
@@ -148,14 +158,74 @@
 
 <script src={% static 'app_pottompatti/js/app_pottompatti.js' %}></script>
 <script>
-  document.addEventListener("scroll", function(){
-      const navbar = document.getElementById("mynav");
-      if(window.scrollY > 50){
-          navbar.classList.add("scrolled");
-      } else {
-          navbar.classList.remove("scrolled");
+    let lastScrollTop = 0;
+
+    document.addEventListener("scroll", function() {
+    const st = window.pageYOffset || document.documentElement.scrollTop;
+    const navbar = document.getElementById("mynav");
+    const topbar = document.getElementById("topbar");
+
+    // TOPBAR és NAVBAR csak ha tényleg görgetsz le
+    if (st > lastScrollTop && st > 80) {  // csak ha lejjebb vagy mint 80px
+        navbar.classList.add('navbar-hidden');
+        topbar.classList.add('topbar-hidden');
+    } else if (st < lastScrollTop) {
+        // felfelé görgetés
+        navbar.classList.remove('navbar-hidden');
+        if (st <= 50) {
+            topbar.classList.remove('topbar-hidden');
+        }
+    }
+
+    // átlátszó header effekthez
+    if (st <= 50) {
+        navbar.classList.remove('scrolled');
+    } else {
+        navbar.classList.add('scrolled');
+    }
+
+    lastScrollTop = st <= 0 ? 0 : st; // ne legyen negatív
+});
+
+  document.addEventListener('scroll', function() {
+    document.querySelectorAll('.fade-in').forEach(function(el){
+        const rect = el.getBoundingClientRect();
+        if(rect.top < window.innerHeight - 150) {
+            el.classList.add('visible');
+        }
+    });
+    });
+    document.addEventListener("DOMContentLoaded", function() {
+    setTimeout(function(){
+        document.querySelectorAll('.fade-in-on-load').forEach(function(el){
+            el.classList.add('visible');
+            triggerFadeIn();
+        });
+    }, 500); // <-- 1000 ms = 1 másodperc késleltetés
+    });
+
+
+    function triggerFadeIn() {
+    document.querySelectorAll('.fade-in-htmx').forEach(function(el, index) {
+        // Reset, ne legyen visible alapból
+        el.classList.remove('visible');
+        el.style.transitionDelay = (index * 100) + "ms"; 
+    });
+
+    // Kicsi várakozás, hogy az új DOM beépüljön
+    setTimeout(() => {
+        document.querySelectorAll('.fade-in-htmx').forEach(function(el) {
+            el.classList.add('visible');
+        });
+    }, 150); // 150ms biztosan elég
+}
+
+    document.body.addEventListener('htmx:afterSwap', function(e)
+      {
+        triggerFadeIn();
       }
-  });
-  </script>
+);
+
+</script>
   
 </html>

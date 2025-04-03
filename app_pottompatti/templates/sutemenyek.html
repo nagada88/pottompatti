@@ -3,33 +3,41 @@
 {% block content %}
 
 
+<h1 class="kinalat fade-in-on-load"><i>Sütemény kínálatunk</i></h1>
+
 <section>
-  <div class="container-fluid">
-
-      <div class="row mt-5 mb-5 g-0"> 
-        <div class="col-lg-1"></div>
-
-        <div class="col-lg-2 categories"> 
-          <h4>Kategóriák</h4>
-          <form hx-get="{% url 'filter_sutemenyek' %}" hx-target="#sutemeny-list" hx-trigger="input">
+  <div class="container-fluid listak">
+    <div class="row mt-5 mb-5 g-0"> 
+      <div class="col-xl-3 col-md-4 col-sm-12 categories">
+          <div class="variaciok">
+            <div class="vertical-label">VARIÁCIÓK</div>
+            <h4>Kategóriák</h4>
+            <form hx-get="{% url 'filter_sutemenyek' %}" hx-target="#sutemeny-list" hx-trigger="input">
               {% for sutemeny_category in sutemenycategories %}
-                  <div class="form-check">
-                      <input class="form-check-input" type="checkbox" name="sutemeny_category" id="sutemeny_category{{ torta_category.id }}" value="{{ sutemeny_category.id }}">
-                      <label class="form-check-label" for="category{{ sutemeny_category.id }}">
-                        {{ sutemeny_category.name }}
-                      </label>
-                  </div>
+              <div class="form-check d-flex justify-content-between align-items-center mb-2">
+                <label class="form-check-label mb-0" for="category{{ sutemeny_category.id }}">
+                  {{ sutemeny_category.name }}
+                </label>
+                <input class="form-check-input" type="checkbox" name="sutemeny_category" id="sutemeny_category{{ sutemeny_category.id }}" value="{{ sutemeny_category.id }}">
+              </div>
               {% endfor %}
-          </form>
-        </div>     
+              <hr>
+              <!-- Permanent szűrő -->
+              <div class="form-check mt-4 d-flex justify-content-between align-items-center mb-2">
+                <label class="form-check-label" for="permanent-check">Csak állandó kínálat</label>
+                <input class="form-check-input" type="checkbox" name="permanent" value="1" id="permanent-check">
+              </div>
+            </div>               
+            </form>
+          </div>     
 
-      <div class="col-lg-7" id="sutemeny-list">
-        {% include 'partial_templates/sutemeny_list.html' %}
-      </div>
-
-     <div class="col-lg-2">
-     </div>
+          
+          <div class="col-xl-9 col-md-8 col-sm-12" id="sutemeny-list">
+            {% include 'partial_templates/sutemeny_list.html' %}
+          </div>
+          
     </div>
   </div>
 </section>
+
 {% endblock content %}

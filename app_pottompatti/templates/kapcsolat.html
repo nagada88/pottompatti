@@ -8,7 +8,7 @@
   </div>
   <div class="row">
     <!-- Info Box -->
-    <div class="info-box mx-auto mb-5 p-4 col-lg-6 kapcsolat-leiras">
+    <div class="info-box mx-auto mb-5 p-4 col-lg-4 kapcsolat-leiras">
         <p class="mb-3">
             Ha már van konkrét elképzelésed, vagy tanácsra van szükséged a tökéletes süti kiválasztásához, írj nekünk bátran az online felületünkön! Örömmel segítünk, hogy pontosan azt kapd, amit megálmodtál. 🍪😊
         </p>
@@ -17,32 +17,48 @@
         </p>
     </div>
 
-    <div class="col-lg-6">
+    <div class="col-lg-8">
       <!-- Rendelés form -->
-      <h2 class="mb-4 text-center"><i>Add le rendelésed online</i></h2>
+      <h2 class="mb-4 rendelesleadas"><i>Add le rendelésed online!</i></h2>
       <div class="form-container">
         <form method="post" action="">
             {% csrf_token %}
             <div class="row g-3">
 
-                <div class="col-12">
-                    <label for="nev" class="form-label">Név*</label>
-                    <input type="text" class="form-control" id="nev" name="nev" required>
+                <div class="row mb-3 align-items-center">
+                    <div class="col-sm-3 text-end">
+                        <label for="name" class="form-label">Név*</label>
+                    </div>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="name">
+                    </div>
+                </div>
+                
+                <div class="row mb-3 align-items-center">
+                    <div class="col-sm-3 text-end">
+                        <label for="phone" class="form-label">Telefonszám*</label>
+                    </div>
+                    <div class="col-sm-9">
+                        <input type="tel" class="form-control" id="phone" placeholder="+36 30">
+                    </div>
                 </div>
 
-                <div class="col-12">
-                    <label for="telefon" class="form-label">Telefonszám*</label>
-                    <input type="tel" class="form-control" id="telefon" name="telefon" required>
+                <div class="row mb-3 align-items-center">
+                    <div class="col-sm-3 text-end">
+                        <label for="phone" class="form-label">E-mail cím*/label>
+                    </div>
+                    <div class="col-sm-9">
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
                 </div>
 
-                <div class="col-12">
-                    <label for="email" class="form-label">E-mail cím*</label>
-                    <input type="email" class="form-control" id="email" name="email" required>
-                </div>
-
-                <div class="col-12">
-                    <label for="rendeles" class="form-label">Rendelés leírása</label>
-                    <textarea class="form-control" id="rendeles" name="rendeles" rows="4" required></textarea>
+                <div class="row mb-3 align-items-start">
+                    <div class="col-sm-3 text-end mt-1">
+                        <label for="rendeles" class="form-label">Rendelés részletei</label>
+                    </div>
+                    <div class="col-sm-9">
+                        <textarea class="form-control" id="rendeles" name="rendeles" rows="14" required></textarea>
+                    </div>
                 </div>
 
                 <div class="col-12 text-center">

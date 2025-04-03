@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Arima:wght@100..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 h1 {
   text-align: center;
@@ -21,6 +22,7 @@ h2 {
   font-size: 35px;
   color: #4E6661;
 }
+
 /* ---------------------------------------- */
 /* COL-XS */
 /* ---------------------------------------- */
@@ -87,7 +89,29 @@ h2 {
   .ihlet img{
     height: 300px;
     width: 300px;
-  }  
+  }
+  .navbar-brand img {
+    width: 80px;
+  }
+  .vertical-label{
+    font-size: 50px;
+    left: -23px; /* mennyire lógjon le */
+    top: 55%;
+    transform: translateY(-200%) translateX(27%) rotate(90deg);
+    margin-left: 0;
+  }
+
+  .variaciok{
+    padding-left: 12vw;
+    margin-right: none;
+  }
+
+  .modal-dialog{
+    width: none;
+  }
+  .listak{
+    padding: 20px;
+  }
 }
 
 
@@ -95,6 +119,10 @@ h2 {
 /* COL-SM */
 /* ---------------------------------------- */
 @media (min-width: 576px){
+  .listak{
+    padding: 20px;
+  }
+
   .social{
     padding-top: 5px;
     padding-bottom: 5px;
@@ -157,7 +185,24 @@ h2 {
   .ihlet img{
     height: 500px;
     width: 500px;
-  }  
+  }
+
+  .vertical-label{
+    font-size: 50px;
+    left: -23px; /* mennyire lógjon le */
+    top: 55%;
+    transform: translateY(-200%) translateX(27%) rotate(90deg);
+    margin-left: 0;
+  }
+
+  .variaciok{
+    padding-left: 12vw;
+    margin-right: none;
+  }
+
+  .modal-dialog{
+    width: none;
+  }
 }
 
 
@@ -184,6 +229,14 @@ h2 {
     margin: 40px 50px;
   }
 
+  .variaciok{
+    padding-left: 3vw;
+    margin-right: 50px;
+  }
+
+  #cake-list{
+    /* margin-left: -5px; */
+  }
 }
 
 
@@ -191,6 +244,9 @@ h2 {
 /* COL-LG */
 /* ---------------------------------------- */
 @media (min-width: 992px) {
+  .listak{
+    padding: none;
+  }
 
 }
 
@@ -214,8 +270,7 @@ h2 {
   }
 
   .hero-image{
-    margin-top: -140px; /* akkora legyen, amilyen magas a navbar */
-  }
+    margin-top: -120px; }
 
   .logo{
     width: 400px;
@@ -232,7 +287,41 @@ h2 {
   .ihlet .container-fluid{
     max-width: 60%;
   }
-  
+
+  .vertical-label{
+    font-size: 70px;
+    left: -30px; /* mennyire lógjon le */
+    top: 50%;
+    transform: translateY(-200%) translateX(27%) rotate(90deg);
+    margin-left: 3vw;
+  }
+  .variaciok{
+    padding-left: 3vw;
+  }
+  .modal-dialog{
+    width: 30%;
+  }
+
+  .vertical-label{
+    font-size: 50px;
+    left: -23px; /* mennyire lógjon le */
+    top: 55%;
+    transform: translateY(-200%) translateX(27%) rotate(90deg);
+    margin-left: 0;
+  }
+
+  .vertical-label{
+    font-size: 50px;
+    left: -20px; /* mennyire lógjon le */
+    top: 55%;
+    transform: translateY(-200%) translateX(27%) rotate(90deg);
+    margin-left: 0;
+  }
+
+  .variaciok{
+    padding-left: 2vw;
+    margin-right: 10px;
+  }
 }
 
 
@@ -240,8 +329,12 @@ h2 {
 /* COL-XXL */
 /* ---------------------------------------- */
 @media (min-width: 1400px) {
-
-
+  .listak{
+    padding: 0 100px ;
+  }
+  .variaciok{
+    width: 300px;
+  }
 }
 
 /* ---------------------------------------- */
@@ -260,7 +353,7 @@ h2 {
 
   .btn-order{
     top: 60%;
-    left: 45.5%;
+    left: 46.7%;
     border-radius: 30px; /* szép lekerekítés */
     padding: 15px 35px;
     font-weight: 500;
@@ -289,12 +382,35 @@ hr.half-width{
 /* ********************************************** */
 /* ******* NAVBAR  */
 /* ********************************************** */
+#topbar {
+  background: #f5f5f5;
+  font-size: 14px;
+  transition: all 0.5s ease;
+  z-index: 1040; /* nagyobb mint a háttér */
+}
+
+/* TRANSITIONS */
+#topbar, #mynav {
+  will-change: transform, opacity, background;
+  transition: transform 0.4s ease, opacity 0.4s ease, background 0.4s ease;
+}
+
+/* SCROLL EFFECT */
+.navbar-hidden {
+  transform: translateY(-150%);
+  opacity: 0;
+}
+
+.topbar-hidden {
+  transform: translateY(-150%);
+  opacity: 0;
+}
 
 .navbar-brand img {
   border-radius: 50%;
   transition: 0.2s linear;
-  height: 80px;
 }
+
 
 .navbar-brand img:hover {
   transform: scale(1.05);
@@ -333,6 +449,11 @@ hr.half-width{
   .navbar-brand img {
     width: 80px;
   }
+
+  .scrolled .navbar-brand img {
+    width: 50px;
+  }
+
   .navbar-brand {
     margin-right: 0;
     padding: 0 1em;
@@ -359,31 +480,15 @@ hr.half-width{
   width: 70%;
 }
 
-  /*SCROLL LOCKED RESPONSIVE CLASSES*/
-  /* .nav-colored {
-		-color: #badfd7;
-    opacity: 0.9;
-  }
-  
-  .nav-transparent { background-color:transparent;}
-  
-  ul.navbar-nav>li.nav-item>a.nav-link.custom{
-    color: #000000 !important;
-    display: inline-block;
-} */
-
-
 /* Alapállapot */
 .navbar-light {
   background: transparent !important;
   transition: all 0.3s ease;
 }
 
-/* Görgetéskor */
 .navbar-light.scrolled {
   background: white !important;
   box-shadow: 0 4px 6px -4px #999;
-  height: 80px;
 }
 
 /* Magasság animáció */
@@ -791,58 +896,36 @@ hr.half-width{
   font-weight: 700;
 }
 
-.torta-card{
-  box-shadow:hsl(40, 20%, 50%) 0 0 50px;
-  background-color: #dee2e3;
-  color: #464747;
-  border-radius: 1px;
-  height: 500px;
-  width: 400px;
-  padding-left: 0;
-  font-size: 14px;
-  justify-content: center;
-  border-radius: 20px;
-  margin-top:20px;
-  position:relative;
-  background-color: #A2B49C;
-}
-
-.wrapper-img{
-  overflow:hidden;
-  height: 11rem;
-  width: 11rem;
-  margin-top: 3px;
-  border-radius: 5px;
-}
-
-.tortapic{
-  height:100%;
-  width:100%;
-  overflow: hidden;
-  border-radius: 5px;
-  transition: transform 1s ease;
-  object-fit: cover;
-}
-
-.cover{
-  object-fit: cover;
-  width:100%;
-  height:auto;
-}
-
-.tortapic:hover{
-  transform: scale(1.1);
-  transform: rotate(2deg) scale(1.1);
-}
-
 .product-card{
-  border-bottom: 1px solid rgb(224, 224, 224);
-  overflow: hidden; /* add this to contain floated children */
-  margin: 20px;
-  padding: 20px;
-  display:flex;
+  overflow: hidden;
+  width: 100%;
   transition: box-shadow 0.3s ease-in-out;
-  font-family: "Karla", sans-serif;
+  background-color: #FFF3F9;
+  border-radius: 50px;
+  color: #4E6661;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+@media (max-width: 1200px) {
+  .wrapper-img{
+    max-height: 300px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .wrapper-img{
+    max-height: 400px;
+  }
+}
+
+.product-card h5{
+  font-family: "Playfair Display", serif;
+  font-weight: 100;
+  color: #4E6661;
+  font-size: clamp(1.5rem, 1vw, 5rem);
 }
 
 .product-card:hover{
@@ -851,14 +934,133 @@ hr.half-width{
 
 .product-card-body{
   padding-left: 2rem;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   position: relative;
+} 
+
+.wrapper-img{
+  border-radius: 50px;
+  margin-top: 3px;
+  border-radius: 50px;
+  width: 100%;
+  height: 350px;
+  position: relative;
+  overflow: hidden;
 }
 
-.categories{
-  font-family: "Karla", sans-serif;
-  padding-left: 3rem;
+.tortapic{
+  border-radius: 50px;
+  transition: transform 1s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+
+.modal-body{
+  color: #4E6661;
+  font-family: "Mulish", sans-serif;
+  font-weight: 100;
+}
+
+.modal-body h5{
+  font-family: "Playfair Display", serif;
+  font-weight: 100;
+  text-align: center;
+  font-size: clamp(1.5rem, 2vw, 5rem);
+}
+
+
+.modal-body h4{
+  font-family: "Playfair Display", serif;
+  font-weight: 100;
+  font-style: italic;
+  text-align: left;
+  font-size: clamp(1.5rem, 1.4vw, 5rem);
+}
+
+.modal-content{
+  border-radius: 60px !important;
+  -webkit-box-shadow: 0 0 16px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+}
+
+.modal-dialog{
+  max-width: none !important;
+}
+
+.modal-body img{
+  border-radius: 50px;
+  height: 100%;
+  width: auto;
+}
+
+.separator-modal{
+  color: #707070;
+  font-size: clamp(1.5rem, 1.1vw, 5rem);
+  font-family: "Playfair Display", serif;
+  font-weight: 100;
+  padding-top:20px; 
+  padding-bottom: 20px;
+}
+
+.cover{
+  object-fit: cover;
+  width:100%;
+  height:auto;
+}
+
+.variaciok{
+  font-family: "Lato", sans-serif;
   padding-top: 40px;
+  background-color: #4E6661;
+  border-radius: 50px;
+  min-height: 400px;
+  max-height: 500px;
+  color: #FFFFFF;
+  position: relative;
+  overflow: visible; 
+}
+
+.categories h4{
+  text-transform: uppercase;
+  padding-left: 30px;
+}
+
+.form-check{
+  padding-right: 35px;
+}
+
+.list-unstyled{
+  text-align: right;
+  text-decoration: none;
+}
+
+.list-unstyled a{
+  text-decoration: none;
+  color: #4E6661;
+}
+
+.list-unstyled a:hover{
+  text-decoration: none;
+  color: #F6D2D6;
+}
+
+
+.footer .bordered{
+  font-size: 20px;
+}
+
+.vertical-label {
+  position: absolute;
+  transform-origin: left top;
+  color: #F6D2D6;
+  padding: 0.5rem 1rem;
+  font-family: "Lato", sans-serif;
+  font-style: bold;
+  font-weight: 700;
+  z-index: 1;   /* ! fontos: csak kicsi legyen */
 }
 
 .category-tag{
@@ -875,89 +1077,11 @@ body{
   /* right: -10px; */
 }
 
-.modal-dialog{
-  font-family: "Karla", sans-serif;
-}
-
-.modal-footer{
-  border-top: none;
-}
-
-.modal-header{
-  border-bottom: none;
-  padding-bottom: 0.2rem;
-}
-
-.accordition-wedding{
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  font-family: "Karla", sans-serif;
-  min-height: 500px;
-}
-
-.ac-wedd-bg{
-  background-image: url("/static/app_pottompatti/img/wedding-pattern.jpg"); /* Kép megadása */
-  background-repeat: repeat; /* Ez az alapértelmezett, de biztosan megadhatod */
-}
-
-.accordition-wedding h3{
-  font-size: 36px;
-  font-family: "Lekton", sans-serif;  
-}
-
-/* Az accordion header háttérszínének eltávolítása */
-.accordion-button, .accordion, .accordion-item{
-  background-color: transparent !important; /* Átlátszóvá teszi a hátteret */
-  border: none; /* Ha a szegélyt is el akarod tüntetni */
-}
-
-.accordion-button{
-  font-size: 24px;
-}
-
-.accordion-header{
-  font-family: "Lekton", sans-serif;
-}
-
-.accordion-button:not(.collapsed){
-  color: #000000;
-}
-
-/* Az accordion body háttérszínének eltávolítása */
-.accordion-body {
-  background-color: transparent !important; /* Átlátszóvá teszi a test hátterét */
-}
-
-.accordion-button:focus{
-  border: none;
-  box-shadow: none;
-}
-
-.eskuvo-szoveg{
-  padding-top: 3rem;
-  padding-bottom: 2rem;
-  font-family: "Karla", sans-serif;  
-}
-
-.eskuvo-szoveg h3, h4{
-  font-family: "Lekton", sans-serif;
-}
-
-.eskuvo-img img{
-  width: 100%;
-  height: 100%;
-  padding-bottom: 3rem;
-}
-
-.eskuvo-torta-lista{
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-}
-
-.eskuvo-torta-lista h1{
-  padding-top:10px;
-  padding-bottom:10px;
-  font-family: "Lekton", sans-serif;  
+.kinalat{
+  font-size: clamp(1.5rem, 3vw, 5rem);
+  font-style: italic;
+  padding-top: 3vw;
+  padding-bottom: 3vw;
 }
 
 .btn:hover{
@@ -991,11 +1115,12 @@ body{
 
 .hero-image {
   position: relative; 
-  background-image: url("/static/app_pottompatti/img/background_base.png");
+  background-image: url("/static/app_pottompatti/img/background_base.svg");
   background-size: cover;
   background-position: center;
   width: 100%;
   padding-top: 56.25%; /* = 4500 / 8000 arány */
+  z-index: 1; /* háttér */
 }
 
 
@@ -1004,6 +1129,7 @@ body{
   text-align: center;
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
+  
   font-weight: 200;
   font-style: normal;   
   width: 100%;
@@ -1184,16 +1310,6 @@ p.bordered1 .bolded{
   --form-font: "Mulish", sans-serif;
 }
 
-.info-box {
-  background: var(--info-bg);
-  border-radius: var(--border-radius);
-  max-width: 300px;
-  text-align: center;
-  font-size: 1.1rem;
-  color: #333;
-  line-height: 1.6;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-}
 
 form {
   font-family: var(--form-font);
@@ -1213,12 +1329,6 @@ form {
   color: white;
 }
 
-@media (max-width: 768px) {
-  .info-box {
-      padding: 2rem 1rem;
-      font-size: 1rem;
-  }
-}
 
 .kapcsolat{
   background-color: #FFF4F9;
@@ -1227,10 +1337,21 @@ form {
 
 .kapcsolat-leiras{
   position:relative;
-  bottom:150px;
-  left:450px;
-  position: relative;
+  bottom:50px;
+  left: 350px;
+  width: 500px;
   background: url("/static/app_pottompatti/img/rendeles_hatter.jpg");
+  text-align: center;
+  font-size: 1.1rem;
+  color: white;
+  font-family: "Mulish", sans-serif;
+  margin-top: 10px;
+  font-style: italic;
+  font-weight: 100;
+  font-size: 25px;
+  line-height: 1.6;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  border-radius: 50px;
 }
 
 .form-container{
@@ -1238,12 +1359,66 @@ form {
   border-radius: 100px;
   padding: 50px;
   margin-right: 10vw;
+  font-family: "Mulish", sans-serif;
+  font-style: italic;
+  color: #4E6661;
+  text-align: left;
+}
+
+.rendelesleadas{
+  font-size: clamp(1.5rem, 2.2vw, 5rem);
+  text-align: left;
+  margin-left: 240px;
 }
 
 .divider{
   height: 15vw;
 }
 
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in-on-load {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+.fade-in-on-load.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in-htmx {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+
+.fade-in-htmx.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.form-control {
+  background-color: #f8f9fa; /* halvány szürke */
+  border-radius: 40px;
+  border: 1px solid #ced4da;
+}
+
+.form-control:focus {
+  background-color: white;
+  box-shadow: 0 0 0 0.1rem rgba(0, 123, 255, 0.15);
+}
 
 /* div { outline: 1px dashed blue } span { outline: 1px dashed green }
 
