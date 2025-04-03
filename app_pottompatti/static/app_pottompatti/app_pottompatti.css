@@ -112,6 +112,11 @@ h2 {
   .listak{
     padding: 20px;
   }
+
+  .kinalat{
+    font-size: clamp(1.5rem, 10vw, 5rem);
+    padding-top: 50px;
+  }
 }
 
 
@@ -202,6 +207,10 @@ h2 {
 
   .modal-dialog{
     width: none;
+  }
+  .kinalat{
+    font-size: clamp(1.5rem, 3vw, 5rem);
+    padding-top: 50px;
   }
 }
 
@@ -1092,9 +1101,7 @@ body{
 }
 
 .kinalat{
-  font-size: clamp(1.5rem, 3vw, 5rem);
   font-style: italic;
-  padding-top: 3vw;
   padding-bottom: 3vw;
 }
 
