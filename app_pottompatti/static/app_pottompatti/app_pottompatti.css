@@ -166,7 +166,7 @@ h2 {
 
   .cseppnyi{
     top: 35.4%;
-    font-size: 50px;
+    /* font-size: 50px; */
     margin-left: -30px;
   }
   
@@ -351,6 +351,20 @@ h2 {
     left: 52.5%;
   }
 
+  .btn-order{
+    top: 60%;
+    left: 44.7%;
+    border-radius: 30px; /* szép lekerekítés */
+    padding: 15px 35px;
+    font-weight: 500;
+  }
+}
+
+
+/* ---------------------------------------- */
+/* MORE THAN XXL */
+/* ---------------------------------------- */
+@media (min-width: 2000px) {
   .btn-order{
     top: 60%;
     left: 46.7%;
@@ -1241,7 +1255,7 @@ p.bordered1 .bolded{
 }
 
 .cseppnyi, .minden-falat{
-  font-size: clamp(1.5rem, 2vw, 5rem);
+  font-size: clamp(1.5rem, 3.5vw, 5rem);
 }
 
 .ajanlatok{
