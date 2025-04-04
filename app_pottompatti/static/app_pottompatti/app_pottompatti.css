@@ -27,6 +27,14 @@ h2 {
 /* COL-XS */
 /* ---------------------------------------- */
 @media (max-width: 576px){
+  .rolam img{
+    max-width: 90%; 
+  }
+
+  .rolam p, h2{
+    margin: 0 10px;
+  }
+
   .social{
     padding-top: 5px;
     padding-bottom: 5px;
@@ -52,36 +60,41 @@ h2 {
 
   .hero-image{
     margin-top: auto; /* akkora legyen, amilyen magas a navbar */
+    height: 300px;
+    background-size: cover;
+    margin-bottom: 100px;
   }
 
   .logo{
-    width: 150px;
+    width: 200px;
+    top: 35%;
   }
 
   .cseppnyi{
-    top: 15.4%;
+    top: 10.4%;
   }
   
   .minden-falat{
-    top: 100.4%;
+    top: 110.4%;
   }
   
+  .cseppnyi, .minden-falat{
+    font-size: 2rem;
+  }
+
   .btn-order{
   top: 48%;
-  left: 38.5%;
   border-radius: 30px; /* szép lekerekítés */
   padding: 5px 10px;
   font-weight: 500;
   }
-
-  .logo{
-    top: 69.2%;
-    left: 56.5%;
-  }
+  
   .ajanlatok{
     max-width: 90%; 
     padding-left: 0;
+    padding-bottom: 60px;
   }
+
   .ihlet .container-fluid{
     max-width: 80%;
   }
@@ -117,6 +130,15 @@ h2 {
     font-size: clamp(1.5rem, 10vw, 5rem);
     padding-top: 50px;
   }
+
+  .separator{
+    padding-top: none;
+  }
+
+  .btn-discover{
+    display: block;
+    margin: 0 auto;
+  }
 }
 
 
@@ -124,6 +146,18 @@ h2 {
 /* COL-SM */
 /* ---------------------------------------- */
 @media (min-width: 576px){
+  .rolam img{
+    max-width: 90%; 
+  }
+
+  .btn-discover{
+    margin-left: 200px;
+  }
+
+  .separator{
+    padding-top: 100px;
+  }
+  
   .listak{
     padding: 20px;
   }
@@ -133,14 +167,6 @@ h2 {
     padding-bottom: 5px;
   }
   
-  .btn-order{
-    top: 58%;
-    left: 44.9%;
-    border-radius: 30px; /* szép lekerekítés */
-    padding: 15px 35px;
-    font-weight: 500;
-    }
-
   .carousel{
     margin: 10px 20px;
   }
@@ -164,29 +190,44 @@ h2 {
 
   .hero-image{
     margin-top: auto; /* akkora legyen, amilyen magas a navbar */
+    height: 450px;
+    background-size: cover;
   }
+
+  .logo{
+    top: 40.2%;
+    width:250px;
+  }
+
+  .btn-order{
+    top: 52%;
+    border-radius: 30px; /* szép lekerekítés */
+    padding: 10px 30px;
+    font-weight: 500;
+  }
+
+  .cseppnyi{
+    top: 17.4%;
+    font-size: 2rem;
+  }
+
+  .minden-falat{
+    top: 105.4%;
+    font-size: 50px;
+  }
+
+  .cseppnyi, .minden-falat{
+    font-size: 2.5rem;
+  }
+
   .navbar-brand img {
     width: 80px;
   }
 
-  .cseppnyi{
-    top: 35.4%;
-    /* font-size: 50px; */
-    margin-left: -30px;
-  }
-  
-  .minden-falat{
-    top: 90.4%;
-    font-size: 50px;
-    margin-left: -30px;
-  }
-  .logo{
-    top: 69.2%;
-    left: 52.5%;
-  }
   .ihlet .container-fluid{
     max-width: 80%;
   }
+
   .ihlet img{
     height: 500px;
     width: 500px;
@@ -211,6 +252,10 @@ h2 {
   .kinalat{
     font-size: clamp(1.5rem, 3vw, 5rem);
     padding-top: 50px;
+  }
+  .ajanlatok{
+    max-width: 90%; 
+    padding-left: 0;
   }
 }
 
@@ -243,9 +288,42 @@ h2 {
     margin-right: 50px;
   }
 
-  #cake-list{
-    /* margin-left: -5px; */
+  
+  .hero-image{
+    margin-top: auto; /* akkora legyen, amilyen magas a navbar */
+    height: 400px;
+    background-size: cover;
+    margin-bottom: 100px;
   }
+
+  .btn-order{
+    top: calc(38vw - 25.3%);
+    border-radius: 40px; /* szép lekerekítés */
+    padding: 12px 35px;
+    font-weight: 500;
+    font-size: 24px;
+  }
+
+  .logo{
+    top: calc(38vw - 43.3%);
+    width:350px;
+  }
+
+  .cseppnyi{
+    top: calc(38vw - 70%);
+    font-size: 2rem;
+  }
+
+  .minden-falat{
+    top: calc(38vw + 50%);
+    font-size: 50px;
+  }
+
+  .cseppnyi, .minden-falat{
+    font-size: 2.5rem;
+  }
+
+
 }
 
 
@@ -257,6 +335,39 @@ h2 {
     padding: none;
   }
 
+  .hero-image{
+    margin-top: auto; /* akkora legyen, amilyen magas a navbar */
+    height: 500px;
+    background-size: cover;
+    margin-bottom: 100px;
+  }
+
+  .btn-order{
+    top: calc(38vw - 20.3%);
+    border-radius: 40px; /* szép lekerekítés */
+    padding: 12px 35px;
+    font-weight: 500;
+    font-size: 24px;
+  }
+
+  .logo{
+    top: calc(38vw - 34.3%);
+    width:350px;
+  }
+
+  .cseppnyi{
+    top: calc(38vw - 70%);
+    font-size: 2rem;
+  }
+
+  .minden-falat{
+    top: calc(38vw + 50%);
+    font-size: 50px;
+  }
+
+  .cseppnyi, .minden-falat{
+    font-size: 2.5rem;
+  }
 }
 
 
@@ -265,8 +376,13 @@ h2 {
 /* COL-XL */
 /* ---------------------------------------- */
 @media (min-width: 1200px) {
-    .navbar-nav{
-    height: 120px;
+  .rolam img{
+    max-width: 100%; 
+    margin-left: -100px;
+  }
+
+  .navbar-nav{
+    height: 90px !important;
     display: flex;
     justify-content: space-between;
     padding-left: 120px;
@@ -279,20 +395,51 @@ h2 {
   }
 
   .hero-image{
-    margin-top: -120px; }
+    margin-top: -120px; /* akkora legyen, amilyen magas a navbar */
+    height: 500px;
+    background-size: cover;
+    margin-bottom: 100px;
+  }
+
+  .btn-order{
+    top: calc(38vw - 20.3%);
+    border-radius: 40px; /* szép lekerekítés */
+    padding: 12px 35px;
+    font-weight: 500;
+    font-size: 24px;
+  }
 
   .logo{
-    width: 400px;
+    top: calc(38vw - 34.3%);
+    width:350px;
   }
+
+  .cseppnyi{
+    top: calc(38vw - 70%);
+    font-size: 2rem;
+  }
+
+  .minden-falat{
+    top: calc(38vw + 50%);
+    font-size: 50px;
+  }
+
+  .cseppnyi, .minden-falat{
+    font-size: 2.5rem;
+  }
+
+
   .ajanlatok{
     max-width:95%; 
     padding-left: 200px;
   }
+
   p.bordered1{
     padding: 0 20px;
     margin-left: 130px;
     margin-top: 100px;
   }
+
   .ihlet .container-fluid{
     max-width: 60%;
   }
@@ -344,6 +491,39 @@ h2 {
   .variaciok{
     width: 300px;
   }
+
+  .logo{
+    top: calc(38vw - 32.9%);
+    width:400px;
+  }
+
+  .btn-order{
+    top: calc(38vw - 20.3%);
+    border-radius: 40px; /* szép lekerekítés */
+    padding: 12px 35px;
+    font-weight: 500;
+    font-size: 30px;
+  }
+
+  .hero-image{
+    margin-top: -120px; /* akkora legyen, amilyen magas a navbar */
+    height: 600px;
+    background-size: cover;
+    margin-bottom: 150px;
+  }
+
+  .cseppnyi{
+    top: calc(38vw - 60%);
+  }
+
+  .minden-falat{
+    top: calc(38vw + 40%);
+    font-size: 50px;
+  }
+
+  .cseppnyi, .minden-falat{
+    font-size: 4rem;
+  }
 }
 
 /* ---------------------------------------- */
@@ -356,16 +536,111 @@ h2 {
   }
 
   .logo{
-    top: 68.3%;
-    left: 52.5%;
+    top: calc(38vw - 34%);
+    width:550px;
   }
 
   .btn-order{
-    top: 60%;
-    left: 44.7%;
-    border-radius: 30px; /* szép lekerekítés */
-    padding: 15px 35px;
+    top: calc(38vw - 18%);
+    border-radius: 40px; /* szép lekerekítés */
+    padding: 12px 35px;
     font-weight: 500;
+    font-size: 36px;
+  }
+
+  .hero-image{
+    height: 600px;
+    background-size: cover;
+    padding-bottom:800px;
+  }
+
+  .cseppnyi{
+    top: calc(38vw - 55%);
+  }
+
+  .minden-falat{
+    top: calc(38vw + 40%);
+    font-size: 50px;
+  }
+
+  .cseppnyi, .minden-falat{
+    font-size: 5rem;
+  }
+
+}
+
+
+/* ---------------------------------------- */
+/* MORE THAN  */
+/* ---------------------------------------- */
+@media (min-width: 1800px) {
+
+  .logo{
+    top: calc(38vw - 34%);
+    width:550px;
+  }
+
+  .btn-order{
+    top: calc(38vw - 18%);
+    border-radius: 40px; /* szép lekerekítés */
+    padding: 12px 35px;
+    font-weight: 500;
+    font-size: 36px;
+  }
+
+  .hero-image{
+    height: 500px;
+    background-size: cover;
+    margin-bottom: 150px;
+  }
+
+  .cseppnyi{
+    top: calc(38vw - 65%);
+  }
+
+  .minden-falat{
+    top: calc(38vw + 50%);
+    font-size: 50px;
+  }
+
+  .cseppnyi, .minden-falat{
+    font-size: 5rem;
+  }
+
+}
+
+/* ---------------------------------------- */
+/* MORE THAN XXL */
+/* ---------------------------------------- */
+@media (min-width: 2000px) {
+  .btn-order{
+    top: 32.7%;
+    border-radius: 50px; /* szép lekerekítés */
+    padding: 20px 50px;
+    font-weight: 500;
+    font-size: 25px;
+  }
+  .logo{
+    width: 400px;
+    top: 26%;
+  }
+
+  .hero-image{
+    height: 1200px;
+    background-size: cover;
+    background-position: center -300px; /* felfelé tolja a képet */
+  }
+
+  .cseppnyi{
+    top: 10.2%;
+  }
+
+  .minden-falat{
+    top: 65%;
+  }
+
+  .cseppnyi, .minden-falat{
+    font-size: 5rem;
   }
 }
 
@@ -373,16 +648,38 @@ h2 {
 /* ---------------------------------------- */
 /* MORE THAN XXL */
 /* ---------------------------------------- */
-@media (min-width: 2000px) {
+@media (min-width: 2120px) {
   .btn-order{
-    top: 60%;
-    left: 46.7%;
-    border-radius: 30px; /* szép lekerekítés */
-    padding: 15px 35px;
+    top: calc(38vw - 34.7%);
+    border-radius: 50px; /* szép lekerekítés */
+    padding: 20px 50px;
     font-weight: 500;
+    font-size: 30px;
+  }
+  .logo{
+    width: 400px;
+    top: calc(38vw - 41.5%);
+  }
+
+  .hero-image{
+    height: 1200px;
+    background-size: cover;
+    margon-bottom:none;
+  }
+
+  .cseppnyi{
+    top: calc(38vw - 55.2%);
+  }
+
+  .minden-falat{
+    top: calc(38vw + 6%);
+    font-size: 50px;
+  }
+
+  .cseppnyi, .minden-falat{
+    font-size: 5rem;
   }
 }
-
 /* ********************************************** */
 /* ******* GENERAL STYLE DEFINITIONS  */
 /* ********************************************** */
@@ -406,10 +703,13 @@ hr.half-width{
 /* ******* NAVBAR  */
 /* ********************************************** */
 #topbar {
-  background: #f5f5f5;
+  background: #4E6661;
   font-size: 14px;
   transition: all 0.5s ease;
   z-index: 1040; /* nagyobb mint a háttér */
+  color: white;
+  font-family: "Mulish", sans-serif;
+  font-style: italic;
 }
 
 /* TRANSITIONS */
@@ -446,9 +746,9 @@ hr.half-width{
   text-transform: uppercase;
   font-size: 22px;
   color: #A57C00 !important;
-  -webkit-box-shadow: 0 8px 6px -6px #999;
+  /* -webkit-box-shadow: 0 8px 6px -6px #999;
   -moz-box-shadow: 0 8px 6px -6px #999;
-  box-shadow: 0 8px 6px -6px #999;
+  box-shadow: 0 8px 6px -6px #999; */
 }
 
 .navbar-nav {
@@ -886,7 +1186,7 @@ hr.half-width{
 .socicon{
   transition: 0.1s linear;
   transform:scale(1.2);
-  color: #969595;
+  color: white;
 }
 
 .socicon:hover{
@@ -1126,7 +1426,6 @@ body{
   transition-property: all;
   -webkit-transition-property: background, color;
   transition-property: background, color;
-  display: inline-block;
   font-size: 20px;
   color: #000;
   letter-spacing: 0.0001vw;
@@ -1137,11 +1436,13 @@ body{
 .hero-image {
   position: relative; 
   background-image: url("/static/app_pottompatti/img/background_base.svg");
-  background-size: cover;
-  background-position: center;
   width: 100%;
-  padding-top: 56.25%; /* = 4500 / 8000 arány */
   z-index: 1; /* háttér */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* vízszintesen középre */
+  justify-content: center; 
+  background-repeat: no-repeat;
 }
 
 
@@ -1159,7 +1460,6 @@ body{
 
 .logo {
   position: absolute;   /* a szülőhöz fog igazodni */
-  transform: translate(-68.4%, -52%); /* vagy inkább responsive: max-width: 20vw */
   height: auto;
 }
 
@@ -1224,6 +1524,7 @@ p.bordered1 {
   font-size: clamp(1rem, 1.25vw, 2rem);
   font-weight: 100;
   color: #707070;
+  padding-left: 10px;
 }
 
 p.bordered1 .bolded{
@@ -1231,16 +1532,6 @@ p.bordered1 .bolded{
   font-weight: 500;
 }
 
-.btn-discover {
-  background: white;
-  color: #EBAEB4;
-  border: 2px solid #EBAEB4;
-  border-radius: 30px; /* szép lekerekítés */
-  padding: 10px 25px;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  margin-left: 200px;
-}
 
 .btn-discover:hover {
   background: #EBAEB4;
@@ -1259,10 +1550,6 @@ p.bordered1 .bolded{
   font-family: "Mulish", sans-serif;
   color: #707070;
   font-weight: 100;
-}
-
-.cseppnyi, .minden-falat{
-  font-size: clamp(1.5rem, 3.5vw, 5rem);
 }
 
 .ajanlatok{
@@ -1321,7 +1608,6 @@ p.bordered1 .bolded{
   font-size: clamp(1.5rem, 2vw, 5rem);
   font-family: "Playfair Display", serif;
   font-weight: 100;
-  padding-top: 100px;
 }
 
 :root {

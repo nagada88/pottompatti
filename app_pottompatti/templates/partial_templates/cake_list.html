@@ -17,7 +17,7 @@
         </div>
 
         <div class="modal fade" id="tortaModal{{ forloop.counter }}" tabindex="-1" aria-labelledby="tortaModalLabel{{ forloop.counter }}" aria-hidden="true" data-bs-keyboard="true">
-            <div class="modal-dialog modal-dialog-centered"> <!-- nagyobb modal -->
+            <div class="modal-dialog modal-dialog-centered"> 
                 <div class="modal-content">
                     <div class="modal-body">
                         <div class="row">
@@ -30,7 +30,7 @@
                                     <center>~ & ~</center>
                                   </div>
                                 <h4>Leírás</h4>
-                                <p>{{ torta.description }}</p> <!-- hosszú leírás -->
+                                <p>{{ torta.description }}</p> 
                             </div>
                         </div>
                     </div>
@@ -40,19 +40,3 @@
 
     {% endfor %}
 </div>
-<!-- 
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        document.querySelectorAll('.tortapic').forEach(function(img) {
-            if (img.naturalHeight > img.naturalWidth) {
-                // portrait
-                img.style.width = '100%';
-                img.style.height = 'auto';
-            } else {
-                // landscape
-                img.style.height = '100%';
-                img.style.width = 'auto';
-            }
-        });
-    });
-</script> -->

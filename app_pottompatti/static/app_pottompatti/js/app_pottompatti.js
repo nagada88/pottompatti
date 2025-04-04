@@ -1,90 +1,67 @@
-// $(document).ready(function() {
-//   $('#navbarDropdown').mouseenter(function() {
-//     $('.dropdown-menu').slideToggle(300, "linear");
-//   });
-//
-//   $('.dropdown-menu').mouseleave(function() {
-//     $(this).slideToggle(300, "linear");
-//   });
-// });
+let lastScrollTop = 0;
 
+document.addEventListener("scroll", function() {
+const st = window.pageYOffset || document.documentElement.scrollTop;
+const navbar = document.getElementById("mynav");
+const topbar = document.getElementById("topbar");
 
-var myNav = document.getElementById('mynav');
-window.onscroll = function () {
-      "use strict";
-       if (document.body.scrollTop >= 20 || document.documentElement.scrollTop >= 20 ) {
-          myNav.classList.add("nav-colored");
-          $('ul.navbar-nav>li.nav-item>a.nav-link').addClass('custom');
-          myNav.classList.remove("nav-transparent");
-      }
-      else {
-          myNav.classList.add("nav-transparent");
-          myNav.classList.remove("nav-colored");
-          $('ul.navbar-nav>li.nav-item>a.nav-link').removeClass('custom');
-      }
-};
-
-$(".ongray").hover(
-  function(){$(this).addClass("g")},
-  function(){$(this).removeClass("g");}
-);
-
-$(".photocover").hover(
-  function(){$(this).removeClass("photog")},
-  function(){$(this).addClass("photog");}
-);
-
-
-
-
-
-const getCookie = (name) => {
-  const value = " " + document.cookie;
-  console.log("value", `==${value}==`);
-  const parts = value.split(" " + name + "=");
-  return parts.length < 2 ? undefined : parts.pop().split(";").shift();
-};
-
-const setCookie = function (name, value, expiryDays, domain, path, secure) {
-  const exdate = new Date();
-  exdate.setHours(
-    exdate.getHours() +
-      (typeof expiryDays !== "number" ? 365 : expiryDays) * 24
-  );
-  document.cookie =
-    name +
-    "=" +
-    value +
-    ";expires=" +
-    exdate.toUTCString() +
-    ";path=" +
-    (path || "/") +
-    (domain ? ";domain=" + domain : "") +
-    (secure ? ";secure" : "");
-};
-
-
-(() => {
-  const $cookiesBanner = document.querySelector(".cookies-eu-banner");
-  const $cookiesBannerButton = $cookiesBanner.querySelector("button");
-
-  $cookiesBannerButton.addEventListener("click", () => {
-    $cookiesBanner.remove();
-  });
-})();
-
-
-const $cookiesBanner = document.querySelector(".cookies-eu-banner");
-const $cookiesBannerButton = $cookiesBanner.querySelector("button");
-const cookieName = "cookiesBanner";
-const hasCookie = getCookie(cookieName);
-
-if (!hasCookie) {
-  $cookiesBanner.classList.remove("hidden");
+// TOPBAR és NAVBAR csak ha tényleg görgetsz le
+if (st > lastScrollTop && st > 80) {  // csak ha lejjebb vagy mint 80px
+    navbar.classList.add('navbar-hidden');
+    topbar.classList.add('topbar-hidden');
+} else if (st < lastScrollTop) {
+    // felfelé görgetés
+    navbar.classList.remove('navbar-hidden');
+    if (st <= 50) {
+        topbar.classList.remove('topbar-hidden');
+    }
 }
 
-$cookiesBannerButton.addEventListener("click", () => {
-  setCookie(cookieName, "closed");
-  $cookiesBanner.remove();
+// átlátszó header effekthez
+if (st <= 50) {
+    navbar.classList.remove('scrolled');
+} else {
+    navbar.classList.add('scrolled');
+}
+
+lastScrollTop = st <= 0 ? 0 : st; // ne legyen negatív
 });
 
+document.addEventListener('scroll', function() {
+document.querySelectorAll('.fade-in').forEach(function(el){
+    const rect = el.getBoundingClientRect();
+    if(rect.top < window.innerHeight - 150) {
+        el.classList.add('visible');
+    }
+});
+});
+document.addEventListener("DOMContentLoaded", function() {
+setTimeout(function(){
+    document.querySelectorAll('.fade-in-on-load').forEach(function(el){
+        el.classList.add('visible');
+        triggerFadeIn();
+    });
+}, 500); // <-- 1000 ms = 1 másodperc késleltetés
+});
+
+
+function triggerFadeIn() {
+document.querySelectorAll('.fade-in-htmx').forEach(function(el, index) {
+    // Reset, ne legyen visible alapból
+    el.classList.remove('visible');
+    el.style.transitionDelay = (index * 100) + "ms"; 
+});
+
+// Kicsi várakozás, hogy az új DOM beépüljön
+setTimeout(() => {
+    document.querySelectorAll('.fade-in-htmx').forEach(function(el) {
+        el.classList.add('visible');
+    });
+}, 150); // 150ms biztosan elég
+}
+
+document.body.addEventListener('htmx:afterSwap', function(e)
+  {
+    triggerFadeIn();
+  }
+);
