@@ -1,40 +1,75 @@
 let lastScrollTop = 0;
-
-document.addEventListener("scroll", function() {
-const st = window.pageYOffset || document.documentElement.scrollTop;
 const navbar = document.getElementById("mynav");
 const topbar = document.getElementById("topbar");
+const navbarCollapse = document.getElementById("navbarNav");
+const navbarToggler = document.querySelector(".navbar-toggler");
 
-// TOPBAR és NAVBAR csak ha tényleg görgetsz le
-if (st > lastScrollTop && st > 80) {  // csak ha lejjebb vagy mint 80px
-    navbar.classList.add('navbar-hidden');
-    topbar.classList.add('topbar-hidden');
-} else if (st < lastScrollTop) {
-    // felfelé görgetés
-    navbar.classList.remove('navbar-hidden');
-    if (st <= 50) {
-        topbar.classList.remove('topbar-hidden');
+function isNavbarOpen() {
+    return navbarCollapse.classList.contains("show") || document.body.classList.contains("menu-open");
+  }
+  
+  navbarCollapse.addEventListener('shown.bs.collapse', () => {
+    document.body.classList.add('menu-open');
+    navbar.classList.remove('navbar-hidden'); // biztosan jelenjen meg
+    topbar.classList.remove('topbar-hidden');
+  });
+  
+  navbarCollapse.addEventListener('hidden.bs.collapse', () => {
+    document.body.classList.remove('menu-open');
+  });
+
+// toggle body class menü nyitáskor
+navbarToggler.addEventListener("click", () => {
+  setTimeout(() => {
+    if (navbarCollapse.classList.contains("show")) {
+      document.body.classList.add("menu-open");
+    } else {
+      document.body.classList.remove("menu-open");
     }
-}
-
-// átlátszó header effekthez
-if (st <= 50) {
-    navbar.classList.remove('scrolled');
-} else {
-    navbar.classList.add('scrolled');
-}
-
-lastScrollTop = st <= 0 ? 0 : st; // ne legyen negatív
+  }, 350); // Bootstrap collapse animáció ideje
 });
 
 document.addEventListener('scroll', function() {
-document.querySelectorAll('.fade-in').forEach(function(el){
-    const rect = el.getBoundingClientRect();
-    if(rect.top < window.innerHeight - 150) {
-        el.classList.add('visible');
+    document.querySelectorAll('.fade-in').forEach(function(el){
+        const rect = el.getBoundingClientRect();
+        if(rect.top < window.innerHeight - 150) {
+            el.classList.add('visible');
+        }
+    });
+    });
+    document.addEventListener("DOMContentLoaded", function() {
+    setTimeout(function(){
+        document.querySelectorAll('.fade-in-on-load').forEach(function(el){
+            el.classList.add('visible');
+            triggerFadeIn();
+        });
+    }, 500); // <-- 1000 ms = 1 másodperc késleltetés
+    });
+    
+document.addEventListener("scroll", function () {
+    if (document.body.classList.contains('menu-open')) return;
+  
+    const st = window.pageYOffset || document.documentElement.scrollTop;
+  
+    if (st > lastScrollTop && st > 80) {
+      navbar.classList.add("navbar-hidden");
+      topbar.classList.add("topbar-hidden");
+    } else if (st < lastScrollTop) {
+      navbar.classList.remove("navbar-hidden");
+      if (st <= 50) {
+        topbar.classList.remove("topbar-hidden");
+      }
     }
-});
-});
+  
+    if (st <= 50) {
+      navbar.classList.remove("scrolled");
+    } else {
+      navbar.classList.add("scrolled");
+    }
+  
+    lastScrollTop = st <= 0 ? 0 : st;
+  });
+
 document.addEventListener("DOMContentLoaded", function() {
 setTimeout(function(){
     document.querySelectorAll('.fade-in-on-load').forEach(function(el){

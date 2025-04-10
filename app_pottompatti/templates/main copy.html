@@ -87,7 +87,7 @@
 <nav id="mynav" class="navbar navbar-expand-xl navbar-light sticky-top navbar-custom">
   <div class="container-fluid">
     <a class="navbar-brand d-md-none" href="#">
-      <img src="/static/app_pottompatti/img/logo.jpg" alt="">
+      <img src={% static 'app_pottompatti/img/logo.jpg' %}  alt="">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -102,14 +102,19 @@
         </li>
 
         <a class="navbar-brand d-none d-md-block" href="rolunk">
-          <img src="/static/app_pottompatti/img/logo.jpg" alt="">
+          <img src={% static 'app_pottompatti/img/logo.jpg' %}  alt="">
         </a>
         <li class="nav-item menupoint">
           <a class="nav-link" href="esemeny">eseményekre</a>
-        </li>
+        </li>          
         <li class="nav-item menupoint">
           <a class="nav-link" href="kapcsolat">kapcsolat</a>
         </li>
+        <!-- <li class="social">
+          <a href="https://www.instagram.com/pottompatti/" target="blank"><i class="fa-brands fa-instagram socicon"></i></a>
+          <a href="https://www.facebook.com/pottompatti" target="blank"><i class="fa-brands fa-facebook-f socicon"></i></a>
+          <a href="https://www.tiktok.com/@pottompatti" target="blank"><i class="fa-brands fa-tiktok socicon"></i></a>
+        </li> -->
       </ul>
     </div>
   </div>

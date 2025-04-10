@@ -104,8 +104,9 @@ h2 {
     width: 300px;
   }
   .navbar-brand img {
-    width: 80px;
+    width: 50px;
   }
+
   .vertical-label{
     font-size: 50px;
     left: -23px; /* mennyire lógjon le */
@@ -664,7 +665,7 @@ h2 {
   .hero-image{
     height: 1200px;
     background-size: cover;
-    margon-bottom:none;
+    margin-bottom:none;
   }
 
   .cseppnyi{
@@ -1469,6 +1470,7 @@ body{
   color: #4E6661;
   border: 2px solid #4E6661;
   transition: all 0.3s ease;
+  text-decoration: none;
 }
 
 .btn-order:hover {
@@ -1725,6 +1727,39 @@ form {
 .form-control:focus {
   background-color: white;
   box-shadow: 0 0 0 0.1rem rgba(0, 123, 255, 0.15);
+}
+
+
+body.menu-open .logo {
+  position: static !important;
+  margin: 0 auto;
+  display: block;
+}
+
+
+#topbar,
+#mynav {
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.navbar-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.topbar-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+
+
+/* ✨ Prevent body from jumping when menu opens */
+body.menu-open .hero-image {
+  margin-top: 0 !important;
+  padding-top: 140px; /* vagy annyi, amekkora a navbar és topbar összege mobilon */
 }
 
 /* div { outline: 1px dashed blue } span { outline: 1px dashed green }
