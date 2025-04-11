@@ -1,7 +1,7 @@
 
-<div class="row g-3">
+<div class="row">
     {% for torta in tortak %}
-        <div class="col-xl-4 col-sm-12 col-md-6 pb-3">
+        <div class="col-xl-4 col-sm-12 col-md-6 pb-4 pe-3 ps-3">
             <div class="product-card fade-in-htmx">
                 <div class="wrapper-img">
                     <a href="#tortaModal{{ forloop.counter }}" data-bs-toggle="modal" data-bs-target="#tortaModal{{ forloop.counter }}">
@@ -11,13 +11,12 @@
                 <div class="product-card-body">
                         <h5 class="card-title">{{ torta.name }}</h5>
                         <p class="category-tag">#{{ torta.product_category }}</p>
-
                 </div>
             </div>
         </div>
 
-        <div class="modal fade" id="tortaModal{{ forloop.counter }}" tabindex="-1" aria-labelledby="tortaModalLabel{{ forloop.counter }}" aria-hidden="true" data-bs-keyboard="true">
-            <div class="modal-dialog modal-dialog-centered"> 
+        <div class="modal fade" id="tortaModal{{ forloop.counter }}" tabindex="-1" aria-labelledby="tortaModalLabel{{ forloop.counter }}" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered"> 
                 <div class="modal-content">
                     <div class="modal-body">
                         <div class="row">

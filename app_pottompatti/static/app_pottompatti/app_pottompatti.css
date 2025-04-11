@@ -1,1770 +1,2051 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Arima:wght@100..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Arima:wght@100..700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
-h1 {
-  text-align: center;
-  font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
-  font-weight: 200;
-  font-style: normal;
-  font-size: clamp(1.5rem, 3.5vw, 5rem);
-  color: #4E6661;
-}
-
-h2 {
-  font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
-  font-weight: 200;
-  font-style: normal;
-  font-size: 35px;
-  color: #4E6661;
-}
-
-/* ---------------------------------------- */
-/* COL-XS */
-/* ---------------------------------------- */
-@media (max-width: 576px){
-  .rolam img{
-    max-width: 90%; 
+  h1 {
+    text-align: center;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-size: clamp(1.5rem, 3.5vw, 5rem);
+    color: #4E6661;
   }
 
-  .rolam p, h2{
-    margin: 0 10px;
+  h2 {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 35px;
+    color: #4E6661;
   }
 
-  .social{
-    padding-top: 5px;
-    padding-bottom: 5px;
-  }
-  .carousel{
-    margin: 10px 20px;
-  }
+  /* ---------------------------------------- */
+  /* COL-XS */
+  /* ---------------------------------------- */
+  @media (max-width: 576px){
 
-  .vertical-center{
-    line-height: 1.2;
-    font-size: 15px;
-    padding: 2vw 5vw;
-  }
+    .form-container{
+      padding-bottom:20px;
+      border-radius: 30px;
+      margin: 10px auto;
+    }
 
-  .card-2,.card-3,.card-4{
-    padding-top: 20px;
-  }
+    .rendelesleadas{
+      text-align: center;
+      padding-bottom: 20px;
+    }
 
-  .activity-card{
-    height: 350px;
-    width: 350px;
-  }
+    .kapcsolat-leiras{
+        padding: 20px;
+        margin: 0 auto;
+        margin-top: 100px;
+        font-size: 14px;
+    }
 
-  .hero-image{
-    margin-top: auto; /* akkora legyen, amilyen magas a navbar */
-    height: 300px;
-    background-size: cover;
-    margin-bottom: 100px;
-  }
-
-  .logo{
-    width: 200px;
-    top: 35%;
-  }
-
-  .cseppnyi{
-    top: 10.4%;
-  }
-  
-  .minden-falat{
-    top: 110.4%;
-  }
-  
-  .cseppnyi, .minden-falat{
-    font-size: 2rem;
-  }
-
-  .btn-order{
-  top: 48%;
-  border-radius: 30px; /* szép lekerekítés */
-  padding: 5px 10px;
-  font-weight: 500;
-  }
-  
-  .ajanlatok{
-    max-width: 90%; 
-    padding-left: 0;
-    padding-bottom: 60px;
-  }
-
-  .ihlet .container-fluid{
-    max-width: 80%;
-  }
-
-  .ihlet img{
-    height: 300px;
-    width: 300px;
-  }
-  .navbar-brand img {
-    width: 50px;
-  }
-
-  .vertical-label{
-    font-size: 50px;
-    left: -23px; /* mennyire lógjon le */
-    top: 55%;
-    transform: translateY(-200%) translateX(27%) rotate(90deg);
-    margin-left: 0;
-  }
-
-  .variaciok{
-    padding-left: 12vw;
-    margin-right: none;
-  }
-
-  .modal-dialog{
-    width: none;
-  }
-  .listak{
-    padding: 20px;
-  }
-
-  .kinalat{
-    font-size: clamp(1.5rem, 10vw, 5rem);
-    padding-top: 50px;
-  }
-
-  .separator{
-    padding-top: none;
-  }
-
-  .btn-discover{
-    display: block;
-    margin: 0 auto;
-  }
-}
+    .footer{
+      padding-top: 0;
+      padding-bottom: 50px;
+    }
 
 
-/* ---------------------------------------- */
-/* COL-SM */
-/* ---------------------------------------- */
-@media (min-width: 576px){
-  .rolam img{
-    max-width: 90%; 
-  }
+    .footer-logo{
+      margin: 2rem 5px;
+      text-align: left;
+    }
 
-  .btn-discover{
-    margin-left: 200px;
-  }
+    .footer .bordered{
+      font-size: 1rem;
+      margin-bottom: 10px;
+      margin-top: 0px;
+    }
 
-  .separator{
-    padding-top: 100px;
-  }
-  
-  .listak{
-    padding: 20px;
-  }
+    .list-unstyled{
+      text-align: left;
+      margin-top: 0;
+    }
 
-  .social{
-    padding-top: 5px;
-    padding-bottom: 5px;
-  }
-  
-  .carousel{
-    margin: 10px 20px;
-  }
+    .rolam img{
+      max-width: 90%; 
+    }
 
-  .vertical-center{
-    line-height: 1.2;
-    font-size: 15px;
-    padding: 2vw 4vw;
-  }
+    .rolam p, h2{
+      margin: 0 10px;
+    }
 
-  .card-2,.card-3,.card-4{
-    padding-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+    .social{
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+    .carousel{
+      margin: 10px 20px;
+    }
 
-  .activity-card{
-    height: 350px;
-    width: 350px;
-  }
+    .vertical-center{
+      line-height: 1.2;
+      font-size: 15px;
+      padding: 2vw 5vw;
+    }
 
-  .hero-image{
-    margin-top: auto; /* akkora legyen, amilyen magas a navbar */
-    height: 450px;
-    background-size: cover;
-  }
+    .card-2,.card-3,.card-4{
+      padding-top: 20px;
+    }
 
-  .logo{
-    top: 40.2%;
-    width:250px;
-  }
+    .activity-card{
+      height: 350px;
+      width: 350px;
+    }
 
-  .btn-order{
-    top: 52%;
+    .hero-image{
+      margin-top: auto; /* akkora legyen, amilyen magas a navbar */
+      height: 300px;
+      background-size: cover;
+      margin-bottom: 100px;
+    }
+
+    .logo{
+      width: 200px;
+      top: 35%;
+    }
+
+    .cseppnyi{
+      top: 10.4%;
+    }
+    
+    .minden-falat{
+      top: 110.4%;
+    }
+    
+    .cseppnyi, .minden-falat{
+      font-size: 2rem;
+    }
+
+    .btn-order{
+    top: 48%;
     border-radius: 30px; /* szép lekerekítés */
-    padding: 10px 30px;
+    padding: 5px 10px;
     font-weight: 500;
+    }
+    
+    .ajanlatok{
+      max-width: 90%; 
+      padding-left: 0;
+      padding-bottom: 60px;
+    }
+
+    .ihlet .container-fluid{
+      max-width: 80%;
+    }
+
+    .ihlet img{
+      height: 300px;
+      width: 300px;
+    }
+    .navbar-brand img {
+      width: 50px;
+    }
+
+    .vertical-label{
+      font-size: 50px;
+      left: -23px; /* mennyire lógjon le */
+      top: 55%;
+      transform: translateY(-200%) translateX(27%) rotate(90deg);
+      margin-left: 0;
+    }
+
+    .variaciok{
+      padding-left: 12vw;
+      margin-right: none;
+    }
+
+    .modal-dialog{
+      width: none;
+    }
+
+    .listak{
+      padding: 20px;
+    }
+
+    .kinalat{
+      font-size: clamp(1.5rem, 10vw, 5rem);
+      padding-top: 50px;
+    }
+
+    .separator{
+      padding-top: none;
+    }
+
+    .btn-discover{
+      display: block;
+      margin: 0 auto;
+    }
+
+    .gi-1{
+      height:450px;
+    }
+
+    .gi-2{
+      height:150px;
+    }
+
+    .gi-3{
+      height:300px;
+    }
+
+
+    #topbar small {
+      font-size: 8px;
+      text-align: left !important;
+    }
+
+    .contact-info span {
+      display: inline-block;
+      margin-bottom: 2px;
+    }
+
+    /* .contact-info {
+      padding-bottom: 10px;
+    } */
+
+    .social {
+      padding-top: 5px;
+    }
+
+    #topbar .nyitvatartas small {
+      display: block;
+      margin-top: 4px;
+    }
+
+    .social i{
+      height: 10px;
+    }
+
+    .categories, .product-list{
+      padding: 0 4vw;
+    }
   }
 
-  .cseppnyi{
-    top: 17.4%;
-    font-size: 2rem;
+
+  /* ---------------------------------------- */
+  /* COL-SM */
+  /* ---------------------------------------- */
+  @media (min-width: 576px){
+
+    .rendelesleadas{
+      text-align: center;
+      padding-bottom: 20px;
+    }
+
+    .form-container{
+      margin-left: 40px;
+      margin-right: 40px;
+      border-radius: 20px;
+    }
+    
+    .kapcsolat-leiras{
+      padding: 20px;
+      margin: 0 auto;
+      margin-top: 100px;
+      font-size: 14px;
   }
 
-  .minden-falat{
-    top: 105.4%;
-    font-size: 50px;
+    .categories, .product-list{
+      padding: 0 calc(40px + 10vw);
+    }
+
+    .footer .bordered{
+      font-size: 16px;
+      text-align: center;
+    }
+
+    .gi-1{
+      height:900px;
+    }
+
+    .gi-2{
+      height:300px;
+    }
+
+    .gi-3{
+      height:600px;
+    }
+    
+    .rolam img{
+      max-width: 90%; 
+    }
+
+    .btn-discover{
+      margin-left: 200px;
+    }
+
+    .separator{
+      padding-top: 100px;
+    }
+    
+    .listak{
+      padding: 20px;
+    }
+
+    .social{
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+    
+    .carousel{
+      margin: 10px 20px;
+    }
+
+    .vertical-center{
+      line-height: 1.2;
+      font-size: 15px;
+      padding: 2vw 4vw;
+    }
+
+    .card-2,.card-3,.card-4{
+      padding-top: 20px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .activity-card{
+      height: 350px;
+      width: 350px;
+    }
+
+    .hero-image{
+      margin-top: auto; /* akkora legyen, amilyen magas a navbar */
+      height: 450px;
+      background-size: cover;
+    }
+
+    .logo{
+      top: 40.2%;
+      width:250px;
+    }
+
+    .btn-order{
+      top: 52%;
+      border-radius: 30px; /* szép lekerekítés */
+      padding: 10px 30px;
+      font-weight: 500;
+    }
+
+    .cseppnyi{
+      top: 17.4%;
+      font-size: 2rem;
+    }
+
+    .minden-falat{
+      top: 105.4%;
+      font-size: 50px;
+    }
+
+    .cseppnyi, .minden-falat{
+      font-size: 2.5rem;
+    }
+
+    .navbar-brand img {
+      width: 80px;
+    }
+
+    .ihlet .container-fluid{
+      max-width: 80%;
+    }
+
+    .ihlet img{
+      height: 500px;
+      width: 500px;
+    }
+
+    .vertical-label{
+      font-size: 50px;
+      left: -23px; /* mennyire lógjon le */
+      top: 55%;
+      transform: translateY(-200%) translateX(27%) rotate(90deg);
+      margin-left: 0;
+    }
+
+    .variaciok{
+      padding-left: 12vw;
+      margin-right: none;
+    }
+
+    .modal-dialog{
+      width: none;
+    }
+
+    .kinalat{
+      font-size: clamp(1.5rem, 7vw, 5rem);
+      padding-top: 50px;
+    }
+
+    .ajanlatok{
+      max-width: 90%; 
+      padding-left: 0;
+    }
   }
 
-  .cseppnyi, .minden-falat{
-    font-size: 2.5rem;
+
+
+  /* ---------------------------------------- */
+  /* COL-MD */
+  /* ---------------------------------------- */
+  @media (min-width: 768px) {
+
+    .categories, .product-list{
+      padding: 0;
+    }
+
+    .list-unstyled{
+      text-align: right;
+      margin-top: 40px;
+    }
+
+    .social{
+      min-width: 200px;
+    }
+
+    .navbar-brand img {
+      width: 80px;
+    }
+
+    .vertical-center{
+      line-height: 2;
+      font-size: 15px;
+      padding: 0 5vw;
+    }
+    .carousel{
+      margin: 40px 50px;
+    }
+
+    .variaciok{
+      padding-left: 3vw;
+      margin-right: 50px;
+    }
+
+    
+    .hero-image{
+      margin-top: auto; /* akkora legyen, amilyen magas a navbar */
+      height: 400px;
+      background-size: cover;
+      margin-bottom: 200px;
+    }
+
+    .btn-order{
+      top: calc(38vw - 25.3%);
+      border-radius: 40px; /* szép lekerekítés */
+      padding: 12px 35px;
+      font-weight: 500;
+      font-size: 24px;
+    }
+
+    .logo{
+      top: calc(38vw - 43.3%);
+      width:350px;
+    }
+
+    .cseppnyi{
+      top: calc(38vw - 70%);
+      font-size: 2rem;
+    }
+
+    .minden-falat{
+      top: calc(38vw + 50%);
+      font-size: 50px;
+    }
+
+    .cseppnyi, .minden-falat{
+      font-size: 2.5rem;
+    }
+
+    .form-container{
+      padding: 50px;
+      margin-right: 10vw;
+      border-radius: 20px;
+    }
+  }
+
+
+  /* ---------------------------------------- */
+  /* COL-LG */
+  /* ---------------------------------------- */
+  @media (min-width: 992px) {
+    .listak{
+      padding: none;
+    }
+
+    .hero-image{
+      margin-top: auto; /* akkora legyen, amilyen magas a navbar */
+      height: 500px;
+      background-size: cover;
+      margin-bottom: 200px;
+    }
+
+    .btn-order{
+      top: calc(38vw - 20.3%);
+      border-radius: 40px; /* szép lekerekítés */
+      padding: 12px 35px;
+      font-weight: 500;
+      font-size: 24px;
+    }
+
+    .logo{
+      top: calc(38vw - 34.3%);
+      width:350px;
+    }
+
+    .cseppnyi{
+      top: calc(38vw - 70%);
+      font-size: 2rem;
+    }
+
+    .minden-falat{
+      top: calc(38vw + 50%);
+      font-size: 50px;
+    }
+
+    .cseppnyi, .minden-falat{
+      font-size: 2.5rem;
+    }
+
+    #topbar .container{
+      max-width: 1050px;
+    }
+  }
+
+
+
+  /* ---------------------------------------- */
+  /* COL-XL */
+  /* ---------------------------------------- */
+  @media (min-width: 1200px) {
+    .kapcsolat-leiras{
+      position:relative;
+      bottom:50px;
+      left: 120px;
+      width: 400px;
+      padding: 10px;
+      font-size: 14px;
+    }
+
+    .rolam img{
+      max-width: 100%; 
+      margin-left: -100px;
+    }
+
+    .navbar-nav{
+      height: 90px !important;
+      display: flex;
+      justify-content: space-between;
+      padding-left: 120px;
+      padding-right: 120px;
+    }
+
+    .activity-card{
+      height: 300px;
+      width: 300px;
+    }
+
+    .hero-image{
+      margin-top: -120px; /* akkora legyen, amilyen magas a navbar */
+      height: 500px;
+      background-size: cover;
+      margin-bottom: 250px;
+    }
+
+    .btn-order{
+      top: calc(38vw - 20.3%);
+      border-radius: 40px; /* szép lekerekítés */
+      padding: 12px 35px;
+      font-weight: 500;
+      font-size: 24px;
+    }
+
+    .logo{
+      top: calc(38vw - 34.3%);
+      width:350px;
+    }
+
+    .cseppnyi{
+      top: calc(38vw - 70%);
+      font-size: 2rem;
+    }
+
+    .minden-falat{
+      top: calc(38vw + 50%);
+      font-size: 50px;
+    }
+
+    .cseppnyi, .minden-falat{
+      font-size: 2.5rem;
+    }
+
+
+    .ajanlatok{
+      max-width:95%; 
+      padding-left: 200px;
+    }
+
+    p.bordered1{
+      padding: 0 20px;
+      margin-left: 130px;
+      margin-top: 100px;
+    }
+
+    .ihlet .container-fluid{
+      max-width: 60%;
+    }
+
+    .vertical-label{
+      font-size: 70px;
+      left: -30px; /* mennyire lógjon le */
+      top: 50%;
+      transform: translateY(-200%) translateX(27%) rotate(90deg);
+      margin-left: 3vw;
+    }
+
+    .variaciok{
+      padding-left: 3vw;
+    }
+
+    .modal-dialog{
+      width: 30%;
+    }
+
+    .vertical-label{
+      font-size: 50px;
+      left: -23px; /* mennyire lógjon le */
+      top: 55%;
+      transform: translateY(-200%) translateX(27%) rotate(90deg);
+      margin-left: 0;
+    }
+
+    .vertical-label{
+      font-size: 50px;
+      left: -20px; /* mennyire lógjon le */
+      top: 55%;
+      transform: translateY(-200%) translateX(27%) rotate(90deg);
+      margin-left: 0;
+    }
+
+    .variaciok{
+      padding-left: 2vw;
+      margin-right: 10px;
+    }
+  }
+
+
+  /* ---------------------------------------- */
+  /* COL-XXL */
+  /* ---------------------------------------- */
+  @media (min-width: 1400px) {
+    .listak{
+      padding: 0 100px ;
+    }
+    .variaciok{
+      width: 300px;
+    }
+
+    .logo{
+      top: calc(38vw - 32.9%);
+      width:400px;
+    }
+
+    .btn-order{
+      top: calc(38vw - 20.3%);
+      border-radius: 40px; /* szép lekerekítés */
+      padding: 12px 35px;
+      font-weight: 500;
+      font-size: 30px;
+    }
+
+    .hero-image{
+      margin-top: -120px; /* akkora legyen, amilyen magas a navbar */
+      height: 600px;
+      background-size: cover;
+      margin-bottom: 300px;
+    }
+
+    .cseppnyi{
+      top: calc(38vw - 60%);
+    }
+
+    .minden-falat{
+      top: calc(38vw + 40%);
+      font-size: 50px;
+    }
+
+    .cseppnyi, .minden-falat{
+      font-size: 4rem;
+    }
+    .kapcsolat-leiras{
+      left: 150px;
+      padding:50px;
+    }
+
+  }
+
+  /* ---------------------------------------- */
+  /* MORE THAN XXL */
+  /* ---------------------------------------- */
+  @media (min-width: 1600px) {
+    .activity-card{
+      height: 350px;
+      width: 350px;
+    }
+
+    .logo{
+      top: calc(38vw - 34%);
+      width:550px;
+    }
+
+    .btn-order{
+      top: calc(38vw - 18%);
+      border-radius: 40px; /* szép lekerekítés */
+      padding: 12px 35px;
+      font-weight: 500;
+      font-size: 36px;
+    }
+
+    .hero-image{
+      height: 600px;
+      background-size: cover;
+      padding-bottom:800px;
+    }
+
+    .cseppnyi{
+      top: calc(38vw - 55%);
+    }
+
+    .minden-falat{
+      top: calc(38vw + 40%);
+      font-size: 50px;
+    }
+
+    .cseppnyi, .minden-falat{
+      font-size: 5rem;
+    }
+
+    .kapcsolat-leiras{
+      position:relative;
+      bottom:50px;
+      left: 100px;
+      width: 500px;
+      padding-top: 60px;
+    }
+
+    .form-container{
+      padding: 50px;
+      margin-right: 10vw;
+      border-radius: 50px;
+    }
+  }
+
+
+  /* ---------------------------------------- */
+  /* MORE THAN  */
+  /* ---------------------------------------- */
+  @media (min-width: 1800px) {
+
+    .kapcsolat-leiras{
+      left: 145px;
+    }
+
+    .logo{
+      top: calc(38vw - 34%);
+      width:550px;
+    }
+
+    .btn-order{
+      top: calc(38vw - 18%);
+      border-radius: 40px; /* szép lekerekítés */
+      padding: 12px 35px;
+      font-weight: 500;
+      font-size: 36px;
+    }
+
+    .hero-image{
+      height: 500px;
+      background-size: cover;
+      margin-bottom: 150px;
+    }
+
+    .cseppnyi{
+      top: calc(38vw - 65%);
+    }
+
+    .minden-falat{
+      top: calc(38vw + 50%);
+      font-size: 50px;
+    }
+
+    .cseppnyi, .minden-falat{
+      font-size: 5rem;
+    }
+
+  }
+
+  /* ---------------------------------------- */
+  /* MORE THAN XXL */
+  /* ---------------------------------------- */
+  @media (min-width: 2000px) {
+    .btn-order{
+      top: 32.7%;
+      border-radius: 50px; /* szép lekerekítés */
+      padding: 20px 50px;
+      font-weight: 500;
+      font-size: 25px;
+    }
+    .logo{
+      width: 400px;
+      top: 26%;
+    }
+
+    .hero-image{
+      height: 1200px;
+      background-size: cover;
+      background-position: center -300px; /* felfelé tolja a képet */
+    }
+
+    .cseppnyi{
+      top: 10.2%;
+    }
+
+    .minden-falat{
+      top: 65%;
+    }
+
+    .cseppnyi, .minden-falat{
+      font-size: 5rem;
+    }
+    .kapcsolat-leiras{
+      left: 200px;
+    }
+  }
+
+
+  /* ---------------------------------------- */
+  /* MORE THAN XXL */
+  /* ---------------------------------------- */
+  @media (min-width: 2120px) {
+    .btn-order{
+      top: calc(38vw - 34.7%);
+      border-radius: 50px; /* szép lekerekítés */
+      padding: 20px 50px;
+      font-weight: 500;
+      font-size: 30px;
+    }
+    .logo{
+      width: 400px;
+      top: calc(38vw - 41.5%);
+    }
+
+    .hero-image{
+      height: 1200px;
+      background-size: cover;
+      margin-bottom:none;
+    }
+
+    .cseppnyi{
+      top: calc(38vw - 55.2%);
+    }
+
+    .minden-falat{
+      top: calc(38vw + 6%);
+      font-size: 50px;
+    }
+
+    .cseppnyi, .minden-falat{
+      font-size: 5rem;
+    }
+    .kapcsolat-leiras{
+      left: 345px;
+    }
+  }
+  /* ********************************************** */
+  /* ******* GENERAL STYLE DEFINITIONS  */
+  /* ********************************************** */
+  .main-text{
+    background: #FFE1E1;
+    text-align: center;
+  }
+
+  .main-bg-color
+  {
+    background-color: #f7e3db;
+  }
+
+  hr.half-width{
+    width:50%;
+    margin: 0 auto;
+    height: 1px;
+  }
+
+  /* ********************************************** */
+  /* ******* NAVBAR  */
+  /* ********************************************** */
+  #topbar {
+    background: #4E6661;
+    transition: all 0.5s ease;
+    z-index: 1030; /* nagyobb mint a háttér */
+    color: white;
+    font-family: "Mulish", sans-serif;
+    font-style: italic;
+  }
+
+  /* TRANSITIONS */
+  #topbar, #mynav {
+    will-change: transform, opacity, background;
+    transition: transform 0.4s ease, opacity 0.4s ease, background 0.4s ease;
+  }
+
+  /* SCROLL EFFECT */
+  .navbar-hidden {
+    transform: translateY(-150%);
+    opacity: 0;
+  }
+
+  .topbar-hidden {
+    transform: translateY(-150%);
+    opacity: 0;
   }
 
   .navbar-brand img {
-    width: 80px;
+    border-radius: 50%;
+    transition: 0.2s linear;
   }
 
-  .ihlet .container-fluid{
+
+  .navbar-brand img:hover {
+    transform: scale(1.05);
+  }
+
+  .navbar-light{
+    background: transparent !important;
+    font-family: "Mulish", sans-serif;
+    font-weight: 200;
+    text-transform: uppercase;
+    font-size: 22px;
+    color: #A57C00 !important;
+  }
+
+  /* Hamburger fókusz stílus javítása */
+  .navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  .navbar-nav {
+    align-items: center;
+    flex: 1;
+    margin: auto !important;
     max-width: 80%;
   }
 
-  .ihlet img{
-    height: 500px;
-    width: 500px;
+  .navbar-nav a{
+    color: #A57C00 !important;
+    text-decoration: none;
   }
 
-  .vertical-label{
-    font-size: 50px;
-    left: -23px; /* mennyire lógjon le */
-    top: 55%;
-    transform: translateY(-200%) translateX(27%) rotate(90deg);
-    margin-left: 0;
+  .navbar .navbar-nav .nav-link {
+    font-size: 1.1em;
+    padding: 0.5em 1em;
   }
 
-  .variaciok{
-    padding-left: 12vw;
-    margin-right: none;
+  @media screen and (min-width: 1200px) {
+    .navbar-brand img {
+      width: 80px;
+    }
+
+    .scrolled .navbar-brand img {
+      width: 50px;
+    }
+
+    .navbar-brand {
+      margin-right: 0;
+      padding: 0 1em;
+    }
   }
 
-  .modal-dialog{
-    width: none;
-  }
-  .kinalat{
-    font-size: clamp(1.5rem, 3vw, 5rem);
-    padding-top: 50px;
-  }
-  .ajanlatok{
-    max-width: 90%; 
-    padding-left: 0;
-  }
-}
-
-
-
-/* ---------------------------------------- */
-/* COL-MD */
-/* ---------------------------------------- */
-@media (min-width: 768px) {
-
-  .social{
-    min-width: 200px;
+  .navbar .navbar-nav .nav-item a {
+    position: relative;
   }
 
-  .navbar-brand img {
-    width: 80px;
+  .navbar .navbar-nav .nav-item a::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    content: "";
+    background-color:#FFE1E1;
+    width: 0%;
+    height: 1px;
+    transition: all 0.5s;
+  }
+  .navbar .navbar-nav .nav-item a:hover::after {
+    width: 70%;
+  }
+
+  /* Alapállapot */
+  .navbar-light {
+    background: transparent !important;
+    transition: all 0.3s ease;
+  }
+
+  .navbar-light.scrolled {
+    background: white !important;
+    box-shadow: 0 4px 6px -4px #999;
+  }
+
+  /* Magasság animáció */
+  #navbarNav,
+  .navbar-nav {
+    transition: all 0.3s ease;
+  }
+
+  /* Eredeti magasság */
+  @media (min-width: 1200px) {
+    .navbar-light {
+        height: 120px;
+    }
+  }
+
+
+  /* ********************************************** */
+  /* CAROUSEL */
+  /* ********************************************** */
+  .carousel{
+    height: 678px;
+  }
+
+  /* .bg-light {
+    background-color: transparent !important;
+  } */
+
+  .carousel-item {
+    /* max-height: 100vh; */
+    min-height: 500px;
+  }
+
+  .carousel-item h2{
+      font-size: 24px;
+      text-transform: uppercase;
+      letter-spacing: .3rem;
+      font-family: "Kumbh Sans", sans-serif;
+      text-transform: uppercase;
+      font-weight: 700;
+      padding-bottom: 30px;
+  }
+
+  .carousel-item h2:after{
+      content:' ';
+      display:block;
+      border: 1px solid ;
+      border-color: rgba(0,0,0,0.55);
+      margin-left: 20%;
+      margin-right: 20%;
+      text-align: center;
+  }
+
+  .carousel-item p{
+      font-size: 22px;
+      font-family: 'Courier New', monospace;
+  }
+
+  .carousel-item img{
+    opacity: 0.8;
+    overflow: hidden;
+    object-fit: cover;
+    height: 578px;
+    padding-top: 70px;
+    padding-bottom: 10px;
+    padding-left: 100px; 
+    padding-right: 100px;
   }
 
   .vertical-center{
-    line-height: 2;
-    font-size: 15px;
-    padding: 0 5vw;
-  }
-  .carousel{
-    margin: 40px 50px;
-  }
+      position: relative;
+      top: 7vw;
+  }  
 
-  .variaciok{
-    padding-left: 3vw;
-    margin-right: 50px;
-  }
 
-  
-  .hero-image{
-    margin-top: auto; /* akkora legyen, amilyen magas a navbar */
-    height: 400px;
-    background-size: cover;
-    margin-bottom: 100px;
-  }
-
-  .btn-order{
-    top: calc(38vw - 25.3%);
-    border-radius: 40px; /* szép lekerekítés */
-    padding: 12px 35px;
-    font-weight: 500;
-    font-size: 24px;
+  .carousel-indicators [data-bs-target] {
+    box-sizing: content-box;
+    flex: 0 1 auto;
+    width: 20px; /* change width */
+    height: 20px; /* change height */
+    margin-right: 6px;
+    margin-left: 6px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #FFA5C0;
+    background-clip: padding-box;
+    border: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    opacity: .5;
+    transition: opacity .6s ease;
+    border-radius: 100%; 
   }
 
-  .logo{
-    top: calc(38vw - 43.3%);
-    width:350px;
+  .carousel-indicators  [data-bs-target].active{
+    background-color: #BB034E; 
   }
 
-  .cseppnyi{
-    top: calc(38vw - 70%);
-    font-size: 2rem;
-  }
-
-  .minden-falat{
-    top: calc(38vw + 50%);
-    font-size: 50px;
-  }
-
-  .cseppnyi, .minden-falat{
-    font-size: 2.5rem;
-  }
-
-
-}
-
-
-/* ---------------------------------------- */
-/* COL-LG */
-/* ---------------------------------------- */
-@media (min-width: 992px) {
-  .listak{
-    padding: none;
-  }
-
-  .hero-image{
-    margin-top: auto; /* akkora legyen, amilyen magas a navbar */
-    height: 500px;
-    background-size: cover;
-    margin-bottom: 100px;
-  }
-
-  .btn-order{
-    top: calc(38vw - 20.3%);
-    border-radius: 40px; /* szép lekerekítés */
-    padding: 12px 35px;
-    font-weight: 500;
-    font-size: 24px;
-  }
-
-  .logo{
-    top: calc(38vw - 34.3%);
-    width:350px;
-  }
-
-  .cseppnyi{
-    top: calc(38vw - 70%);
-    font-size: 2rem;
-  }
-
-  .minden-falat{
-    top: calc(38vw + 50%);
-    font-size: 50px;
-  }
-
-  .cseppnyi, .minden-falat{
-    font-size: 2.5rem;
-  }
-}
-
-
-
-/* ---------------------------------------- */
-/* COL-XL */
-/* ---------------------------------------- */
-@media (min-width: 1200px) {
-  .rolam img{
-    max-width: 100%; 
-    margin-left: -100px;
-  }
-
-  .navbar-nav{
-    height: 90px !important;
-    display: flex;
-    justify-content: space-between;
-    padding-left: 120px;
-    padding-right: 120px;
+  /* ********************************************** */
+  /* ACTIVITIES */
+  /* ********************************************* */
+  .section-activities{  
+      padding: 3vw 5VW;
+      padding-bottom: 5vw;
+      text-align: center;
+      margin-top: 100vh; /* Eltolja az első tartalmi blokkot a hero image alá */
   }
 
   .activity-card{
-    height: 300px;
-    width: 300px;
+    background-color: #B2C8BD;
+    opacity: 0.7;
+    transition: 0.2s linear;
   }
 
-  .hero-image{
-    margin-top: -120px; /* akkora legyen, amilyen magas a navbar */
-    height: 500px;
-    background-size: cover;
-    margin-bottom: 100px;
+  .activity-card h2{
+      text-align: center;
+      letter-spacing: 0.5rem;
+      font-size: 72px;
+      font-family: "Amatic SC", sans-serif;
+      font-weight: 700;
+      font-style: normal;
   }
 
-  .btn-order{
-    top: calc(38vw - 20.3%);
-    border-radius: 40px; /* szép lekerekítés */
-    padding: 12px 35px;
-    font-weight: 500;
-    font-size: 24px;
-  }
-
-  .logo{
-    top: calc(38vw - 34.3%);
-    width:350px;
-  }
-
-  .cseppnyi{
-    top: calc(38vw - 70%);
-    font-size: 2rem;
-  }
-
-  .minden-falat{
-    top: calc(38vw + 50%);
-    font-size: 50px;
-  }
-
-  .cseppnyi, .minden-falat{
-    font-size: 2.5rem;
+  .activity-card:hover{
+    opacity: 1;
+    transform: scale(1.01);
   }
 
 
-  .ajanlatok{
-    max-width:95%; 
-    padding-left: 200px;
+  .card-1 h2{
+    padding-top: 70px;
   }
 
-  p.bordered1{
-    padding: 0 20px;
-    margin-left: 130px;
-    margin-top: 100px;
+  .card-2 h2{
+    padding-top: 140px;
   }
 
-  .ihlet .container-fluid{
-    max-width: 60%;
+  .card-3 h2{
+    padding-top: 140px;
   }
 
-  .vertical-label{
-    font-size: 70px;
-    left: -30px; /* mennyire lógjon le */
-    top: 50%;
-    transform: translateY(-200%) translateX(27%) rotate(90deg);
-    margin-left: 3vw;
-  }
-  .variaciok{
-    padding-left: 3vw;
-  }
-  .modal-dialog{
-    width: 30%;
+
+  .card-4 h2{
+    padding-top: 140px;
   }
 
-  .vertical-label{
-    font-size: 50px;
-    left: -23px; /* mennyire lógjon le */
-    top: 55%;
-    transform: translateY(-200%) translateX(27%) rotate(90deg);
-    margin-left: 0;
+  .card-4 p, .card-3 p, .card-2 p{
+    padding-top: 80px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
-  .vertical-label{
-    font-size: 50px;
-    left: -20px; /* mennyire lógjon le */
-    top: 55%;
-    transform: translateY(-200%) translateX(27%) rotate(90deg);
-    margin-left: 0;
+  /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+  .flip-card {
+    background-color: transparent;
+    /* border: 1px solid #f1f1f1; */
+    perspective: 500px; /* Remove this if you don't want the 3D effect */
   }
 
-  .variaciok{
-    padding-left: 2vw;
-    margin-right: 10px;
-  }
-}
-
-
-/* ---------------------------------------- */
-/* COL-XXL */
-/* ---------------------------------------- */
-@media (min-width: 1400px) {
-  .listak{
-    padding: 0 100px ;
-  }
-  .variaciok{
-    width: 300px;
-  }
-
-  .logo{
-    top: calc(38vw - 32.9%);
-    width:400px;
-  }
-
-  .btn-order{
-    top: calc(38vw - 20.3%);
-    border-radius: 40px; /* szép lekerekítés */
-    padding: 12px 35px;
-    font-weight: 500;
-    font-size: 30px;
-  }
-
-  .hero-image{
-    margin-top: -120px; /* akkora legyen, amilyen magas a navbar */
-    height: 600px;
-    background-size: cover;
-    margin-bottom: 150px;
-  }
-
-  .cseppnyi{
-    top: calc(38vw - 60%);
-  }
-
-  .minden-falat{
-    top: calc(38vw + 40%);
-    font-size: 50px;
-  }
-
-  .cseppnyi, .minden-falat{
-    font-size: 4rem;
-  }
-}
-
-/* ---------------------------------------- */
-/* MORE THAN XXL */
-/* ---------------------------------------- */
-@media (min-width: 1600px) {
-  .activity-card{
-    height: 350px;
-    width: 350px;
-  }
-
-  .logo{
-    top: calc(38vw - 34%);
-    width:550px;
-  }
-
-  .btn-order{
-    top: calc(38vw - 18%);
-    border-radius: 40px; /* szép lekerekítés */
-    padding: 12px 35px;
-    font-weight: 500;
-    font-size: 36px;
-  }
-
-  .hero-image{
-    height: 600px;
-    background-size: cover;
-    padding-bottom:800px;
-  }
-
-  .cseppnyi{
-    top: calc(38vw - 55%);
-  }
-
-  .minden-falat{
-    top: calc(38vw + 40%);
-    font-size: 50px;
-  }
-
-  .cseppnyi, .minden-falat{
-    font-size: 5rem;
-  }
-
-}
-
-
-/* ---------------------------------------- */
-/* MORE THAN  */
-/* ---------------------------------------- */
-@media (min-width: 1800px) {
-
-  .logo{
-    top: calc(38vw - 34%);
-    width:550px;
-  }
-
-  .btn-order{
-    top: calc(38vw - 18%);
-    border-radius: 40px; /* szép lekerekítés */
-    padding: 12px 35px;
-    font-weight: 500;
-    font-size: 36px;
-  }
-
-  .hero-image{
-    height: 500px;
-    background-size: cover;
-    margin-bottom: 150px;
-  }
-
-  .cseppnyi{
-    top: calc(38vw - 65%);
-  }
-
-  .minden-falat{
-    top: calc(38vw + 50%);
-    font-size: 50px;
-  }
-
-  .cseppnyi, .minden-falat{
-    font-size: 5rem;
-  }
-
-}
-
-/* ---------------------------------------- */
-/* MORE THAN XXL */
-/* ---------------------------------------- */
-@media (min-width: 2000px) {
-  .btn-order{
-    top: 32.7%;
-    border-radius: 50px; /* szép lekerekítés */
-    padding: 20px 50px;
-    font-weight: 500;
-    font-size: 25px;
-  }
-  .logo{
-    width: 400px;
-    top: 26%;
-  }
-
-  .hero-image{
-    height: 1200px;
-    background-size: cover;
-    background-position: center -300px; /* felfelé tolja a képet */
-  }
-
-  .cseppnyi{
-    top: 10.2%;
-  }
-
-  .minden-falat{
-    top: 65%;
-  }
-
-  .cseppnyi, .minden-falat{
-    font-size: 5rem;
-  }
-}
-
-
-/* ---------------------------------------- */
-/* MORE THAN XXL */
-/* ---------------------------------------- */
-@media (min-width: 2120px) {
-  .btn-order{
-    top: calc(38vw - 34.7%);
-    border-radius: 50px; /* szép lekerekítés */
-    padding: 20px 50px;
-    font-weight: 500;
-    font-size: 30px;
-  }
-  .logo{
-    width: 400px;
-    top: calc(38vw - 41.5%);
-  }
-
-  .hero-image{
-    height: 1200px;
-    background-size: cover;
-    margin-bottom:none;
-  }
-
-  .cseppnyi{
-    top: calc(38vw - 55.2%);
-  }
-
-  .minden-falat{
-    top: calc(38vw + 6%);
-    font-size: 50px;
-  }
-
-  .cseppnyi, .minden-falat{
-    font-size: 5rem;
-  }
-}
-/* ********************************************** */
-/* ******* GENERAL STYLE DEFINITIONS  */
-/* ********************************************** */
-.main-text{
-   background: #FFE1E1;
-   text-align: center;
-}
-
-.main-bg-color
-{
-  background-color: #f7e3db;
-}
-
-hr.half-width{
-  width:50%;
-  margin: 0 auto;
-  height: 1px;
-}
-
-/* ********************************************** */
-/* ******* NAVBAR  */
-/* ********************************************** */
-#topbar {
-  background: #4E6661;
-  font-size: 14px;
-  transition: all 0.5s ease;
-  z-index: 1040; /* nagyobb mint a háttér */
-  color: white;
-  font-family: "Mulish", sans-serif;
-  font-style: italic;
-}
-
-/* TRANSITIONS */
-#topbar, #mynav {
-  will-change: transform, opacity, background;
-  transition: transform 0.4s ease, opacity 0.4s ease, background 0.4s ease;
-}
-
-/* SCROLL EFFECT */
-.navbar-hidden {
-  transform: translateY(-150%);
-  opacity: 0;
-}
-
-.topbar-hidden {
-  transform: translateY(-150%);
-  opacity: 0;
-}
-
-.navbar-brand img {
-  border-radius: 50%;
-  transition: 0.2s linear;
-}
-
-
-.navbar-brand img:hover {
-  transform: scale(1.05);
-}
-
-.navbar-light{
-  background: transparent !important;
-  font-family: "Mulish", sans-serif;
-  font-weight: 200;
-  text-transform: uppercase;
-  font-size: 22px;
-  color: #A57C00 !important;
-  /* -webkit-box-shadow: 0 8px 6px -6px #999;
-  -moz-box-shadow: 0 8px 6px -6px #999;
-  box-shadow: 0 8px 6px -6px #999; */
-}
-
-.navbar-nav {
-  align-items: center;
-  flex: 1;
-  margin: auto !important;
-  max-width: 80%;
-}
-
-.navbar-nav a{
-  color: #A57C00 !important;
-  text-decoration: none;
-}
-
-.navbar .navbar-nav .nav-link {
-  font-size: 1.1em;
-  padding: 0.5em 1em;
-}
-
-@media screen and (min-width: 1200px) {
-  .navbar-brand img {
-    width: 80px;
-  }
-
-  .scrolled .navbar-brand img {
-    width: 50px;
-  }
-
-  .navbar-brand {
-    margin-right: 0;
-    padding: 0 1em;
-  }
-}
-
-.navbar .navbar-nav .nav-item a {
-  position: relative;
-}
-
-.navbar .navbar-nav .nav-item a::after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  content: "";
-  background-color:#FFE1E1;
-  width: 0%;
-  height: 1px;
-  transition: all 0.5s;
-}
-.navbar .navbar-nav .nav-item a:hover::after {
-  width: 70%;
-}
-
-/* Alapállapot */
-.navbar-light {
-  background: transparent !important;
-  transition: all 0.3s ease;
-}
-
-.navbar-light.scrolled {
-  background: white !important;
-  box-shadow: 0 4px 6px -4px #999;
-}
-
-/* Magasság animáció */
-#navbarNav,
-.navbar-nav {
-  transition: all 0.3s ease;
-}
-
-/* Eredeti magasság */
-@media (min-width: 1200px) {
-  .navbar-light {
-      height: 120px;
-  }
-}
-
-
-/* ********************************************** */
-/* CAROUSEL */
-/* ********************************************** */
-.carousel{
-  height: 678px;
-}
-
-/* .bg-light {
-	background-color: transparent !important;
-} */
-
-.carousel-item {
-	/* max-height: 100vh; */
-	min-height: 500px;
-}
-
-.carousel-item h2{
-    font-size: 24px;
-    text-transform: uppercase;
-    letter-spacing: .3rem;
-    font-family: "Kumbh Sans", sans-serif;
-    text-transform: uppercase;
-    font-weight: 700;
-    padding-bottom: 30px;
-}
-
-.carousel-item h2:after{
-    content:' ';
-    display:block;
-    border: 1px solid ;
-    border-color: rgba(0,0,0,0.55);
-    margin-left: 20%;
-    margin-right: 20%;
-    text-align: center;
-}
-
-.carousel-item p{
-    font-size: 22px;
-    font-family: 'Courier New', monospace;
-}
-
-.carousel-item img{
-  opacity: 0.8;
-  overflow: hidden;
-  object-fit: cover;
-  height: 578px;
-  padding-top: 70px;
-  padding-bottom: 10px;
-  padding-left: 100px; 
-  padding-right: 100px;
-}
-
-.vertical-center{
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
     position: relative;
-    top: 7vw;
- }  
-
-
-.carousel-indicators [data-bs-target] {
-  box-sizing: content-box;
-  flex: 0 1 auto;
-  width: 20px; /* change width */
-  height: 20px; /* change height */
-  margin-right: 6px;
-  margin-left: 6px;
-  text-indent: -999px;
-  cursor: pointer;
-  background-color: #FFA5C0;
-  background-clip: padding-box;
-  border: 0;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  opacity: .5;
-  transition: opacity .6s ease;
-  border-radius: 100%; 
-}
-
-.carousel-indicators  [data-bs-target].active{
-  background-color: #BB034E; 
-}
-
-/* ********************************************** */
-/* ACTIVITIES */
-/* ********************************************* */
-.section-activities{  
-    padding: 3vw 5VW;
-    padding-bottom: 5vw;
+    width: 100%;
+    height: 100%;
     text-align: center;
-    margin-top: 100vh; /* Eltolja az első tartalmi blokkot a hero image alá */
-}
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
 
-.activity-card{
-  background-color: #B2C8BD;
-  opacity: 0.7;
-  transition: 0.2s linear;
-}
+  .flip-card-inner img{
+    height: 100%;
+    object-fit: contain;
+  }
 
-.activity-card h2{
-    text-align: center;
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    overflow: hidden;
+  }
+
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: #B2C8BD;
+    color: white;
+  }
+
+  /* Style the back side */
+  .flip-card-back {
+    background-color: #B2C8BD;
     letter-spacing: 0.5rem;
-    font-size: 72px;
+    font-size: 30px;
     font-family: "Amatic SC", sans-serif;
     font-weight: 700;
     font-style: normal;
-}
-
-.activity-card:hover{
-  opacity: 1;
-  transform: scale(1.01);
-}
-
-
-.card-1 h2{
-  padding-top: 70px;
-}
-
-.card-2 h2{
-  padding-top: 140px;
-}
-
-.card-3 h2{
-  padding-top: 140px;
-}
-
-
-.card-4 h2{
-  padding-top: 140px;
-}
-
-.card-4 p, .card-3 p, .card-2 p{
-  padding-top: 80px;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-.flip-card {
-  background-color: transparent;
-  /* border: 1px solid #f1f1f1; */
-  perspective: 500px; /* Remove this if you don't want the 3D effect */
-}
-
-/* This container is needed to position the front and back side */
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-
-.flip-card-inner img{
-  height: 100%;
-  object-fit: contain;
-}
-
-/* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-/* Position the front and back side */
-.flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden; /* Safari */
-  backface-visibility: hidden;
-  overflow: hidden;
-}
-
-/* Style the front side (fallback if image is missing) */
-.flip-card-front {
-  background-color: #B2C8BD;
-  color: white;
-}
-
-/* Style the back side */
-.flip-card-back {
-  background-color: #B2C8BD;
-  letter-spacing: 0.5rem;
-  font-size: 30px;
-  font-family: "Amatic SC", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  opacity: 0.5;
-  color: black;
-  transform: rotateY(180deg);
-}
-
-.flip-card-back-1 {
-  background-color: #bbb;
-  color: black;
-  transform: rotateY(180deg);
-}
-
-.flip-card-back-1 {
-  transform: rotateY(180deg);
-}
-/* ********************************************** */
-/* PARALLAX EFFECTS */
-/* ********************************************** */
-.parallax {
-  /* Set a specific height */
-  min-height: 400px;
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  z-index: 0;
-  /* background: url("/static/app_vackolo/img/page_elements/paw_bg.png"); */
-  height: 400px;
-  background-color: rgba(255,255,255,0.7);
-  background-blend-mode: lighten;
-  background-image: url("/static/app_pottompatti/img/bakery.jpeg");
-}
-
-/* ********************************************** */
-/* JÁRTÁL NÁLUNK */
-/* ********************************************** */
-.jartalnalunk{
-  min-height: 500px;
-}
-
-.jartalnalunk h2{
-  text-align: center;
-}
-
-.jartalnalunk img{
-  object-fit: cover;
-  width: 100%;
-  border-radius: 5%;
-}
-
-.img-container{
-  padding: 100px 100px;
-  overflow: hidden;
-}
-
-.jartalnalunk h2{
-  font-size: 24px;
-  text-transform: uppercase;
-  letter-spacing: .3rem;
-}
-
-.jartalnalunk p{
-  font-size: 22px;
-  font-family: 'Courier New', monospace;
-  text-align: center;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.jartalnalunk-text{
-  padding-top: 10vw;
-}
-
-
-/* ********************************************** */
-/* FOOTER */
-/* ********************************************** */
-.footer{
-  text-align: center;
-  color: #4E6661;
-  position: sticky;
-  top: 100%;
-}
-
-.footer h2{
-  font-family: "Lekton", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-/* ********************************************** */
-/* BUTTON DEFINITIONS */
-/* ********************************************** */
-.btn1 {
-  border-radius: 12px;
-  border: 0px;
-  -webkit-box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
-  background: #3bae46;
-  min-width: 120px;
-  font-family: 'Quicksand', sans-serif;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-  transition-property: all;
-  -webkit-transition-property: background, color;
-  transition-property: background, color;
-  display: inline-block;
-  color: #fff;
-  letter-spacing: 0.0005vw;
-  margin-top: 1vw;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.btn1:hover{
-  background: #fff;
-  color: #3bae46;
-  letter-spacing: 0.001vw;
-}
-
-
-.maincategories .row{
-  height: 500px;
-  overflow: hidden;
-  background-color: antiquewhite;
-  border-radius: 30px;
-}
-
-.maincategory{
-  text-align: center;
-  padding-top: 10rem;
-  text-transform: uppercase;
-}
-
-.maincatimgcontainer{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
-.maincatimgcontainer img {
-    /* flex-shrink: 0; */
-    min-width: 100%;
-    min-height: 100%;
-    border-radius: 30px;
-}
-
-
-/* ********************************************** */
-/* SOCIAL ICONS */
-/* ********************************************** */
-
-.social img{
-  height: 30px;
-  width:30px;
-  transition: 0.1s linear;
-  opacity: 0.7;
-}
-
-.social a{
-  padding: 5px;
-}
-
-.social img:hover{
- transform: scale(1.3);
- opacity: 1;
-}
-
-.socicon{
-  transition: 0.1s linear;
-  transform:scale(1.2);
-  color: white;
-}
-
-.socicon:hover{
-  transform:scale(1.6);
-}
-
-
-/* ********************************************** */
-/* TORTÁK */
-/* ********************************************** */
-
-.torta-sidebar{
-  text-align: center;
-}
-
-.torta-sidebar a{
-  text-decoration: none;
-  color: grey;
-  transition: 0.2s linear;
-}
-
-.torta-sidebar a:hover{
-  font-size: 18px;
-}
-
-.torta-lista{
-  letter-spacing: 0.5rem;
-  font-size: 30px;
-  font-family: "Amatic SC", sans-serif;
-  font-weight: 700;
-}
-
-.product-card{
-  overflow: hidden;
-  width: 100%;
-  transition: box-shadow 0.3s ease-in-out;
-  background-color: #FFF3F9;
-  border-radius: 50px;
-  color: #4E6661;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-@media (max-width: 1200px) {
-  .wrapper-img{
-    max-height: 300px;
+    opacity: 0.5;
+    color: black;
+    transform: rotateY(180deg);
   }
-}
 
-@media (min-width: 1200px) {
-  .wrapper-img{
-    max-height: 400px;
+  .flip-card-back-1 {
+    background-color: #bbb;
+    color: black;
+    transform: rotateY(180deg);
   }
-}
 
-.product-card h5{
-  font-family: "Playfair Display", serif;
-  font-weight: 100;
-  color: #4E6661;
-  font-size: clamp(1.5rem, 1vw, 5rem);
-}
+  .flip-card-back-1 {
+    transform: rotateY(180deg);
+  }
 
-.product-card:hover{
-  box-shadow: 10px 10px 5px rgba(233, 233, 233, 0.699);
-}
+  /* ********************************************** */
+  /* JÁRTÁL NÁLUNK */
+  /* ********************************************** */
+  .jartalnalunk{
+    min-height: 500px;
+  }
 
-.product-card-body{
-  padding-left: 2rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  position: relative;
-} 
+  .jartalnalunk h2{
+    text-align: center;
+  }
 
-.wrapper-img{
-  border-radius: 50px;
-  margin-top: 3px;
-  border-radius: 50px;
-  width: 100%;
-  height: 350px;
-  position: relative;
-  overflow: hidden;
-}
+  .jartalnalunk img{
+    object-fit: cover;
+    width: 100%;
+    border-radius: 5%;
+  }
 
-.tortapic{
-  border-radius: 50px;
-  transition: transform 1s ease;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; 
-}
+  .img-container{
+    padding: 100px 100px;
+    overflow: hidden;
+  }
 
+  .jartalnalunk h2{
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+  }
 
-.modal-body{
-  color: #4E6661;
-  font-family: "Mulish", sans-serif;
-  font-weight: 100;
-}
+  .jartalnalunk p{
+    font-size: 22px;
+    font-family: 'Courier New', monospace;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 
-.modal-body h5{
-  font-family: "Playfair Display", serif;
-  font-weight: 100;
-  text-align: center;
-  font-size: clamp(1.5rem, 2vw, 5rem);
-}
+  .jartalnalunk-text{
+    padding-top: 10vw;
+  }
 
 
-.modal-body h4{
-  font-family: "Playfair Display", serif;
-  font-weight: 100;
-  font-style: italic;
-  text-align: left;
-  font-size: clamp(1.5rem, 1.4vw, 5rem);
-}
+  /* ********************************************** */
+  /* FOOTER */
+  /* ********************************************** */
+  .footer{
+    text-align: center;
+    color: #4E6661;
+    position: sticky;
+    top: 100%;
+    font-family: "Mulish", sans-serif;
+  }
 
-.modal-content{
-  border-radius: 60px !important;
-  -webkit-box-shadow: 0 0 16px rgba(0, 0, 0, 0.07);
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
-}
+  .footer h2{
+    font-family: "Lekton", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
 
-.modal-dialog{
-  max-width: none !important;
-}
+  .footer-logo{
+    font-weight: 100;
+  }
 
-.modal-body img{
-  border-radius: 50px;
-  height: 100%;
-  width: auto;
-}
-
-.separator-modal{
-  color: #707070;
-  font-size: clamp(1.5rem, 1.1vw, 5rem);
-  font-family: "Playfair Display", serif;
-  font-weight: 100;
-  padding-top:20px; 
-  padding-bottom: 20px;
-}
-
-.cover{
-  object-fit: cover;
-  width:100%;
-  height:auto;
-}
-
-.variaciok{
-  font-family: "Lato", sans-serif;
-  padding-top: 40px;
-  background-color: #4E6661;
-  border-radius: 50px;
-  min-height: 400px;
-  max-height: 500px;
-  color: #FFFFFF;
-  position: relative;
-  overflow: visible; 
-}
-
-.categories h4{
-  text-transform: uppercase;
-  padding-left: 30px;
-}
-
-.form-check{
-  padding-right: 35px;
-}
-
-.list-unstyled{
-  text-align: right;
-  text-decoration: none;
-}
-
-.list-unstyled a{
-  text-decoration: none;
-  color: #4E6661;
-}
-
-.list-unstyled a:hover{
-  text-decoration: none;
-  color: #F6D2D6;
-}
-
-
-.footer .bordered{
-  font-size: 20px;
-}
-
-.vertical-label {
-  position: absolute;
-  transform-origin: left top;
-  color: #F6D2D6;
-  padding: 0.5rem 1rem;
-  font-family: "Lato", sans-serif;
-  font-style: bold;
-  font-weight: 700;
-  z-index: 1;   /* ! fontos: csak kicsi legyen */
-}
-
-.category-tag{
-  color: rgb(136, 114, 114);
-}
-
-body{
-  min-height: 100vh;
-}
-
-.btn-outline-dark{
-  position: absolute;
-  bottom: 0px;
-  /* right: -10px; */
-}
-
-.kinalat{
-  font-style: italic;
-  padding-bottom: 3vw;
-}
-
-.btn:hover{
+  /* ********************************************** */
+  /* BUTTON DEFINITIONS */
+  /* ********************************************** */
+  .btn1 {
+    border-radius: 12px;
+    border: 0px;
+    -webkit-box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
+    background: #3bae46;
+    min-width: 120px;
+    font-family: 'Quicksand', sans-serif;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    transition-property: all;
+    -webkit-transition-property: background, color;
+    transition-property: background, color;
+    display: inline-block;
     color: #fff;
-    background: #A2B49C;
-}
+    letter-spacing: 0.0005vw;
+    margin-top: 1vw;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 
-.btn::after:hover{
-    filter:alpha(opacity=70) !important;
-}
-
-.btn {
-  border-radius: 12px;
-  -webkit-box-shadow: 0 0 16px rgba(0, 0, 0, 0.07);
-  box-shadow: 0 0 16px rgba(0, 0, 0, 0.07);
-  background: #fff;
-  padding: 17px;
-  font-weight: 500;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-  transition-property: all;
-  -webkit-transition-property: background, color;
-  transition-property: background, color;
-  font-size: 20px;
-  color: #000;
-  letter-spacing: 0.0001vw;
-  font-family: "Lekton", sans-serif;
-}
+  .btn1:hover{
+    background: #fff;
+    color: #3bae46;
+    letter-spacing: 0.001vw;
+  }
 
 
-.hero-image {
-  position: relative; 
-  background-image: url("/static/app_pottompatti/img/background_base.svg");
-  width: 100%;
-  z-index: 1; /* háttér */
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* vízszintesen középre */
-  justify-content: center; 
-  background-repeat: no-repeat;
-}
+  .maincategories .row{
+    height: 500px;
+    overflow: hidden;
+    background-color: antiquewhite;
+    border-radius: 30px;
+  }
+
+  .maincategory{
+    text-align: center;
+    padding-top: 10rem;
+    text-transform: uppercase;
+  }
+
+  .maincatimgcontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .maincatimgcontainer img {
+      /* flex-shrink: 0; */
+      min-width: 100%;
+      min-height: 100%;
+      border-radius: 30px;
+  }
 
 
-.hero-image p{
-  position: absolute;
-  text-align: center;
-  font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
-  
-  font-weight: 200;
-  font-style: normal;   
-  width: 100%;
-  color: #4E6661;
-}
+  /* ********************************************** */
+  /* SOCIAL ICONS */
+  /* ********************************************** */
 
-.logo {
-  position: absolute;   /* a szülőhöz fog igazodni */
-  height: auto;
-}
+  .social img{
+    height: 30px;
+    width:30px;
+    transition: 0.1s linear;
+    opacity: 0.7;
+  }
 
-.btn-order {
-  position: absolute;
-  background: white;
-  color: #4E6661;
-  border: 2px solid #4E6661;
-  transition: all 0.3s ease;
-  text-decoration: none;
-}
+  .social a{
+    padding: 5px;
+  }
 
-.btn-order:hover {
-  background: #4E6661;
-  color: white;
-  border-color: #4E6661;
-}
-
-.filler{
-  padding: 10vw 0;
-}
-
-p.bordered {
-  border-left: 2px solid #4E6661;
-  border-right: 2px solid #4E6661;
-  font-weight: 200;
-  padding: 0.5rem 1rem;
-  max-width: 900px;
-  margin: 3rem auto;
-  text-align: left;
-  font-family: "Mulish", sans-serif;
-  font-size: clamp(1rem, 1.25vw, 2rem);
-}
-
-.gallery-custom{
-  overflow: hidden;
-}
-
-.gallery-item {
-  position: relative;
-  overflow: hidden;
-  padding: 5px;
-  box-sizing: border-box;
-}
-
-.gallery-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.gallery-item img.offset-top {
-  object-position: center -100px; /* felfelé tolja a képet */
-}
-
-
-p.bordered1 {
-  border-left: 2px solid #4E6661;
-  max-width: 600px;
-  text-align: left;
-  font-family: "Mulish", sans-serif;
-  font-size: clamp(1rem, 1.25vw, 2rem);
-  font-weight: 100;
-  color: #707070;
-  padding-left: 10px;
-}
-
-p.bordered1 .bolded{
-  font-family: Arima, sans-serif;
-  font-weight: 500;
-}
-
-
-.btn-discover:hover {
-  background: #EBAEB4;
-  color: white;
-  border-color: #EBAEB4;
-}
-
-.rolam{
-  background-color: #FFF4F9;
-}
-
-.rolam p{
-  max-width: 600px;
-  margin-top: 20px;
-  text-align: left;
-  font-family: "Mulish", sans-serif;
-  color: #707070;
-  font-weight: 100;
-}
-
-.ajanlatok{
-  transform: rotate(-4deg);
-}
-
-.ihlet{
-  background-color: #FFF4F9;
-}
-
-
-.ihlet img{
-  object-fit: cover;
-  overflow: hidden;
-  max-width: 95%;
-  border-radius: 50px;
-  padding: 20px;
-}
-
-.ihlet .row{
-  padding-top: 50px;
-  margin-bottom: 50px;
-
-}
-
-.ihlet .btn-discover{
-  margin: 0;
-}
-
-.ihlet h2{
-  padding-bottom: 20px;
-}
-
-.ihlet h1{
-  margin-top: 3vw;
-}
-
-.esemenyekre{
-  padding-top: 4vw;
-  padding-bottom: 4vw;
-  max-width: 60%;
-}
-
-.esemenyekre h1{
-  padding-bottom: 3vw;
-}
-
-.esemenyekre p{
-  font-family: "Mulish", sans-serif;
-  font-weight: 100;
-  color: #707070;
-}
-
-.separator{
-  color: #707070;
-  font-size: clamp(1.5rem, 2vw, 5rem);
-  font-family: "Playfair Display", serif;
-  font-weight: 100;
-}
-
-:root {
-  --primary-color: #EBAEB4;
-  --info-bg: #FFE1E1;
-  --border-radius: 20px;
-  --form-font: "Mulish", sans-serif;
-}
-
-
-form {
-  font-family: var(--form-font);
-}
-
-.btn-discover {
-  background: white;
-  color: var(--primary-color);
-  border: 1px solid var(--primary-color);
-  border-radius: 30px;
-  padding: 10px 25px;
-  transition: all 0.3s ease;
-}
-
-.btn-discover:hover {
-  background: var(--primary-color);
-  color: white;
-}
-
-
-.kapcsolat{
-  background-color: #FFF4F9;
-  margin-top: -120px;
-}
-
-.kapcsolat-leiras{
-  position:relative;
-  bottom:50px;
-  left: 350px;
-  width: 500px;
-  background: url("/static/app_pottompatti/img/rendeles_hatter.jpg");
-  text-align: center;
-  font-size: 1.1rem;
-  color: white;
-  font-family: "Mulish", sans-serif;
-  margin-top: 10px;
-  font-style: italic;
-  font-weight: 100;
-  font-size: 25px;
-  line-height: 1.6;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  border-radius: 50px;
-}
-
-.form-container{
-  background-color: #FFFFFF;
-  border-radius: 100px;
-  padding: 50px;
-  margin-right: 10vw;
-  font-family: "Mulish", sans-serif;
-  font-style: italic;
-  color: #4E6661;
-  text-align: left;
-}
-
-.rendelesleadas{
-  font-size: clamp(1.5rem, 2.2vw, 5rem);
-  text-align: left;
-  margin-left: 240px;
-}
-
-.divider{
-  height: 15vw;
-}
-
-.fade-in {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 1s ease-out;
-}
-
-.fade-in.visible {
+  .social img:hover{
+  transform: scale(1.3);
   opacity: 1;
-  transform: translateY(0);
-}
+  }
 
-.fade-in-on-load {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.6s ease-out;
-}
+  .socicon{
+    transition: 0.1s linear;
+    transform:scale(1.2);
+    color: white;
+  }
 
-.fade-in-on-load.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.fade-in-htmx {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
+  .socicon:hover{
+    transform:scale(1.6);
+  }
 
 
-.fade-in-htmx.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
+  /* ********************************************** */
+  /* TORTÁK */
+  /* ********************************************** */
 
-.form-control {
-  background-color: #f8f9fa; /* halvány szürke */
-  border-radius: 40px;
-  border: 1px solid #ced4da;
-}
+  .torta-sidebar{
+    text-align: center;
+  }
 
-.form-control:focus {
-  background-color: white;
-  box-shadow: 0 0 0 0.1rem rgba(0, 123, 255, 0.15);
-}
+  .torta-sidebar a{
+    text-decoration: none;
+    color: grey;
+    transition: 0.2s linear;
+  }
+
+  .torta-sidebar a:hover{
+    font-size: 18px;
+  }
+
+  .torta-lista{
+    letter-spacing: 0.5rem;
+    font-size: 30px;
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 700;
+  }
+
+  .product-card{
+    overflow: hidden;
+    width: 100%;
+    transition: box-shadow 0.3s ease-in-out;
+    background-color: #FFF3F9;
+    border-radius: 50px;
+    color: #4E6661;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  @media (max-width: 1200px) {
+    .wrapper-img{
+      max-height: 300px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .wrapper-img{
+      max-height: 400px;
+    }
+  }
+
+  .product-card h5{
+    font-family: "Playfair Display", serif;
+    font-weight: 100;
+    color: #4E6661;
+    font-size: clamp(1.5rem, 1vw, 5rem);
+  }
+
+  .product-card:hover{
+    box-shadow: 10px 10px 5px rgba(233, 233, 233, 0.699);
+  }
+
+  .product-card-body{
+    padding-left: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    position: relative;
+  } 
+
+  .wrapper-img{
+    border-radius: 50px;
+    margin-top: 3px;
+    border-radius: 50px;
+    width: 100%;
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .tortapic{
+    border-radius: 50px;
+    transition: transform 1s ease;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+  }
 
 
-body.menu-open .logo {
-  position: static !important;
-  margin: 0 auto;
-  display: block;
-}
+  .modal-body{
+    color: #4E6661;
+    font-family: "Mulish", sans-serif;
+    font-weight: 100;
+  }
+
+  .modal-body h5{
+    font-family: "Playfair Display", serif;
+    font-weight: 100;
+    text-align: center;
+    font-size: clamp(1.5rem, 2vw, 5rem);
+  }
 
 
-#topbar,
-#mynav {
-  transition: opacity 0.4s ease, visibility 0.4s ease;
-}
+  .modal-body h4{
+    font-family: "Playfair Display", serif;
+    font-weight: 100;
+    font-style: italic;
+    text-align: left;
+    font-size: clamp(1.5rem, 1.4vw, 5rem);
+  }
 
-.navbar-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
+  .modal-content{
+    border-radius: 60px !important;
+    -webkit-box-shadow: 0 0 16px rgba(0, 0, 0, 0.07);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+  }
 
-.topbar-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
+  .modal-dialog{
+    max-width: none !important;
+  }
 
 
+  .modal-body img{
+    border-radius: 50px;
+    height: 100%;
+    width: auto;
+  }
 
-/* ✨ Prevent body from jumping when menu opens */
-body.menu-open .hero-image {
-  margin-top: 0 !important;
-  padding-top: 140px; /* vagy annyi, amekkora a navbar és topbar összege mobilon */
-}
+  .separator-modal{
+    color: #707070;
+    font-size: clamp(1.5rem, 1.1vw, 5rem);
+    font-family: "Playfair Display", serif;
+    font-weight: 100;
+    padding-top:20px; 
+    padding-bottom: 20px;
+  }
 
-/* div { outline: 1px dashed blue } span { outline: 1px dashed green }
+  .cover{
+    object-fit: cover;
+    width:100%;
+    height:auto;
+  }
 
-  div { 
-      border: 1px solid rgb(0, 0, 0);
-  } */
+  .variaciok{
+    font-family: "Lato", sans-serif;
+    padding-top: 40px;
+    background-color: #4E6661;
+    border-radius: 50px;
+    min-height: 400px;
+    max-height: 500px;
+    color: #FFFFFF;
+    position: relative;
+    overflow: visible; 
+  }
+
+  .categories h4{
+    text-transform: uppercase;
+    padding-left: 30px;
+  }
+
+  .form-check{
+    padding-right: 35px;
+  }
+
+  .list-unstyled{
+    text-decoration: none;
+  }
+
+  .list-unstyled a{
+    text-decoration: none;
+    color: #4E6661;
+  }
+
+  .list-unstyled a:hover{
+    text-decoration: none;
+    color: #F6D2D6;
+  }
+
+  .vertical-label {
+    position: absolute;
+    transform-origin: left top;
+    color: #F6D2D6;
+    padding: 0.5rem 1rem;
+    font-family: "Lato", sans-serif;
+    font-style: bold;
+    font-weight: 700;
+    z-index: 1;   /* ! fontos: csak kicsi legyen */
+  }
+
+  .category-tag{
+    color: rgb(136, 114, 114);
+  }
+
+  body{
+    min-height: 100vh;
+  }
+
+  .btn-outline-dark{
+    position: absolute;
+    bottom: 0px;
+    /* right: -10px; */
+  }
+
+  .kinalat{
+    font-style: italic;
+    padding-bottom: 3vw;
+  }
+
+  .btn:hover{
+      color: #fff;
+      background: #A2B49C;
+  }
+
+  .btn::after:hover{
+      filter:alpha(opacity=70) !important;
+  }
+
+  .btn {
+    border-radius: 12px;
+    -webkit-box-shadow: 0 0 16px rgba(0, 0, 0, 0.07);
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.07);
+    background: #fff;
+    padding: 17px;
+    font-weight: 500;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    transition-property: all;
+    -webkit-transition-property: background, color;
+    transition-property: background, color;
+    font-size: 20px;
+    color: #000;
+    letter-spacing: 0.0001vw;
+    font-family: "Lekton", sans-serif;
+  }
+
+
+  .hero-image {
+    position: relative; 
+    background-image: url("/static/app_pottompatti/img/background_base.svg");
+    width: 100%;
+    z-index: 1; /* háttér */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* vízszintesen középre */
+    justify-content: center; 
+    background-repeat: no-repeat;
+  }
+
+
+  .hero-image p{
+    position: absolute;
+    text-align: center;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    
+    font-weight: 200;
+    font-style: normal;   
+    width: 100%;
+    color: #4E6661;
+  }
+
+  .logo {
+    position: absolute;   /* a szülőhöz fog igazodni */
+    height: auto;
+  }
+
+  .btn-order {
+    position: absolute;
+    background: white;
+    color: #4E6661;
+    border: 2px solid #4E6661;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+
+  .btn-order:hover {
+    background: #4E6661;
+    color: white;
+    border-color: #4E6661;
+  }
+
+  .filler{
+    padding: 10vw 0;
+  }
+
+  p.bordered {
+    border-left: 2px solid #4E6661;
+    border-right: 2px solid #4E6661;
+    font-weight: 200;
+    padding: 0.5rem 1rem;
+    max-width: 900px;
+    margin: 3rem auto;
+    text-align: left;
+    font-family: "Mulish", sans-serif;
+    font-size: clamp(1rem, 1.25vw, 2rem);
+  }
+
+  .gallery-custom{
+    overflow: hidden;
+  }
+
+  .gallery-item {
+    position: relative;
+    overflow: hidden;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .gallery-item img.offset-top {
+    object-position: center -100px; /* felfelé tolja a képet */
+  }
+
+
+  p.bordered1 {
+    border-left: 2px solid #4E6661;
+    max-width: 600px;
+    text-align: left;
+    font-family: "Mulish", sans-serif;
+    font-size: clamp(1rem, 1.25vw, 2rem);
+    font-weight: 100;
+    color: #707070;
+    padding-left: 10px;
+  }
+
+  p.bordered1 .bolded{
+    font-family: Arima, sans-serif;
+    font-weight: 500;
+  }
+
+
+  .btn-discover:hover {
+    background: #EBAEB4;
+    color: white;
+    border-color: #EBAEB4;
+  }
+
+  .rolam{
+    background-color: #FFF4F9;
+  }
+
+  .rolam p{
+    max-width: 600px;
+    margin-top: 20px;
+    text-align: left;
+    font-family: "Mulish", sans-serif;
+    color: #707070;
+    font-weight: 100;
+  }
+
+  .ajanlatok{
+    transform: rotate(-4deg);
+  }
+
+  .ihlet{
+    background-color: #FFF4F9;
+  }
+
+
+  .ihlet img{
+    object-fit: cover;
+    overflow: hidden;
+    max-width: 95%;
+    border-radius: 50px;
+    padding: 20px;
+  }
+
+  .ihlet .row{
+    padding-top: 50px;
+    padding-bottom: 100px;
+
+  }
+
+  .ihlet .btn-discover{
+    margin: 0;
+  }
+
+  .ihlet h2{
+    padding-bottom: 20px;
+  }
+
+  .ihlet h1{
+    margin-top: 3vw;
+  }
+
+  .esemenyekre{
+    padding-top: 4vw;
+    padding-bottom: 4vw;
+    max-width: 60%;
+  }
+
+  .esemenyekre h1{
+    padding-bottom: 3vw;
+  }
+
+  .esemenyekre p{
+    font-family: "Mulish", sans-serif;
+    font-weight: 100;
+    color: #707070;
+  }
+
+  .separator{
+    color: #707070;
+    font-size: clamp(1.5rem, 2vw, 5rem);
+    font-family: "Playfair Display", serif;
+    font-weight: 100;
+  }
+
+  :root {
+    --primary-color: #EBAEB4;
+    --info-bg: #FFE1E1;
+    --border-radius: 20px;
+    --form-font: "Mulish", sans-serif;
+  }
+
+
+  form {
+    font-family: var(--form-font);
+  }
+
+  .btn-discover {
+    background: white;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 30px;
+    padding: 10px 25px;
+    transition: all 0.3s ease;
+  }
+
+  .btn-discover:hover {
+    background: var(--primary-color);
+    color: white;
+  }
+
+
+  .kapcsolat{
+    background-color: #FFF4F9;
+    margin-top: -120px;
+  }
+
+  .kapcsolat-leiras{
+    background: url("/static/app_pottompatti/img/rendeles_hatter.jpg");
+    text-align: center;
+    font-size: 1.1rem;
+    color: white;
+    font-family: "Mulish", sans-serif;
+    font-style: italic;
+    font-weight: 100;
+    line-height: 1.6;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    border-radius: 50px;
+  }
+
+  .form-container{
+    background-color: #FFFFFF;
+    font-family: "Mulish", sans-serif;
+    font-style: italic;
+    color: #4E6661;
+    text-align: left;
+  }
+
+  .rendelesleadas{
+    font-size: clamp(1.5rem, 2.2vw, 5rem);
+  }
+
+  .divider{
+    height: 15vw;
+  }
+
+  .fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease-out;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .fade-in-on-load {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+  }
+
+  .fade-in-on-load.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .fade-in-htmx {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+
+  .fade-in-htmx.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .form-control {
+    background-color: #f8f9fa; /* halvány szürke */
+    border-radius: 40px;
+    border: 1px solid #ced4da;
+  }
+
+  .form-control:focus {
+    background-color: white;
+    box-shadow: 0 0 0 0.1rem rgba(0, 123, 255, 0.15);
+  }
+
+
+  body.menu-open .logo {
+    /* position: static !important;  <-- EZT TÖRÖLD */
+    margin: 0 auto;
+    display: block;
+  }
+
+
+  #topbar,
+  #mynav {
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+  }
+
+  .navbar-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .topbar-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+
+
+  /* ✨ Prevent body from jumping when menu opens */
+  body.menu-open .hero-image {
+    margin-top: 0 !important;
+    padding-top: 136px; /* vagy annyi, amekkora a navbar és topbar összege mobilon */
+  }
+
+
+  body.menu-open #mynav {
+    background-color: white !important;
+    box-shadow: 0 4px 6px -4px #999;
+    transition: background-color 0.3s ease;
+  }
+
+
+  /* Színek változók helyett */
+  :root {
+    --background-color: rgba(0, 0, 0, 0.85);
+    --text-color: #ffffff;
+    --button-pink: #ebaeb4; /* helyettesítsd a tényleges értékkel, ha más */
+    --font-gray: #707070;   /* helyettesítsd a tényleges értékkel, ha más */
+  }
+
+  /* Cookie banner alapbeállítás */
+  .cookie-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: var(--background-color);
+    color: var(--text-color);
+    padding: 15px 20px;
+    text-align: center;
+    z-index: 1000;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.2);
+    animation: slideUp 0.5s ease-out;
+  }
+
+  .cookie-bar p {
+    flex: 1 1 100%;
+    margin: 0;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  /* Gombok konténer */
+  .cookie-bar .cookie-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Gombok stílusa */
+  .cookie-bar button {
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+    text-transform: uppercase;
+  }
+
+  .cookie-bar .cc-cookie-accept {
+    background: var(--button-pink);
+    color: white;
+  }
+
+  .cookie-bar .cc-cookie-accept:hover {
+    background: #006ae6; /* sötétebb verzió a primary-color-hoz */
+  }
+
+  .cookie-bar .cc-cookie-decline {
+    background: var(--font-gray);
+    color: white;
+  }
+
+  .cookie-bar .cc-cookie-decline:hover {
+    background: #cc0000; /* sötétebb verzió a secondary-color-hoz */
+  }
+
+  .cookie-bar .cc-cookie-settings {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+  }
+
+  .cookie-bar .cc-cookie-settings:hover {
+    background: rgba(255, 255, 255, 0.4);
+  }
+
+  /* Animáció a banner megjelenésére */
+  @keyframes slideUp {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  /* Reszponzív beállítások */
+  @media (max-width: 768px) {
+    .cookie-bar {
+      flex-direction: column;
+      padding: 15px;
+    }
+
+    .cookie-bar p {
+      font-size: 14px;
+    }
+
+    .cookie-bar button {
+      width: 100%;
+    }
+  }
+
+  /* Dátum kiválasztás kiemelés */
+  .selected-date {
+    background-color: var(--button-pink) !important;
+    color: var(--font-gray) !important;
+  }
+
+  /* div { outline: 1px dashed blue } span { outline: 1px dashed green }
+
+    div { 
+        border: 1px solid rgb(0, 0, 0);
+    } */
 

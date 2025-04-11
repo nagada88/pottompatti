@@ -25,7 +25,9 @@
 
 
 <!-- JavaScript Bundle with Popper -->
-<script src={% static 'app_pottompatti/bootstrap-5.0.2-dist/js/bootstrap.js' %}></script>
+<script src={% static 'app_pottompatti/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js' %}></script>
+
+<!-- <script src={% static 'app_pottompatti/bootstrap-5.0.2-dist/js/bootstrap.js' %}></script> -->
 <script type="text/javascript" src={% static 'app_pottompatti/js/htmx.min.js' %} defer></script>
 
 <!-- own css -->
@@ -63,31 +65,29 @@
 
 
 <!-- TOPBAR -->
-<div id="topbar" class="topbar">
-  <div class="container d-flex justify-content-between align-items-center h-100">
-      <div>
-          <small>📍 {{ kapcsolat.address }} | ☎ {{ kapcsolat.telefonszam }} | ✉ {{ kapcsolat.emailcim }}</small>
-      </div>
-      <div>
-          <small>⏰ Nyitvatartás: {{ kapcsolat.nyitvatartas }}</small>
-      </div>
-      <div>
-        <small>
-        <span class="social">
-          <a href={{ kapcsolat.instagram }} target="blank"><i class="fa-brands fa-instagram socicon"></i></a>
-          <a href={{ kapcsolat.facebook }}  target="blank"><i class="fa-brands fa-facebook-f socicon"></i></a>
-          <a href={{ kapcsolat.tiktok }}  target="blank"><i class="fa-brands fa-tiktok socicon"></i></a>
-        </span>
-        </small>
-      </div>
+<div id="topbar" class="topbar d-none d-lg-block">
+  <div class="container d-flex flex-wrap justify-content-between align-items-center h-100 text-md-start">
+    <div class="contact-info">
+      <small>
+        <span class="me-2">📍 {{ kapcsolat.address }}</span><br class="d-sm-none">
+        <span class="me-2">☎ {{ kapcsolat.telefonszam }}</span><br class="d-sm-none">
+        <span>✉ {{ kapcsolat.emailcim }}</span><br class="d-sm-none">
+        <span>⏰ {{ kapcsolat.nyitvatartas }}</span>
+      </small>
+    </div>
+    <div class="social">
+      <a href={{ kapcsolat.instagram }} target="blank"><i class="fa-brands fa-instagram socicon"></i></a>
+      <a href={{ kapcsolat.facebook }} target="blank"><i class="fa-brands fa-facebook-f socicon"></i></a>
+      <a href={{ kapcsolat.tiktok }} target="blank"><i class="fa-brands fa-tiktok socicon"></i></a>
+    </div>
   </div>
 </div>
 
 
 <nav id="mynav" class="navbar navbar-expand-xl navbar-light sticky-top navbar-custom">
   <div class="container-fluid">
-    <a class="navbar-brand d-md-none" href="#">
-      <img src="/static/app_pottompatti/img/logo.jpg" alt="">
+    <a class="navbar-brand d-md-none" href="rolunk">
+      <img src="/static/app_pottompatti/img/logo.jpg" alt="Főoldal logó">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -102,7 +102,7 @@
         </li>
 
         <a class="navbar-brand d-none d-md-block" href="rolunk">
-          <img src="/static/app_pottompatti/img/logo.jpg" alt="">
+          <img src="/static/app_pottompatti/img/logo.jpg"  alt="Főoldal logó">
         </a>
         <li class="nav-item menupoint">
           <a class="nav-link" href="esemeny">eseményekre</a>
@@ -122,20 +122,20 @@
 
 <div class="container footer">
   <div class="row">
-    <div class="col-lg-4">
-      <p style="  margin: 2rem auto;">
+    <div class="col-md-4">
+      <p class="footer-logo">
       <img src="{% static 'app_pottompatti/img/patti_logo.png' %}" style="height: 100px;" /><br>
       {{ kapcsolat.address }} <br>
       {{ kapcsolat.telefonszam }}
     </div>
-    <div class="col-lg-4">
+    <div class="col-md-4">
       <p class="bordered">
         Nyitvatartási idő<br><br>
         {{ kapcsolat.nyitvatartas }}
       </p>
     </div>
-    <div class="col-lg-4">
-      <p><br><br>
+    <div class="col-md-4">
+      <p>
         <ul class="list-unstyled">
           <li><a href="{% url 'tortak' %}">Torták</a></li>
           <li><a href="{% url 'sutemenyek' %}">Sütemények</a></li>
@@ -147,19 +147,18 @@
   </div>
 </div>
 
-<template id="cookie-consent__cookie-bar">
-  <div class="cookie-bar">
-      This site uses cookies for better performance and user experience.
-      Do you agree to use these cookies?
-      {# Button is the more accessible role, but an anchor tag would also work #}
-      <button type="button" class="cookie-consent__accept">Accept</button>
-      <button type="button" class="cookie-consent__decline">Decline</button>
-      <a href="{{ url_cookies }}">Cookies info</a>
+
+<div id="cookie-banner" class="cookie-bar" style="display: none;">
+  <p>Az oldal viselkedésalapú cookie-kat használ. Ha elfogadod, kattints az „Elfogadom” gombra.</p>
+  <div class="cookie-buttons">
+      <button class="cc-cookie-accept">Elfogadom</button>
+      <button class="cc-cookie-decline">Elutasítom</button>
+      <a href="{% static 'app_bettirelax/img/cookie_tajekoztato.pdf' %}" class="cc-cookie-settings" download="cookies">Adatvédelmi irányelvek</a>
   </div>
-</template>
+</div>
 
 </body>
-
+<script src={% static 'app_pottompatti/js/cookie_handler.js' %} defer></script>
 <script src={% static 'app_pottompatti/js/app_pottompatti.js' %}></script>
 
 </html>

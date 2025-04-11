@@ -8,7 +8,7 @@
   </div>
   <div class="row">
     <!-- Info Box -->
-    <div class="info-box mx-auto mb-5 p-4 col-lg-4 kapcsolat-leiras">
+    <div class="info-box col-10 mb-5 col-xl-4 kapcsolat-leiras">
         <p class="mb-3">
             Ha már van konkrét elképzelésed, vagy tanácsra van szükséged a tökéletes süti kiválasztásához, írj nekünk bátran az online felületünkön! Örömmel segítünk, hogy pontosan azt kapd, amit megálmodtál. 🍪😊
         </p>
@@ -20,13 +20,13 @@
     <div class="col-lg-8">
       <!-- Rendelés form -->
       <h2 class="mb-4 rendelesleadas"><i>Add le rendelésed online!</i></h2>
-      <div class="form-container">
+      <div class="form-container pt-5 ps-3 ps-sm-0">
         <form method="post" action="">
             {% csrf_token %}
             <div class="row g-3">
 
                 <div class="row mb-3 align-items-center">
-                    <div class="col-sm-3 text-end">
+                    <div class="col-sm-3 text-sm-end ps-4">
                         <label for="name" class="form-label">Név*</label>
                     </div>
                     <div class="col-sm-9">
@@ -35,7 +35,7 @@
                 </div>
                 
                 <div class="row mb-3 align-items-center">
-                    <div class="col-sm-3 text-end">
+                    <div class="col-sm-3 text-sm-end ps-4">
                         <label for="phone" class="form-label">Telefonszám*</label>
                     </div>
                     <div class="col-sm-9">
@@ -44,8 +44,8 @@
                 </div>
 
                 <div class="row mb-3 align-items-center">
-                    <div class="col-sm-3 text-end">
-                        <label for="phone" class="form-label">E-mail cím*/label>
+                    <div class="col-sm-3 text-sm-end ps-4">
+                        <label for="phone" class="form-label">E-mail cím*</label>
                     </div>
                     <div class="col-sm-9">
                         <input type="email" class="form-control" id="email" name="email" required>
@@ -53,7 +53,7 @@
                 </div>
 
                 <div class="row mb-3 align-items-start">
-                    <div class="col-sm-3 text-end mt-1">
+                    <div class="col-sm-3 text-sm-end mt-1 ps-4">
                         <label for="rendeles" class="form-label">Rendelés részletei</label>
                     </div>
                     <div class="col-sm-9">

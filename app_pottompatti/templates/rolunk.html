@@ -36,7 +36,7 @@
 
       <!-- Col 1 -->
       <div class="col-12 col-xl-4">
-          <div class="gallery-item" style="height:900px;">
+          <div class="gallery-item gi-1">
               <img src="{% static 'app_pottompatti/img/patti_shake.jpg' %}" alt="Patti shake-el a kezében">
           </div>
       </div>
@@ -46,29 +46,29 @@
   <div class="row g-0">
 
       <!-- első sor -->
-      <div class="col-12 gallery-item" style="height:300px;">
+      <div class="col-12 gallery-item gi-2 d-none d-xl-block">
           <img src="{% static 'app_pottompatti/img/sutik.jpg' %}" alt="Szép sütemények">
       </div>
 
       <!-- második + harmadik sor -->
       <div class="col-12">
-          <div class="row g-0" style="height:600px;">
+          <div class="row g-0 gi-3">
 
               <!-- bal oldal -->
               <div class="col-6 d-flex flex-column">
 
-                  <div class="gallery-item offset-top" style="height:300px;">
+                  <div class="gallery-item offset-top gi-2">
                       <img src="{% static 'app_pottompatti/img/limonadek.jpg' %}" alt="Limonadék">
                   </div>
 
-                  <div class="gallery-item" style="height:300px;">
+                  <div class="gallery-item gi-2">
                       <img src="{% static 'app_pottompatti/img/kremes_suti_kek_tanyeron.jpg' %}" alt="Krémes süti kék tányéron">
                   </div>
 
               </div>
 
               <!-- jobb oldal -->
-              <div class="col-6 gallery-item" style="height:600px;">
+              <div class="col-6 gallery-item gi-3">
                   <img src="{% static 'app_pottompatti/img/poharkrem_kinalat.jpg' %}" alt="Pohárkrém kínálat">
               </div>
 
@@ -83,15 +83,15 @@
       <div class="col-12 col-xl-4">
           <div class="row g-0">
 
-              <div class="col-6 gallery-item" style="height:300px;">
+              <div class="col-6 gallery-item gi-2">
                   <img src="{% static 'app_pottompatti/img/poharkrem_es_shake.jpg' %}" alt="Pohárkrém és shake">
               </div>
 
-              <div class="col-6 gallery-item" style="height:300px;">
+              <div class="col-6 gallery-item gi-2">
                   <img src="{% static 'app_pottompatti/img/karamellas_shake.jpg' %}" alt="Karamellás shake">
               </div>
 
-              <div class="col-12 gallery-item offset-top" style="height:600px;">
+              <div class="col-12 gallery-item offset-top gi-3">
                   <img src="{% static 'app_pottompatti/img/vendeg_sutit_eszi.jpg' %}" alt="Vendég sütit eszik">
               </div>
 
@@ -123,7 +123,7 @@
 
           Ne felejtsd el követni Facebook-oldalunkat, ahol elsőként értesülhetsz legfrissebb kínálatunkról és ínycsiklandó akcióinkról! 🍩✨ <br><br>
       </p>
-      <button class="btn btn-discover">Fedezd fel!</button>
+      <a href="{{ kapcsolat.facebook }}" class="btn btn-discover">Fedezd fel!</a>
     </div>
   </div>
 </div>

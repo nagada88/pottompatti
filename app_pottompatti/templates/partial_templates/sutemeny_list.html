@@ -1,7 +1,7 @@
 
 <div class="row">
     {% for sutemeny in sutemenyek %}
-        <div class="col-xl-4 col-sm-12 col-md-6 pb-3">
+        <div class="col-xl-4 col-sm-12 col-md-6 pb-4 pe-3 ps-3">
             <div class="product-card fade-in-htmx">
                 <div class="wrapper-img">
                     <a href="#sutemenyModal{{ forloop.counter }}" data-bs-toggle="modal" data-bs-target="#sutemenyModal{{ forloop.counter }}">
@@ -13,11 +13,10 @@
                         <p class="category-tag">#{{ sutemeny.product_category }}</p>
                     </div>
                 </div>
-
         </div>
 
         <div class="modal fade" id="sutemenyModal{{ forloop.counter }}" tabindex="-1" aria-labelledby="sutemenyModalLabel{{ forloop.counter }}" aria-hidden="true">
-            <div class="modal-dialog modal-lg"> <!-- nagyobb modal -->
+            <div class="modal-dialog modal-lg"> 
                 <div class="modal-content">
                     <div class="modal-body">
                         <div class="row">
@@ -25,12 +24,12 @@
                                 <img src="{{ sutemeny.photo_tumb.url }}" class="img-fluid mb-3" alt="{{ torta.name }}">
                             </div>
                             <div class="col-md-6">
-                                <h5>{{ sutemeny.name }}</h>
+                                <h5>{{ sutemeny.name }}</h5>
                                 <div class="row separator-modal">
                                     <center>~ & ~</center>
                                   </div>
                                 <h4>Leírás</h4>
-                                <p>{{ sutemeny.description }}</p> <!-- hosszú leírás -->
+                                <p>{{ sutemeny.description }}</p>
                             </div>
                         </div>
                     </div>

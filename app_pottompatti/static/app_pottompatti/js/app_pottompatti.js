@@ -100,3 +100,20 @@ document.body.addEventListener('htmx:afterSwap', function(e)
     triggerFadeIn();
   }
 );
+
+document.body.addEventListener('htmx:afterSwap', function(e) {
+  triggerFadeIn();
+
+  e.target.querySelectorAll('[data-bs-toggle="modal"]').forEach(el => {
+    el.addEventListener('click', function () {
+      const target = el.getAttribute('data-bs-target');
+      const modalEl = document.querySelector(target);
+      if (modalEl) {
+        const modal = new bootstrap.Modal(modalEl);
+        modal.show();
+      }
+    });
+  });
+});
+
+
