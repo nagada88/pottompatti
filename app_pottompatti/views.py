@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .models import *
 from app_pottompatti.forms import ContactForm
-
+from django.core.mail import EmailMessage, BadHeaderError
 
 def contact_context(request):
     """
@@ -72,7 +72,14 @@ def kapcsolat(request):
             message = "Üzenet érkezett a Pöttöm Patti honlapról: \n\n" + "\n".join(body.values())
 
             try:
-                send_mail(subject, message,  body['email cím'], [kapcsolat.emailcim])
+                email = EmailMessage(
+                            subject=subject, 
+                            body=message,
+                            from_email='brandbehozunk@gmail.com',
+                            to=[kapcsolat.emailcim],
+                            reply_to=[body['email cím']],
+                          )
+                email.send()    
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
             return redirect("rolunk.html")
