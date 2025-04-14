@@ -113,3 +113,15 @@ class Kapcsolat(SingletonModel):
     def __str__(self):
         return "Kapcsolat"
     
+
+class TortaKepek(ImageHandlerMixin, models.Model):
+    photo = models.ImageField(upload_to='app_pottompatti/img/photos/', verbose_name = "kép", default="/app_pottompatti/img/bakery.jpg")
+    photo_tumb = models.ImageField(upload_to='app_pottompatti/img/thumbs/', editable=False) 
+
+    class Meta:
+        verbose_name = 'torta kép'
+        verbose_name_plural = 'torta képek'
+
+
+    def __str__(self):
+        return "torta kép " + str(self.pk)

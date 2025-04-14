@@ -7,6 +7,7 @@ urlpatterns = [
     re_path(r'rolunk', views.rolunk, name='rolunk'),
     re_path(r'kapcsolat', views.kapcsolat, name='kapcsolat'),
     re_path(r'tortak', views.tortak, name='tortak'),
+    re_path(r'gallery', views.gallery, name='gallery'),
     path('sutemenyek', views.sutemenyek, name='sutemenyek'),
     re_path(r'esemeny', views.esemeny, name='esemenyek'),
     path('filter-cakes/', views.filter_cakes, name='filter_cakes'),

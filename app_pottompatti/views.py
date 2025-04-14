@@ -85,3 +85,21 @@ def kapcsolat(request):
 
 def sikeresmail(request):
     return render(request, 'sikeresmail.html')
+
+
+def gallery(request):
+    kepek = TortaKepek.objects.all()
+
+    picture_quantity = len(kepek)
+    breakpnumber = round(picture_quantity/3.)
+    breakpremaining = picture_quantity%3
+    bplist = [0]
+
+    if breakpremaining in [0,2]:
+        bplist.append(breakpnumber)
+        bplist.append(2*breakpnumber)
+    elif breakpremaining in [1]:
+        bplist.append(breakpnumber+1)
+        bplist.append(2*breakpnumber+1)
+
+    return render(request, 'gallery.html', {'kepek': kepek, 'breakpnumber': breakpnumber, 'bplist': bplist,})

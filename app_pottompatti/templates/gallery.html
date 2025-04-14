@@ -1,0 +1,55 @@
+{% extends 'main.html'%}
+{% load static %}       
+{% block content %}
+
+
+<div class="container fade-in-on-load">
+  <div class="row">
+    <div class="col pt-5 pb-5">
+      <h1><i>Esküvői tortáink</i></h1>
+      <p class="pt-5 basic-text">
+        Ebben a galériában egy kis válogatást találsz az eddig elkészült esküvői tortáink közül. 
+        Fontos tudni, hogy ez csak egy kis ízelítő – messze nem tartalmazza az összes munkánkat, hiszen minden tortánk egyedi, 
+        a párok elképzelései, ízlése és álmai alapján születik meg. Minden egyes desszert külön történetet mesél el, 
+        és pont ettől válik igazán különlegessé.<br>
+        Ha valamelyik torta stílusa vagy hangulata közel áll hozzátok, bátran keressetek meg minket! De akkor is örömmel segítünk, 
+        ha még csak most kezditek megálmodni a nagy nap részleteit, és inspirációra vágytok. Legyen szó elegáns, letisztult formákról, 
+        romantikus virágdíszítésről vagy éppen valami teljesen egyedi elképzelésről – minden esetben arra törekszünk, 
+        hogy a tortátok valóban rólatok szóljon.<br>
+
+        Ha esküvői tortát szeretnétek rendelni, írjatok vagy hívjatok bátran bármelyik elérhetőségünkön. 
+        Szívesen egyeztetünk személyesen is, hogy minden részlet tökéletes legyen – az ízektől kezdve a külalakig, 
+        egészen a szállításig. Várjuk szeretettel a megkereséseteket!
+      </p>
+      <br>
+      <br>
+      <center><a href="kapcsolat" class="btn btn-discover"  style="margin-left: 0 !important;">Kapcsolat</a></center>
+    </div>
+  </div>
+</div>
+
+<div class="container" style="height: 50px";></div>
+<h2>{{ category.0.name }}</h2></h2>
+<div class="container-fluid gallery pb-5 fade-in-on-load">
+    <div class="row g-0">
+      {% for picture in kepek %}
+          {% if forloop.counter0 in bplist %}
+          <div class="col-lg-4 col-md-12">
+          {% endif %}
+            <a href={{ picture.photo.url }} data-lightbox="mygallery">
+                <div class="wrapperconstraint-photo-gallery">
+                    <img src={{ picture.photo_tumb.url }} class="ongray" />
+                </div>
+            </a>
+          {% if forloop.counter in bplist  or forloop.last %}
+          </div>
+          {% endif %}
+      {% endfor %}
+    </div>
+</div>
+
+<div class="container" style="padding-top: 50px; padding-bottom: 50px;">
+<center><a href="rolunk" class="btn btn-discover" style="margin-left: 0 !important;">Főoldalra</a></center>
+</div>
+
+{% endblock content %}
